@@ -1,2 +1,14 @@
-skills/
 node_modules/
+.next/
+.zscripts/
+upload/
+dev.log
+server.log
+download/
+skills/
+mini-services/
+tests/
+examples/
+*.log
+.env.local
+.DS_Store
