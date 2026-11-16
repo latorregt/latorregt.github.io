@@ -60,7 +60,7 @@ export function Header({ onNavigate, onSearch, onOpenCart, onHome }: HeaderProps
                           const subs = subtiposByTipo[tipo] || []
                           return (
                             <div key={tipo} className="relative group/sub" onMouseEnter={() => setHoveredTipo(tipo)} onMouseLeave={() => setHoveredTipo(null)}>
-                              <button onClick={() => handleNavClick(item.cat!, tipo)} className="flex w-full items-center justify-between px-4 py-2 text-sm text-midnight hover:bg-cream-deep hover:text-gold transition-colors">
+                              <button onClick={() => handleNavClick(item.cat!, tipo)} className="flex w-full items-center justify-between px-4 py-2 text-sm text-midnight hover:bg-cream-deep hover:text-gold transition-colors whitespace-nowrap">
                                 {tipo}{subs.length > 0 && <ChevronRight className="w-3 h-3 ml-2" />}
                               </button>
                               {subs.length > 0 && hoveredTipo === tipo && (

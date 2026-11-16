@@ -29,7 +29,7 @@ export const products: Product[] = [
     "precio": 250.0,
     "tarjeta": 272.0,
     "descripcion": "Cinturón Dutton de acabado mate limpio y herraje moderno, en 100% cuero. Correa de perfil liso con punta en ángulo clásico y doble línea de pespuntes finos al tono en ambos bordes. Hebilla rectangular de acabado metálico cepillado con borde frontal texturizado y trabilla fija grabada. Composición: 100% cuero.",
-    "fecha": "2026-11-22",
+    "fecha": "2026-10-22",
     "sale": false,
     "prontoVolvera": false,
     "descuento": null

@@ -13,12 +13,12 @@ const SORT_LABELS: Record<SortMode, string> = { 'recent': 'Mas recientes', 'pric
 
 export function ProductGrid({ filter, onOpenProduct, onNavigate }: ProductGridProps) {
   const [sort, setSort] = useState<SortMode>('recent')
-  const [visibleCount, setVisibleCount] = useState(24)
+  const [visibleCount, setVisibleCount] = useState(22)
   const [filterOpen, setFilterOpen] = useState<string | null>(null)
   const [localFilter, setLocalFilter] = useState<FilterState>(filter)
   const filterRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => { setLocalFilter(filter); setVisibleCount(24) }, [filter])
+  useEffect(() => { setLocalFilter(filter); setVisibleCount(22) }, [filter])
   useEffect(() => {
     const h = (e: MouseEvent) => { if (filterRef.current && !filterRef.current.contains(e.target as Node)) setFilterOpen(null) }
     if (filterOpen) { document.addEventListener('mousedown', h); return () => document.removeEventListener('mousedown', h) }
@@ -40,8 +40,8 @@ export function ProductGrid({ filter, onOpenProduct, onNavigate }: ProductGridPr
   if (localFilter.sale) chips.push({ label: 'SALE', type: 'sale', value: 'true' })
   if (localFilter.search) chips.push({ label: `"${localFilter.search}"`, type: 'search', value: localFilter.search })
   const availableTallas = Array.from(new Set(filtered.flatMap(p => p.tallas))).sort()
-  const toggleFilter = (type: keyof FilterState, value: string) => { setLocalFilter(prev => { const arr = prev[type] as string[]; return { ...prev, [type]: arr.includes(value) ? arr.filter(v => v !== value) : [...arr, value] } }); setVisibleCount(24) }
-  const clearAll = () => { setLocalFilter({ categorias: [], tipos: [], subtipos: [], estilos: [], marcas: [], colores: [], tallas: [], precioMin: null, precioMax: null, sale: false, pronto: null, search: '' }); setVisibleCount(24) }
+  const toggleFilter = (type: keyof FilterState, value: string) => { setLocalFilter(prev => { const arr = prev[type] as string[]; return { ...prev, [type]: arr.includes(value) ? arr.filter(v => v !== value) : [...arr, value] } }); setVisibleCount(22) }
+  const clearAll = () => { setLocalFilter({ categorias: [], tipos: [], subtipos: [], estilos: [], marcas: [], colores: [], tallas: [], precioMin: null, precioMax: null, sale: false, pronto: null, search: '' }); setVisibleCount(22) }
   const hasFilters = chips.length > 0
 
   const showAutoButtons = (f: FilterState) => {
@@ -55,19 +55,28 @@ export function ProductGrid({ filter, onOpenProduct, onNavigate }: ProductGridPr
     <section className="py-10 md:py-14 bg-cream min-h-screen">
       <div className="max-w-[1600px] mx-auto px-4 md:px-6">
         <div className="mb-6"><h1 className="font-serif text-2xl md:text-3xl font-semibold text-midnight">{localFilter.categorias.length === 1 ? `PRODUCTOS DE ${localFilter.categorias[0].toUpperCase()}` : localFilter.categorias.length > 1 ? 'PRODUCTOS DE NIÑOS' : localFilter.sale ? 'SALE' : localFilter.search ? `Busqueda: "${localFilter.search}"` : 'TODOS LOS PRODUCTOS'}</h1>{localFilter.categorias.includes('Hombre') && <p className="text-sm text-muted-foreground mt-1 italic">Clasicos para hombres de caracter</p>}</div>
-        <div className="mb-4 flex items-center justify-between flex-wrap gap-3" ref={filterRef}>
-          <div className="flex items-center gap-2 flex-wrap">
-            {hasFilters && <button onClick={clearAll} className="px-3 py-2 text-xs uppercase tracking-wider text-midnight border border-midnight/15 bg-white hover:border-midnight rounded transition-colors">Borrar filtros</button>}
+        <div ref={filterRef}>
+          {/* Line 1: Filters left + Ordenar right */}
+          <div className="flex items-center justify-between flex-wrap gap-2 mb-3">
+            <div className="flex items-center gap-2 flex-wrap">
             {['Categoria', 'Tipo', 'Talla', 'Marca', 'Color'].map(label => {
               const key = label === 'Categoria' ? 'categorias' : label === 'Tipo' ? 'tipos' : label === 'Talla' ? 'tallas' : label === 'Marca' ? 'marcas' : 'colores'
               const options = label === 'Categoria' ? availableCategorias : label === 'Tipo' ? availableTipos : label === 'Talla' ? availableTallas : label === 'Marca' ? availableMarcas : coloresAll
               if (!options.length) return null
-              return (<div key={label} className="relative"><button onClick={() => setFilterOpen(filterOpen === label ? null : label)} className="px-4 py-2 text-sm border border-midnight/15 bg-white hover:border-midnight transition-colors flex items-center gap-2">{label}<ChevronDown className={`w-3 h-3 transition-transform ${filterOpen === label ? 'rotate-180' : ''}`} /></button>{filterOpen === label && (<div className="dropdown-animate absolute top-full left-0 mt-1 z-20 bg-white border border-midnight/15 shadow-lg rounded-md py-2 max-h-72 overflow-y-auto min-w-[180px] scrollbar-boutique">{options.map(opt => (<button key={opt} onClick={() => toggleFilter(key as keyof FilterState, opt)} className={`block w-full text-left px-3 py-1.5 text-sm hover:bg-cream-deep transition-colors ${(localFilter[key as keyof FilterState] as string[]).includes(opt) ? 'text-gold font-medium' : 'text-midnight'}`}>{opt}</button>))}</div>)}</div>)
+              return (<div key={label} className="relative"><button onClick={() => setFilterOpen(filterOpen === label ? null : label)} className="px-4 py-2 text-sm border border-midnight/15 bg-white hover:border-midnight transition-colors flex items-center gap-2 whitespace-nowrap">{label}<ChevronDown className={`w-3 h-3 transition-transform ${filterOpen === label ? 'rotate-180' : ''}`} /></button>{filterOpen === label && (<div className="dropdown-animate absolute top-full left-0 mt-1 z-20 bg-white border border-midnight/15 shadow-lg rounded-md py-2 max-h-72 overflow-y-auto min-w-[180px] scrollbar-boutique">{options.map(opt => (<button key={opt} onClick={() => toggleFilter(key as keyof FilterState, opt)} className={`block w-full text-left px-3 py-1.5 text-sm hover:bg-cream-deep transition-colors whitespace-nowrap ${(localFilter[key as keyof FilterState] as string[]).includes(opt) ? 'text-gold font-medium' : 'text-midnight'}`}>{opt}</button>))}</div>)}</div>)
             })}
+            </div>
+            <div className="flex items-center gap-2"><label className="text-xs uppercase tracking-wider text-muted-foreground">Ordenar:</label><select value={sort} onChange={e => setSort(e.target.value as SortMode)} className="px-3 py-1.5 text-sm border border-midnight/15 bg-white rounded focus:outline-none focus:border-gold">{Object.entries(SORT_LABELS).map(([k, v]) => (<option key={k} value={k}>{v}</option>))}</select></div>
           </div>
-          <div className="flex flex-col items-end gap-1"><div className="flex items-center gap-2"><label className="text-xs uppercase tracking-wider text-muted-foreground">Ordenar:</label><select value={sort} onChange={e => setSort(e.target.value as SortMode)} className="px-3 py-1.5 text-sm border border-midnight/15 bg-white rounded focus:outline-none focus:border-gold">{Object.entries(SORT_LABELS).map(([k, v]) => (<option key={k} value={k}>{v}</option>))}</select></div><p className="text-xs text-muted-foreground">{filtered.length} productos</p></div>
+          {/* Line 2: Borrar filtros + chips left + product count right */}
+          <div className="flex items-center justify-between flex-wrap gap-2 mb-4">
+            <div className="flex items-center gap-2 flex-wrap">
+              {hasFilters && <button onClick={clearAll} className="text-xs text-gold hover:text-midnight underline underline-offset-2">Borrar filtros</button>}
+              {chips.map((chip, i) => (<button key={i} onClick={() => { if (chip.type === 'sale') setLocalFilter(prev => ({ ...prev, sale: false })); else if (chip.type === 'search') setLocalFilter(prev => ({ ...prev, search: '' })); else toggleFilter(chip.type, chip.value) }} className="inline-flex items-center gap-1.5 px-3 py-1 bg-midnight text-cream text-xs rounded-full hover:bg-midnight-light transition-colors">{chip.label}<X className="w-3 h-3" /></button>))}
+            </div>
+            <p className="text-sm text-muted-foreground">{filtered.length} productos</p>
+          </div>
         </div>
-        {hasFilters && (<div className="flex flex-wrap items-center gap-2 mb-4">{chips.map((chip, i) => (<button key={i} onClick={() => { if (chip.type === 'sale') setLocalFilter(prev => ({ ...prev, sale: false })); else if (chip.type === 'search') setLocalFilter(prev => ({ ...prev, search: '' })); else toggleFilter(chip.type, chip.value) }} className="inline-flex items-center gap-1.5 px-3 py-1 bg-midnight text-cream text-xs rounded-full hover:bg-midnight-light transition-colors">{chip.label}<X className="w-3 h-3" /></button>))}</div>)}
         {autoButtons && onNavigate && (<div className="mb-6"><AutoButtons type={autoButtons.type} onNavigate={onNavigate} /></div>)}
         {visible.length === 0 ? (<div className="text-center py-20"><p className="text-midnight text-lg mb-2">No hay productos que coincidan con tu busqueda.</p><p className="text-muted-foreground text-sm mb-4">Prueba con otros filtros.</p><button onClick={clearAll} className="text-gold hover:text-midnight underline underline-offset-2 text-sm">Borrar todos los filtros</button></div>) : (<><div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">{visible.map((p, i) => (<div key={p.id} className="contents">{i === 8 && (<div className="col-span-2 lg:col-span-2 row-span-1 relative overflow-hidden rounded-lg"><img src="/images/marca/Por_cada_momento_para_cada_integrante.png" alt="Por cada momento para cada integrante" className="w-full h-full object-cover" loading="lazy" /></div>)}<ProductCard product={p} onOpen={onOpenProduct} /></div>))}</div>{visibleCount < filtered.length && (<div className="text-center mt-12"><button onClick={() => setVisibleCount(c => c + 20)} className="px-8 py-3 border border-midnight text-midnight text-sm uppercase tracking-wider rounded-full hover:bg-midnight hover:text-cream transition-colors">Mostrar Mas</button></div>)}<div className="mt-16 text-center py-8 border-t border-midnight/10"><p className="text-sm text-muted-foreground mb-2">Contamos con mas producto en nuestra tienda fisica, no dudes en consultarnos!</p><a href={`https://wa.me/${BRAND.whatsapp}`} target="_blank" rel="noopener noreferrer" className="text-gold hover:text-midnight text-sm font-medium underline underline-offset-2">Consultar por WhatsApp</a></div></>)}
       </div>

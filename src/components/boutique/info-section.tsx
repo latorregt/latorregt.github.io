@@ -75,7 +75,7 @@ export function InfoSection() {
 
             <div className="flex flex-col sm:flex-row gap-3">
               <a href={BRAND.maps.google} target="_blank" rel="noopener noreferrer" onClick={() => track('maps_click', { dest: 'google' })}
-                 className="btn-lift px-4 py-2 text-xs bg-midnight text-cream uppercase tracking-wider font-medium rounded-full flex items-center justify-center gap-2">
+                 className="btn-lift flex-1 px-4 py-2.5 text-xs bg-midnight text-cream uppercase tracking-wider font-medium rounded-lg flex items-center justify-center gap-2">
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                   <circle cx="12" cy="10" r="3"/>
@@ -83,7 +83,7 @@ export function InfoSection() {
                 GOOGLE MAPS
               </a>
               <a href={BRAND.maps.waze} target="_blank" rel="noopener noreferrer" onClick={() => track('maps_click', { dest: 'waze' })}
-                 className="btn-lift px-4 py-2 text-xs bg-white border border-midnight text-midnight uppercase tracking-wider font-medium rounded-full hover:bg-midnight hover:text-cream flex items-center justify-center gap-2">
+                 className="btn-lift flex-1 px-4 py-2.5 text-xs bg-white border border-midnight/20 text-midnight uppercase tracking-wider font-medium rounded-lg hover:bg-midnight hover:text-cream flex items-center justify-center gap-2">
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polygon points="3 11 22 2 13 21 11 13 3 11"/>
                 </svg>

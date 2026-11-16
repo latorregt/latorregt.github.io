@@ -28,6 +28,8 @@ export function ProductDetailClient({ product, related }: ProductDetailClientPro
   const [zoomed, setZoomed] = useState(false)
   const [expanded, setExpanded] = useState<string | null>(null)
   const [relatedIdx, setRelatedIdx] = useState(0)
+  const [dragStart, setDragStart] = useState<{x: number, y: number} | null>(null)
+  const [dragOffset, setDragOffset] = useState<{x: number, y: number}>({x: 0, y: 0})
   const add = useCart(s => s.add)
   const openCart = useCart(s => s.open)
   const router = useRouter()
@@ -51,6 +53,10 @@ export function ProductDetailClient({ product, related }: ProductDetailClientPro
   const goHome = useCallback(() => {
     router.push('/')
   }, [router])
+
+  const handleMouseDown = (e: React.MouseEvent) => { if (zoomed) { setDragStart({x: e.clientX - dragOffset.x, y: e.clientY - dragOffset.y}) } }
+  const handleMouseMove = (e: React.MouseEvent) => { if (zoomed && dragStart) { setDragOffset({x: e.clientX - dragStart.x, y: e.clientY - dragStart.y}) } }
+  const handleMouseUp = () => { setDragStart(null) }
 
   useEffect(() => {
     setActiveIdx(0); setTallaSel(''); setZoomed(false); setExpanded(null)
@@ -97,12 +103,17 @@ export function ProductDetailClient({ product, related }: ProductDetailClientPro
               <div
                 className="bg-white rounded-lg overflow-hidden relative cursor-zoom-in flex items-center justify-center"
                 style={{ minHeight: '500px' }}
-                onClick={() => setZoomed(z => !z)}
+                onClick={() => { if (!zoomed) setZoomed(true); else if (!dragStart) setZoomed(false) }}
+                onMouseDown={handleMouseDown}
+                onMouseMove={handleMouseMove}
+                onMouseUp={handleMouseUp}
+                onMouseLeave={handleMouseUp}
               >
                 <img
                   src={product.imagenes[activeIdx] || product.imagenes[0]}
                   alt={product.nombre}
-                  className={`max-w-full max-h-[600px] object-contain transition-transform duration-300 ${zoomed ? 'scale-150 cursor-zoom-out' : ''}`}
+                  style={zoomed ? { transform: `scale(1.5) translate(${dragOffset.x/3}px, ${dragOffset.y/3}px)` } : {}}
+                  className={`max-w-full max-h-[800px] object-contain transition-transform duration-300 ${zoomed ? 'cursor-grab active:cursor-grabbing' : 'cursor-zoom-in'}`}
                 />
                 <div className="absolute bottom-2 right-2 bg-midnight/70 text-cream p-1.5 rounded">
                   <ZoomIn className="w-4 h-4" />
@@ -192,12 +203,12 @@ export function ProductDetailClient({ product, related }: ProductDetailClientPro
               {[
                 { key: 'envio', title: 'ENVÍO Y DEVOLUCIONES', content: 'Enviamos a todo el territorio de Guatemala con Forza o Guatex. El tiempo estimado de entrega es de 1 a 3 días hábiles a partir del despacho. El envío es gratis en compras mayores a Q1,250, y en Santa Cruz del Quiché es gratis hasta la puerta de tu casa. Los cambios se realizan únicamente en nuestra tienda física, dentro de 15 días y con la prenda en perfecto estado.' },
                 { key: 'lavado', title: 'LAVADO Y CUIDADOS', content: 'Sigue siempre las instrucciones de la etiqueta de cada prenda: es la guía definitiva según el material. Como recomendaciones generales, lava las prendas con otras de color similar, preferentemente con agua fría; no uses cloro ni blanqueador; plancha a la temperatura adecuada a la tela y sécalas a la sombra para conservar el color.' },
-                { key: 'precio', title: 'PRECIO Y TALLAJE', content: 'Precio. Los precios publicados ya incluyen el descuento por pago en efectivo o transferencia. En tienda física y en entrega local, el pago con tarjeta, Apple Pay, Google Pay o PayPal se rige por el precio de etiqueta. Tallaje. Aunque las prendas manejan un tallaje estándar, cada marca maneja sus propias medidas, por lo que una misma talla puede variar de una prenda a otra. Si tienes dudas, escríbenos por WhatsApp.' },
+                { key: 'precio', title: 'PRECIO Y TALLAJE', content: 'Precio. Los precios publicados ya incluyen el descuento por pago en efectivo o transferencia. En tienda física y en entrega local, el pago con tarjeta, Apple Pay, Google Pay o PayPal se rige por el precio de etiqueta.\n\nTallaje. Aunque las prendas manejan un tallaje estándar, cada marca maneja sus propias medidas, por lo que una misma talla puede variar de una prenda a otra. Si tienes dudas, escríbenos por WhatsApp.' },
               ].map(block => (
-                <div key={block.key}>
+                <div key={block.key} className="border-b border-midnight/15">
                   <button
                     onClick={() => setExpanded(expanded === block.key ? null : block.key)}
-                    className="w-full py-3 text-left flex items-center justify-between text-xs uppercase tracking-wider font-medium text-midnight border-t border-midnight/15"
+                    className="w-full py-4 text-left flex items-center justify-between text-xs uppercase tracking-wider font-medium text-midnight"
                   >
                     {block.title}
                     <ChevronDown className={`w-4 h-4 transition-transform ${expanded === block.key ? 'rotate-180' : ''}`} />
