@@ -61,7 +61,7 @@ export function Footer({ onOpenInfoModal }: FooterProps) {
         <div className="flex flex-col items-center gap-3 mb-8">
           <div className="flex items-center gap-3 flex-wrap justify-center">
             {PAYMENT_LOGOS.map(p => (
-              <img key={p.alt} src={p.src} alt={p.alt} className="h-7 object-contain" loading="lazy" />
+              <img key={p.alt} src={p.src} alt={p.alt} className="h-5 object-contain" loading="lazy" />
             ))}
           </div>
           <p className="text-xs text-cream/60 italic">aplicables solo en tienda y en envíos locales</p>

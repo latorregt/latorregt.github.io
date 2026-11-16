@@ -62,7 +62,7 @@ export function Header({ onNavigate, onSearch, onOpenCart, onHome }: HeaderProps
           <nav className="hidden md:flex items-center gap-1" aria-label="Categorías">
             {navItems.map(item => (
               <div key={item.label} className="relative" onMouseEnter={() => setHovered(item.label)} onMouseLeave={() => setHovered(null)}>
-                <button className="px-4 py-2 text-xs tracking-[0.18em] uppercase font-medium text-midnight hover:text-gold transition-colors flex items-center gap-1" onClick={() => item.cat && handleNavClick(item.cat)}>
+                <button className="nav-link px-4 py-2 text-xs tracking-[0.18em] uppercase font-medium text-midnight flex items-center gap-1" onClick={() => item.cat && handleNavClick(item.cat)}>
                   {item.label}
                   {(item.children || (item.cat && tiposByCategoria[item.cat])) && <ChevronDown className="w-3 h-3" />}
                 </button>

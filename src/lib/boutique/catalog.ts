@@ -30,6 +30,10 @@ export function getRelated(product: Product, count = 4): Product[] {
 }
 export function applyFilter(filter: FilterState, sort: SortMode): Product[] {
   let result = ALL_PRODUCTS.filter(p => {
+    // When viewing Hombre category without specific tipo, exclude Accesorios, Ropa Interior, Calzado
+    if (filter.categorias.includes('Hombre') && filter.tipos.length === 0) {
+      if (['Accesorios', 'Ropa Interior', 'Calzado'].includes(p.tipo)) return false
+    }
     if (filter.categorias.length && !filter.categorias.includes(p.categoria)) return false
     if (filter.tipos.length && !filter.tipos.includes(p.tipo)) return false
     if (filter.subtipos.length && !filter.subtipos.includes(p.subtipo)) return false

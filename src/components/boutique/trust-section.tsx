@@ -21,7 +21,7 @@ export function TrustSection() {
   return (
     <section className="bg-midnight py-20 md:py-28 text-cream">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-8">
+        <div className="text-left mb-8">
           <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-3">Vestimos momentos, Construimos confianza</h2>
           <p className="text-xs tracking-[0.15em] uppercase text-cream/60">reseñas extraídas del sitio oficial de la tienda en Google</p>
         </div>
@@ -65,7 +65,7 @@ export function TrustSection() {
 
         {/* Photos row (2 in a row) */}
         <div className="relative">
-          <div className="grid grid-cols-2 gap-4 max-w-2xl mx-auto">
+          <div className="grid grid-cols-2 gap-8 max-w-2xl mx-auto">
             {customerPhotos.map((src, i) => (
               <div key={i} className="aspect-square overflow-hidden rounded-lg">
                 <img src={src} alt="Cliente de Boutique La Torre compartiendo su experiencia con la compra" className="w-full h-full object-cover" loading="lazy" />

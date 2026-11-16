@@ -15,7 +15,7 @@ export function InfoSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
             <div className="flex gap-4 mb-7">
-              <div className="flex-shrink-0 w-11 h-11 bg-midnight flex items-center justify-center text-cream">
+              <div className="flex-shrink-0 w-11 h-11 bg-midnight flex items-center justify-center text-cream rounded-lg">
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                   <circle cx="12" cy="10" r="3"/>
@@ -28,7 +28,7 @@ export function InfoSection() {
             </div>
 
             <div className="flex gap-4 mb-7">
-              <div className="flex-shrink-0 w-11 h-11 bg-midnight flex items-center justify-center text-cream">
+              <div className="flex-shrink-0 w-11 h-11 bg-midnight flex items-center justify-center text-cream rounded-lg">
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <circle cx="12" cy="12" r="10"/>
                   <polyline points="12 6 12 12 16 14"/>
@@ -45,7 +45,7 @@ export function InfoSection() {
             </div>
 
             <div className="flex gap-4 mb-7">
-              <div className="flex-shrink-0 w-11 h-11 bg-midnight flex items-center justify-center text-cream">
+              <div className="flex-shrink-0 w-11 h-11 bg-midnight flex items-center justify-center text-cream rounded-lg">
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                 </svg>
@@ -75,7 +75,7 @@ export function InfoSection() {
 
             <div className="flex flex-col sm:flex-row gap-3">
               <a href={BRAND.maps.google} target="_blank" rel="noopener noreferrer" onClick={() => track('maps_click', { dest: 'google' })}
-                 className="btn-lift flex-1 px-5 py-3 bg-midnight text-cream text-sm uppercase tracking-wider font-medium rounded-full flex items-center justify-center gap-2">
+                 className="btn-lift px-4 py-2 text-xs bg-midnight text-cream uppercase tracking-wider font-medium rounded-full flex items-center justify-center gap-2">
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                   <circle cx="12" cy="10" r="3"/>
@@ -83,7 +83,7 @@ export function InfoSection() {
                 GOOGLE MAPS
               </a>
               <a href={BRAND.maps.waze} target="_blank" rel="noopener noreferrer" onClick={() => track('maps_click', { dest: 'waze' })}
-                 className="btn-lift flex-1 px-5 py-3 bg-white border border-midnight text-midnight text-sm uppercase tracking-wider font-medium rounded-full hover:bg-midnight hover:text-cream flex items-center justify-center gap-2">
+                 className="btn-lift px-4 py-2 text-xs bg-white border border-midnight text-midnight uppercase tracking-wider font-medium rounded-full hover:bg-midnight hover:text-cream flex items-center justify-center gap-2">
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polygon points="3 11 22 2 13 21 11 13 3 11"/>
                 </svg>

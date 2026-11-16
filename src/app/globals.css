@@ -4,9 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-midnight: #0A1530;
-  --color-midnight-light: #15264F;
-  --color-midnight-deep: #050C1C;
+  --color-midnight: #0a0c2e;
+  --color-midnight-light: #1a1c4e;
+  --color-midnight-deep: #05071a;
   --color-gold: #C9A66B;
   --color-gold-light: #D9B97D;
   --color-gold-deep: #A88845;
@@ -69,7 +69,25 @@
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
-.animate-marquee { animation: marquee-scroll 40s linear infinite; }
+.animate-marquee { animation: marquee-scroll 25s linear infinite; }
+
+/* Nav underline hover effect */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--gold);
+  transition: width 300ms ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
 
 /* Header dropdown animation - more pronounced */
 @keyframes dropdown-in {
