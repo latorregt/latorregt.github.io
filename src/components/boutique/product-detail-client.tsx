@@ -1,15 +1,21 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import type { Product } from '@/data/products'
 import { formatGTQ, discountPct, sortTallas } from '@/lib/boutique/format'
 import { useCart } from '@/store/cart'
 import { track } from '@/lib/boutique/analytics'
 import { BRAND, WA_LINK } from '@/lib/boutique/brand'
+import { TopBar } from './top-bar'
+import { Header } from './header'
+import { Footer } from './footer'
+import { CartDrawer } from './cart-drawer'
+import { InfoModal } from './info-modal'
+import { EMPTY_FILTER, type FilterState } from '@/lib/boutique/catalog'
+
 import { ProductCard } from './product-card'
 import { ChevronDown, ZoomIn, ShoppingBag, X, ArrowLeft, MessageCircle } from 'lucide-react'
-import Link from 'next/link'
 import { useEffect } from 'react'
 
 interface ProductDetailClientProps {
@@ -26,6 +32,26 @@ export function ProductDetailClient({ product, related }: ProductDetailClientPro
   const add = useCart(s => s.add)
   const openCart = useCart(s => s.open)
   const router = useRouter()
+  const [infoModalKey, setInfoModalKey] = useState<string | null>(null)
+  const isCartOpen = useCart(s => s.isOpen)
+  const closeCart = useCart(s => s.close)
+
+  const navigate = useCallback((nf: Partial<FilterState>) => {
+    const p = new URLSearchParams()
+    if (nf.categorias) p.set('categoria', nf.categorias.join(','))
+    if (nf.tipos) p.set('tipo', nf.tipos.join(','))
+    if (nf.marcas) p.set('marca', nf.marcas.join(','))
+    if (nf.search) p.set('q', nf.search)
+    router.push(`/?${p.toString()}`)
+  }, [router])
+
+  const handleSearch = useCallback((q: string) => {
+    router.push(`/?q=${encodeURIComponent(q)}`)
+  }, [router])
+
+  const goHome = useCallback(() => {
+    router.push('/')
+  }, [router])
 
   useEffect(() => {
     setActiveIdx(0); setTallaSel(''); setZoomed(false); setExpanded(null)
@@ -45,17 +71,10 @@ export function ProductDetailClient({ product, related }: ProductDetailClientPro
   }
 
   return (
-    <div className="min-h-screen bg-cream">
-      {/* Top bar with back button */}
-      <div className="border-b border-midnight/10 bg-white sticky top-0 z-30">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between">
-          <button onClick={() => router.back()} className="flex items-center gap-2 text-xs uppercase tracking-wider text-midnight hover:text-gold transition-colors">
-            <ArrowLeft className="w-4 h-4" /> VOLVER
-          </button>
-          <Link href="/" className="nav-link text-xs uppercase tracking-wider text-midnight font-medium">INICIO</Link>
-        </div>
-      </div>
-
+    <div className="min-h-screen flex flex-col bg-cream">
+      <TopBar />
+      <Header onNavigate={navigate} onSearch={handleSearch} onOpenCart={openCart} onHome={goHome} />
+      <main className="flex-1">
       <div className="max-w-[1600px] mx-auto px-4 md:px-6 py-8 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
           {/* Gallery - takes 7/12 on desktop */}
@@ -221,6 +240,10 @@ export function ProductDetailClient({ product, related }: ProductDetailClientPro
           </div>
         )}
       </div>
+      </main>
+      <Footer onOpenInfoModal={setInfoModalKey} />
+      <CartDrawer isOpen={isCartOpen} onClose={closeCart} />
+      <InfoModal openKey={infoModalKey} onClose={() => setInfoModalKey(null)} onOpenInfoModal={setInfoModalKey} />
     </div>
   )
 }
