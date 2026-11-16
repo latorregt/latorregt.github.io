@@ -28,10 +28,6 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const { slug } = await params
   const product = findProductBySlug(slug)
   if (!product) notFound()
-<<<<<<< HEAD
   const related = getRelated(product, 8)
-=======
-  const related = getRelated(product, 4)
->>>>>>> 25f5bf1dc96d84d5fe8363201f8f98da36aebfea
   return <ProductDetailClient product={product} related={related} />
 }

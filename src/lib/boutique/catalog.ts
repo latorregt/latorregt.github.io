@@ -16,7 +16,6 @@ export type SortMode = 'recent' | 'price-high' | 'price-low' | 'featured'
 export function findProductBySlug(slug: string): Product | undefined {
   return ALL_PRODUCTS.find(p => p.slug === slug)
 }
-<<<<<<< HEAD
 export function getRelated(product: Product, count = 8): Product[] {
   // First: same tipo + same marca
   let related = ALL_PRODUCTS.filter(p => p.id !== product.id && p.categoria === product.categoria && p.tipo === product.tipo && p.marca === product.marca && !p.prontoVolvera)
@@ -28,14 +27,6 @@ export function getRelated(product: Product, count = 8): Product[] {
     related = related.concat(more)
   }
   // Then: same marca + different tipo
-=======
-export function getRelated(product: Product, count = 4): Product[] {
-  let related = ALL_PRODUCTS.filter(p => p.id !== product.id && p.categoria === product.categoria && p.tipo === product.tipo && !p.prontoVolvera)
-  if (related.length < count) {
-    const more = ALL_PRODUCTS.filter(p => p.id !== product.id && p.categoria === product.categoria && !related.includes(p) && !p.prontoVolvera)
-    related = related.concat(more)
-  }
->>>>>>> 25f5bf1dc96d84d5fe8363201f8f98da36aebfea
   if (related.length < count) {
     const more = ALL_PRODUCTS.filter(p => p.id !== product.id && p.marca === product.marca && !related.includes(p) && !p.prontoVolvera)
     related = related.concat(more)

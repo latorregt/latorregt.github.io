@@ -15,11 +15,7 @@ const CATS = [
 export function Categories({ onSelect }: CategoriesProps) {
   return (
     <section id="categorias" className="py-20 md:py-28 bg-cream">
-<<<<<<< HEAD
       <div className="max-w-[1600px] mx-auto px-4 md:px-6">
-=======
-      <div className="max-w-7xl mx-auto px-6">
->>>>>>> 25f5bf1dc96d84d5fe8363201f8f98da36aebfea
         <div className="text-center mb-14">
           <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-3">— CATÁLOGO —</p>
           <h2 className="font-serif text-3xl md:text-5xl font-semibold text-midnight mb-3">Nuestras Colecciones</h2>
