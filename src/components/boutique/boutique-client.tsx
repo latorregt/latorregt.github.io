@@ -18,6 +18,19 @@ import { useCart } from '@/store/cart'
 
 type View = 'home' | 'listing'
 
+function parseUrlFilter(): { view: View; filter: FilterState } {
+  if (typeof window === 'undefined') return { view: 'home', filter: EMPTY_FILTER }
+  const params = new URLSearchParams(window.location.search)
+  const newFilter: FilterState = { ...EMPTY_FILTER }
+  const c = params.get('categoria'); if (c) newFilter.categorias = c.split(',').filter(Boolean)
+  const t = params.get('tipo'); if (t) newFilter.tipos = t.split(',').filter(Boolean)
+  const m = params.get('marca'); if (m) newFilter.marcas = m.split(',').filter(Boolean)
+  const q = params.get('q'); if (q) newFilter.search = q
+  if (params.get('sale') === 'true') newFilter.sale = true
+  const hasFilter = c || t || m || q || params.get('sale') === 'true'
+  return { view: hasFilter ? 'listing' : 'home', filter: newFilter }
+}
+
 export function BoutiqueClient() {
   const router = useRouter()
   const [view, setView] = useState<View>('home')
@@ -27,62 +40,46 @@ export function BoutiqueClient() {
   const isCartOpen = useCart(s => s.isOpen)
   const closeCart = useCart(s => s.close)
 
+  useEffect(() => { const { view: v, filter: f } = parseUrlFilter(); setView(v); setFilter(f) }, [])
   useEffect(() => {
-    if (typeof window === 'undefined') return
-    const params = new URLSearchParams(window.location.search)
-    const categoria = params.get('categoria')
-    const tipo = params.get('tipo')
-    const marca = params.get('marca')
-    const search = params.get('q')
-    const sale = params.get('sale')
-    const newFilter: FilterState = { ...EMPTY_FILTER }
-    if (categoria) newFilter.categorias = categoria.split(',').filter(Boolean)
-    if (tipo) newFilter.tipos = tipo.split(',').filter(Boolean)
-    if (marca) newFilter.marcas = marca.split(',').filter(Boolean)
-    if (search) newFilter.search = search
-    if (sale === 'true') newFilter.sale = true
-    if (categoria || tipo || marca || search || sale === 'true') {
-      setView('listing'); setFilter(newFilter)
-    } else { setView('home') }
+    const h = () => { const { view: v, filter: f } = parseUrlFilter(); setView(v); setFilter(f) }
+    window.addEventListener('popstate', h)
+    return () => window.removeEventListener('popstate', h)
   }, [])
 
-  const updateUrl = useCallback((newFilter: FilterState, newView: View) => {
-    if (typeof window === 'undefined') return
-    const params = new URLSearchParams()
-    if (newView === 'listing') {
-      if (newFilter.categorias.length) params.set('categoria', newFilter.categorias.join(','))
-      if (newFilter.tipos.length) params.set('tipo', newFilter.tipos.join(','))
-      if (newFilter.marcas.length) params.set('marca', newFilter.marcas.join(','))
-      if (newFilter.search) params.set('q', newFilter.search)
-      if (newFilter.sale) params.set('sale', 'true')
+  const pushUrl = useCallback((f: FilterState, v: View) => {
+    const p = new URLSearchParams()
+    if (v === 'listing') {
+      if (f.categorias.length) p.set('categoria', f.categorias.join(','))
+      if (f.tipos.length) p.set('tipo', f.tipos.join(','))
+      if (f.marcas.length) p.set('marca', f.marcas.join(','))
+      if (f.search) p.set('q', f.search)
+      if (f.sale) p.set('sale', 'true')
     }
-    const qs = params.toString()
-    window.history.replaceState({}, '', qs ? `/?${qs}` : '/')
+    window.history.pushState({}, '', p.toString() ? `/?${p}` : '/')
   }, [])
 
-  const navigate = useCallback((newFilter: Partial<FilterState>) => {
-    const isSaleNav = (newFilter as Record<string, unknown>).sale !== undefined
-    const merged: FilterState = isSaleNav ? { ...EMPTY_FILTER, sale: true } : { ...EMPTY_FILTER, ...newFilter }
-    setFilter(merged); setView('listing'); updateUrl(merged, 'listing')
-    if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [updateUrl])
+  const navigate = useCallback((nf: Partial<FilterState>) => {
+    const isSale = (nf as Record<string, unknown>).sale !== undefined
+    const merged = isSale ? { ...EMPTY_FILTER, sale: true } : { ...EMPTY_FILTER, ...nf }
+    setFilter(merged); setView('listing'); pushUrl(merged, 'listing')
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [pushUrl])
 
   const handleSearch = useCallback((q: string) => {
-    const merged: FilterState = { ...EMPTY_FILTER, search: q }
-    setFilter(merged); setView('listing'); updateUrl(merged, 'listing')
-    if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [updateUrl])
+    const merged = { ...EMPTY_FILTER, search: q }
+    setFilter(merged); setView('listing'); pushUrl(merged, 'listing')
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [pushUrl])
 
   const goHome = useCallback(() => {
-    router.push('/')
-  }, [router])
+    setView('home'); setFilter(EMPTY_FILTER); window.history.pushState({}, '', '/')
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [])
 
-  const openProduct = useCallback((slug: string) => {
-    router.push(`/producto/${slug}`)
-  }, [router])
-
-  const scrollToCategorias = useCallback(() => { document.getElementById('categorias')?.scrollIntoView({ behavior: 'smooth' }) }, [])
-  const scrollToInfo = useCallback(() => { document.getElementById('info')?.scrollIntoView({ behavior: 'smooth' }) }, [])
+  const openProduct = useCallback((slug: string) => { router.push(`/producto/${slug}`) }, [router])
+  const scrollC = useCallback(() => { document.getElementById('categorias')?.scrollIntoView({ behavior: 'smooth' }) }, [])
+  const scrollI = useCallback(() => { document.getElementById('info')?.scrollIntoView({ behavior: 'smooth' }) }, [])
 
   return (
     <div className="min-h-screen flex flex-col bg-cream">
@@ -91,14 +88,14 @@ export function BoutiqueClient() {
       <main className="flex-1">
         {view === 'home' ? (
           <>
-            <Hero onColecciones={scrollToCategorias} onComoLlegar={scrollToInfo} />
+            <Hero onColecciones={scrollC} onComoLlegar={scrollI} />
             <Categories onSelect={(cat) => navigate({ categorias: cat.split(',') })} />
             <FilterPhrases onSelect={(f) => navigate(f)} />
             <InfoSection />
             <TrustSection />
           </>
         ) : (
-          <ProductGrid filter={filter} onOpenProduct={openProduct} />
+          <ProductGrid filter={filter} onOpenProduct={openProduct} onNavigate={navigate} />
         )}
       </main>
       <Footer onOpenInfoModal={setInfoModalKey} />
