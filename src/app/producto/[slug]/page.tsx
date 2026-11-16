@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import { products } from '@/data/products'
 import { findProductBySlug, getRelated } from '@/lib/boutique/catalog'
 import { ProductDetailClient } from '@/components/boutique/product-detail-client'
+import { ogImageUrl } from '@/lib/boutique/images'
 import type { Metadata } from 'next'
 
 export function generateStaticParams() {
@@ -12,13 +13,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const product = findProductBySlug(slug)
   if (!product) return { title: 'Producto no encontrado' }
+  const description = product.descripcion.slice(0, 160) || `${product.marca} · ${product.nombre}`
+  const url = `/producto/${product.slug}/`
   return {
-    title: product.nombre,
-    description: product.descripcion.slice(0, 160) || `${product.marca} · ${product.nombre}`,
+    title: `${product.nombre} · ${product.marca}`,
+    description,
+    alternates: { canonical: url },
     openGraph: {
-      title: `${product.nombre} | Boutique La Torre`,
-      description: product.descripcion.slice(0, 160),
-      images: product.imagenes.map(i => ({ url: i, width: 1200, height: 1200, alt: product.nombre })),
+      title: `${product.nombre} · ${product.marca} | Boutique La Torre`,
+      description,
+      url,
+      images: product.imagenes.slice(0, 1).map(i => ({ url: ogImageUrl(i), width: 800, height: 800, alt: `${product.marca} · ${product.nombre}` })),
       type: 'website',
     },
   }

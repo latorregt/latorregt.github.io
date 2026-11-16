@@ -1,6 +1,7 @@
 'use client'
 
 import { track } from '@/lib/boutique/analytics'
+import { Picture } from '@/components/boutique/picture'
 
 interface CategoriesProps {
   onSelect: (cat: string) => void
@@ -31,7 +32,7 @@ export function Categories({ onSelect }: CategoriesProps) {
               aria-label={`Ver colección ${cat.label}`}
             >
               <div className={`relative ${cat.big ? 'aspect-[3/4]' : 'aspect-[3/4]'}`}>
-                <img src={cat.image} alt={cat.alt} className="w-full h-full object-cover" loading="lazy" />
+                <Picture src={cat.image} alt={cat.alt} className="w-full h-full object-cover" sizes="(min-width: 768px) 34vw, 100vw" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-black/30" />
                 <div className="absolute inset-0 flex flex-col items-center justify-end pb-10">
                   <span className={`font-serif font-semibold text-cream tracking-wider drop-shadow-lg ${cat.big ? 'text-3xl md:text-4xl' : 'text-2xl md:text-3xl'}`}>

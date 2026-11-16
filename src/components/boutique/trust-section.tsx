@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { reviews } from '@/data/reviews'
+import { Picture } from '@/components/boutique/picture'
 
 export function TrustSection() {
   const [reviewIdx, setReviewIdx] = useState(0)
@@ -22,7 +23,7 @@ export function TrustSection() {
           {reviews.length > 3 && (<><button onClick={() => setReviewIdx(i => (i - 1 + maxReviews) % maxReviews)} aria-label="Reseñas anteriores" className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-midnight-light text-cream w-10 h-10 rounded-full flex items-center justify-center hover:bg-gold hover:text-midnight transition-colors z-10"><svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="15 18 9 12 15 6"/></svg></button><button onClick={() => setReviewIdx(i => (i + 1) % maxReviews)} aria-label="Reseñas siguientes" className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-midnight-light text-cream w-10 h-10 rounded-full flex items-center justify-center hover:bg-gold hover:text-midnight transition-colors z-10"><svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="9 18 15 12 9 6"/></svg></button></>)}
         </div>
         <div className="relative">
-          <div className="grid grid-cols-2 gap-6 md:gap-8 max-w-3xl mx-auto">{visiblePhotos.map((src, i) => (<div key={i} className="aspect-[4/5] overflow-hidden rounded-lg"><img src={src} alt="Cliente de Boutique La Torre" className="w-full h-full object-cover" loading="lazy" /></div>))}</div>
+          <div className="grid grid-cols-2 gap-6 md:gap-8 max-w-3xl mx-auto">{visiblePhotos.map((src, i) => (<div key={i} className="aspect-[4/5] overflow-hidden rounded-lg"><Picture src={src} alt="Cliente de Boutique La Torre" className="w-full h-full object-cover" sizes="(min-width: 768px) 370px, 46vw" /></div>))}</div>
           {customerPhotos.length > 2 && (<><button onClick={() => setPhotoIdx(i => (i - 1 + maxPhotos) % maxPhotos)} aria-label="Fotos anteriores" className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-midnight-light text-cream w-10 h-10 rounded-full flex items-center justify-center hover:bg-gold hover:text-midnight transition-colors z-10"><svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="15 18 9 12 15 6"/></svg></button><button onClick={() => setPhotoIdx(i => (i + 1) % maxPhotos)} aria-label="Fotos siguientes" className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-midnight-light text-cream w-10 h-10 rounded-full flex items-center justify-center hover:bg-gold hover:text-midnight transition-colors z-10"><svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="9 18 15 12 9 6"/></svg></button></>)}
         </div>
       </div>

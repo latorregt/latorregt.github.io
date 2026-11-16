@@ -4,6 +4,8 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/compone
 import { X, ChevronDown, ExternalLink, Phone, Mail, MapPin } from 'lucide-react'
 import { BRAND } from '@/lib/boutique/brand'
 import { track } from '@/lib/boutique/analytics'
+import { Picture } from '@/components/boutique/picture'
+import type { ReactElement } from 'react'
 
 interface InfoModalProps { openKey: string | null; onClose: () => void; onOpenInfoModal: (key: string) => void }
 
@@ -40,8 +42,8 @@ function QAPage() {
         <h3 className="font-serif text-xl font-semibold text-midnight mb-3">Guía de tallas</h3>
         <p className="text-sm text-foreground/80 mb-4">Aunque las prendas manejan un tallaje estándar, cada marca maneja sus propias medidas. Antes de comprar, puedes pedirnos las medidas exactas de cualquier prenda.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          <img src="/images/marca/Gemini_Generated_Image_hb8eojhb8eojhb8e.jpg" alt="Cómo medir una prenda de arriba" className="w-full rounded-lg" />
-          <img src="/images/marca/Gemini_Generated_Image_ojbj02ojbj02ojbj.jpg" alt="Cómo medir una prenda de abajo" className="w-full rounded-lg" />
+          <Picture src="/images/marca/Gemini_Generated_Image_hb8eojhb8eojhb8e.jpg" alt="Cómo medir una prenda de arriba" className="w-full rounded-lg" sizes="(min-width: 768px) 400px, 92vw" />
+          <Picture src="/images/marca/Gemini_Generated_Image_ojbj02ojbj02ojbj.jpg" alt="Cómo medir una prenda de abajo" className="w-full rounded-lg" sizes="(min-width: 768px) 400px, 92vw" />
         </div>
         <div className="overflow-x-auto">
           <table className="w-full text-sm border border-midnight/10">
@@ -57,7 +59,7 @@ function QAPage() {
   )
 }
 
-const PAGES: Record<string, { title: string; render: () => JSX.Element }> = {
+const PAGES: Record<string, { title: string; render: () => ReactElement }> = {
   qa: { title: 'Q&A', render: QAPage },
   contacto: { title: 'Contacto', render: () => (<div><h2 className="font-serif text-2xl font-semibold text-midnight mb-1">Contacto</h2><p className="text-sm text-muted-foreground mb-6">¿Tienes dudas sobre un producto, un pedido o tu compra? Escríbenos.</p><div className="space-y-4"><a href={`https://wa.me/${BRAND.whatsapp}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 border border-midnight/10 rounded hover:border-gold transition-colors"><Phone className="w-5 h-5 text-gold" /><div><p className="text-xs uppercase tracking-wider text-muted-foreground">WhatsApp</p><p className="text-sm text-midnight">{BRAND.phone}</p></div></a><a href={`mailto:${BRAND.email}`} className="flex items-center gap-3 p-3 border border-midnight/10 rounded hover:border-gold transition-colors"><Mail className="w-5 h-5 text-gold" /><div><p className="text-xs uppercase tracking-wider text-muted-foreground">Correo electrónico</p><p className="text-sm text-midnight">{BRAND.email}</p></div></a><div className="flex items-start gap-3 p-3 border border-midnight/10 rounded"><MapPin className="w-5 h-5 text-gold mt-0.5" /><div><p className="text-xs uppercase tracking-wider text-muted-foreground">Tienda física</p><p className="text-sm text-midnight">{BRAND.addressFull}</p><p className="text-xs text-muted-foreground mt-1">{BRAND.hours}</p></div></div></div></div>) },
   atencion: { title: 'Atención inmediata', render: () => (<div className="text-center py-8"><h2 className="font-serif text-2xl font-semibold text-midnight mb-3">Atención inmediata</h2><p className="text-sm text-muted-foreground mb-6">¿Necesitas información de inmediato? Llámanos.</p><a href={BRAND.phoneInmediatoLink} className="inline-flex items-center gap-2 px-6 py-3 bg-midnight text-cream text-sm uppercase tracking-wider hover:bg-midnight-light transition-colors"><Phone className="w-4 h-4" />{BRAND.phoneInmediato}</a></div>) },

@@ -3,9 +3,14 @@
 import csv, json, re, urllib.parse
 from pathlib import Path
 
-CATALOG = '/home/z/my-project/upload/CATALOGO 402bb82d8bb18092b7c8c4bb02397876.csv'
-REVIEWS = '/home/z/my-project/upload/RESEÑAS ea9f0fee8dbb4147a8f2f24645e162e9.csv'
-OUT_DIR = Path('/home/z/my-project/src/data')
+import sys
+ROOT = Path(__file__).resolve().parent.parent
+# Uso: python3 scripts/generate-data.py <CATALOGO.csv> <RESEÑAS.csv>
+if len(sys.argv) < 3:
+    sys.exit('Uso: python3 scripts/generate-data.py <CATALOGO.csv> <RESEÑAS.csv>')
+CATALOG = sys.argv[1]
+REVIEWS = sys.argv[2]
+OUT_DIR = ROOT / 'src' / 'data'
 
 def slugify(s):
     if not s: return ''

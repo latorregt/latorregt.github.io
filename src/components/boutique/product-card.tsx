@@ -6,6 +6,9 @@ import { formatGTQ, discountPct, sortTallas } from '@/lib/boutique/format'
 import { useCart } from '@/store/cart'
 import { track } from '@/lib/boutique/analytics'
 import { useRouter } from 'next/navigation'
+import { Picture } from '@/components/boutique/picture'
+
+const CARD_SIZES = '(min-width: 1024px) 24vw, (min-width: 768px) 32vw, 48vw'
 
 interface ProductCardProps {
   product: Product
@@ -14,6 +17,7 @@ interface ProductCardProps {
 
 export function ProductCard({ product, onOpen }: ProductCardProps) {
   const [hovered, setHovered] = useState(false)
+  const [everHovered, setEverHovered] = useState(false)
   const [selectedTalla, setSelectedTalla] = useState<string | null>(null)
   const add = useCart(s => s.add)
   const openCart = useCart(s => s.open)
@@ -40,25 +44,27 @@ export function ProductCard({ product, onOpen }: ProductCardProps) {
   return (
     <article
       className="group cursor-pointer"
-      onMouseEnter={() => setHovered(true)}
+      onMouseEnter={() => { setHovered(true); setEverHovered(true) }}
       onMouseLeave={() => { setHovered(false); setSelectedTalla(null) }}
       onClick={handleCardClick}
     >
       {/* Image */}
       <div className="relative aspect-[3/4] overflow-hidden bg-cream-deep card-zoom">
-        <img
+        <Picture
           src={product.imagenes[0]}
-          alt={product.nombre}
-          className={`w-full h-full object-cover ${hovered && hasSecondImg ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
-          loading="lazy"
+          alt={`${product.marca} · ${product.nombre}`}
+          className="w-full h-full object-cover"
+          sizes={CARD_SIZES}
         />
-        {hasSecondImg && (
-          <img
+        {/* La 2ª imagen solo se descarga cuando el cursor pasa por la tarjeta por primera vez */}
+        {hasSecondImg && everHovered && (
+          <Picture
             src={product.imagenes[1]}
             alt=""
             className={`absolute inset-0 w-full h-full object-cover ${hovered ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
-            loading="lazy"
-            aria-hidden="true"
+            sizes={CARD_SIZES}
+            loading="eager"
+            ariaHidden
           />
         )}
 

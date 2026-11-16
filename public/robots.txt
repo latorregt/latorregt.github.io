@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://latorre.pages.dev/sitemap.xml
+Sitemap: https://latorre.boutiquegt.workers.dev/sitemap.xml

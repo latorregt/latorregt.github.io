@@ -16,6 +16,7 @@ import { EMPTY_FILTER, type FilterState } from '@/lib/boutique/catalog'
 
 import { ProductCard } from './product-card'
 import { ChevronDown, ZoomIn, ShoppingBag, X, ArrowLeft, MessageCircle } from 'lucide-react'
+import { Picture } from '@/components/boutique/picture'
 
 interface ProductDetailClientProps {
   product: Product
@@ -83,7 +84,7 @@ export function ProductDetailClient({ product, related }: ProductDetailClientPro
       <div className="max-w-[1600px] mx-auto px-4 md:px-6 py-8 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
           {/* Gallery - takes 7/12 on desktop */}
-          <div className="md:col-span-7 flex flex-row gap-3 md:gap-4">
+          <div className="md:col-span-7 flex flex-col-reverse md:flex-row gap-3 md:gap-4">
             {/* Thumbnails (vertical on desktop, horizontal scroll on mobile) */}
             {product.imagenes.length > 1 && (
               <div className="flex md:flex-col gap-2 overflow-x-auto md:overflow-x-visible scrollbar-boutique md:max-h-[500px]">
@@ -93,7 +94,7 @@ export function ProductDetailClient({ product, related }: ProductDetailClientPro
                     onClick={() => setActiveIdx(i)}
                     className={`flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded overflow-hidden border-2 ${activeIdx === i ? 'border-gold' : 'border-transparent'}`}
                   >
-                    <img src={img} alt="" className="w-full h-full object-cover" />
+                    <Picture src={img} alt={`${product.nombre} — vista ${i + 1}`} className="w-full h-full object-cover" sizes="80px" widths={[200]} />
                   </button>
                 ))}
               </div>
@@ -109,9 +110,13 @@ export function ProductDetailClient({ product, related }: ProductDetailClientPro
                 onMouseUp={handleMouseUp}
                 onMouseLeave={handleMouseUp}
               >
-                <img
+                <Picture
+                  key={activeIdx}
                   src={product.imagenes[activeIdx] || product.imagenes[0]}
-                  alt={product.nombre}
+                  alt={`${product.marca} · ${product.nombre}`}
+                  sizes="(min-width: 768px) 55vw, 92vw"
+                  priority
+                  draggable={false}
                   style={zoomed ? { transform: `scale(1.5) translate(${dragOffset.x/3}px, ${dragOffset.y/3}px)` } : {}}
                   className={`max-w-full max-h-[800px] object-contain transition-transform duration-300 ${zoomed ? 'cursor-grab active:cursor-grabbing' : 'cursor-zoom-in'}`}
                 />

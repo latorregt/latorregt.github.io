@@ -128,7 +128,6 @@
 .no-scrollbar { scrollbar-width: none; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 
-picture img { display: block; width: 100%; height: 100%; }
 
 .bg-midnight-section { background: var(--midnight); color: var(--cream); }
 .bg-midnight-section h1, .bg-midnight-section h2, .bg-midnight-section h3 { color: var(--cream); }

@@ -7,6 +7,7 @@ import { formatGTQ, waLink } from '@/lib/boutique/format'
 import { BRAND } from '@/lib/boutique/brand'
 import { track } from '@/lib/boutique/analytics'
 import { useState, useEffect } from 'react'
+import { Picture } from '@/components/boutique/picture'
 
 interface CartDrawerProps { isOpen: boolean; onClose: () => void }
 
@@ -70,7 +71,7 @@ export function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                 <div className="space-y-3 mb-5">
                   {items.map(item => (
                     <div key={`${item.productId}-${item.talla}`} className="flex gap-3 bg-white p-3 rounded-lg border border-midnight/5">
-                      <img src={item.imagen} alt={item.nombre} className="w-16 h-20 object-cover rounded" loading="lazy" />
+                      <Picture src={item.imagen} alt={item.nombre} className="w-16 h-20 object-cover rounded" sizes="64px" widths={[200]} />
                       <div className="flex-1 min-w-0">
                         <p className="text-[10px] uppercase tracking-wider text-gold font-medium">{item.marca}</p>
                         <p className="product-name text-sm text-midnight font-medium line-clamp-1">{item.nombre}</p>

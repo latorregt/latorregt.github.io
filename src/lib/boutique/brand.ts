@@ -1,3 +1,6 @@
+/** Dirección pública del sitio. Al comprar el dominio propio, cambiar SOLO aquí y en public/robots.txt, y volver a correr `npm run sitemap`. */
+export const SITE_URL = "https://latorre.boutiquegt.workers.dev";
+
 export const BRAND = {
   name: "La Torre",
   tagline: "moda y estilo",

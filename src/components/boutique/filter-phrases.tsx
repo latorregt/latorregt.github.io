@@ -6,7 +6,7 @@ interface FilterPhrasesProps {
   onSelect: (filter: Record<string, string[]>) => void
 }
 
-const PHRASES = [
+const PHRASES: { label: string; filter: Record<string, string[]> }[] = [
   { label: 'Polos Tendencia', filter: { categorias: ['Hombre'], tipos: ['Polos'] } },
   { label: 'Prendas Infantiles', filter: { categorias: ['Infantil'] } },
   { label: "Levi's", filter: { marcas: ["Levi's"] } },

@@ -1,6 +1,7 @@
 'use client'
 
 import { track } from '@/lib/boutique/analytics'
+import { Picture } from '@/components/boutique/picture'
 
 interface HeroProps {
   onColecciones: () => void
@@ -11,13 +12,14 @@ export function Hero({ onColecciones, onComoLlegar }: HeroProps) {
   return (
     <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden" aria-label="Sección de bienvenida">
       <div className="absolute inset-0">
-        <img
+        <Picture
           src="/images/marca/Boutique_La_Torre_iluminada_de_noche.png"
           alt="Boutique La Torre iluminada de noche en Santa Cruz del Quiché"
           className="w-full h-full object-cover"
           style={{ objectPosition: 'center 15%' }}
-          loading="eager"
-          fetchPriority="high"
+          sizes="(max-aspect-ratio: 1/1) 200vh, 100vw"
+          widths={[600, 1200, 1920]}
+          priority
         />
         {/* Black opacity overlay (no color tint) - heavier at top and bottom for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/25 to-black/70" />
