@@ -16,7 +16,6 @@ import { EMPTY_FILTER, type FilterState } from '@/lib/boutique/catalog'
 
 import { ProductCard } from './product-card'
 import { ChevronDown, ZoomIn, ShoppingBag, X, ArrowLeft, MessageCircle } from 'lucide-react'
-import { useEffect } from 'react'
 
 interface ProductDetailClientProps {
   product: Product
