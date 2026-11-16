@@ -68,7 +68,7 @@ export function ProductGrid({ filter, onOpenProduct }: ProductGridProps) {
 
   return (
     <section className="py-10 md:py-14 bg-cream min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+      <div className="max-w-[1600px] mx-auto px-4 md:px-6">
         <div className="mb-6 flex items-center justify-between flex-wrap gap-4">
           <div>
             <p className="text-xs tracking-[0.2em] uppercase text-gold mb-1">Catálogo</p>
@@ -138,7 +138,16 @@ export function ProductGrid({ filter, onOpenProduct }: ProductGridProps) {
         ) : (
           <>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-              {visible.map(p => (<ProductCard key={p.id} product={p} onOpen={onOpenProduct} />))}
+              {visible.map((p, i) => (
+                <div key={p.id} className="contents">
+                  {i === 8 && (
+                    <div className="col-span-2 lg:col-span-2 row-span-1 relative overflow-hidden rounded-lg">
+                      <img src="/images/marca/Por_cada_momento_para_cada_integrante.png" alt="Por cada momento, para cada integrante" className="w-full h-full object-cover" loading="lazy" />
+                    </div>
+                  )}
+                  <ProductCard product={p} onOpen={onOpenProduct} />
+                </div>
+              ))}
             </div>
             {visibleCount < filtered.length && (
               <div className="text-center mt-12">
