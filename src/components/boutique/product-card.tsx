@@ -85,7 +85,11 @@ export function ProductCard({ product, onOpen }: ProductCardProps) {
                 {tallas.map(t => (
                   <button
                     key={t}
+<<<<<<< HEAD
                     onClick={(e) => { e.stopPropagation(); setSelectedTalla(selectedTalla === t ? null : t) }}
+=======
+                    onClick={(e) => { e.stopPropagation(); setSelectedTalla(t) }}
+>>>>>>> 25f5bf1dc96d84d5fe8363201f8f98da36aebfea
                     className={`min-w-[28px] px-1.5 py-0.5 text-[10px] font-medium transition-colors ${
                       selectedTalla === t
                         ? 'bg-midnight text-cream'
