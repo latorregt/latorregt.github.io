@@ -46,7 +46,9 @@ export function AutoButtons({ type, onNavigate }: AutoButtonsProps) {
   const [scrollIdx, setScrollIdx] = useState(0)
   const maxVisible = 9
   const needsScroll = buttons.length > maxVisible
-  const visibleButtons = needsScroll ? buttons.slice(scrollIdx, scrollIdx + maxVisible) : buttons
+  const buttonWidth = 112 // w-28 = 112px + gap
+  const gap = 16 // md:gap-4
+  const stepWidth = buttonWidth + gap
 
   const handleClick = (btn: { label: string; estilo: string }) => {
     track('auto_button_click', { type, label: btn.label })
@@ -67,13 +69,13 @@ export function AutoButtons({ type, onNavigate }: AutoButtonsProps) {
             <ChevronLeft className="w-4 h-4" />
           </button>
         )}
-        <div key={scrollIdx} className="flex items-center gap-3 md:gap-4 overflow-hidden justify-center flex-1" style={{ animation: "slide-in-right 300ms ease-out" }}>
-          {visibleButtons.map((btn) => (
+        <div className="overflow-hidden flex-1"><div className="flex items-center gap-3 md:gap-4 transition-transform duration-500 ease-out" style={{ transform: `translateX(-${scrollIdx * stepWidth}px)` }}>
+          {buttons.map((btn) => (
             <button key={btn.label} onClick={() => handleClick(btn)} className="flex-shrink-0 w-24 h-24 md:w-28 md:h-28 rounded-full bg-white border-2 border-midnight/15 hover:border-gold hover:bg-gold/5 transition-colors flex items-center justify-center text-center">
               <span className="text-[10px] md:text-xs uppercase tracking-wider font-medium text-midnight px-2 leading-tight">{btn.label}</span>
             </button>
           ))}
-        </div>
+        </div></div>
         {needsScroll && scrollIdx < buttons.length - maxVisible && (
           <button onClick={() => setScrollIdx(i => Math.min(buttons.length - maxVisible, i + 1))} className="flex-shrink-0 w-8 h-8 rounded-full bg-white border border-midnight/15 flex items-center justify-center text-midnight hover:bg-midnight hover:text-cream transition-colors" aria-label="Siguiente">
             <ChevronRight className="w-4 h-4" />
