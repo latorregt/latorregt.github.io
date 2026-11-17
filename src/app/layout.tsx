@@ -1,13 +1,40 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter, Great_Vibes } from "next/font/google";
+import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { SITE_URL } from "@/lib/boutique/brand";
 
-const playfair = Playfair_Display({ variable: "--font-playfair", subsets: ["latin"], display: "swap", weight: ["400", "500", "600", "700", "800"] });
-const inter = Inter({ variable: "--font-inter", subsets: ["latin"], display: "swap", weight: ["300", "400", "500", "600", "700"] });
-const greatVibes = Great_Vibes({ variable: "--font-great-vibes", subsets: ["latin"], display: "swap", weight: ["400"] });
+const playfair = localFont({
+  src: [
+    { path: "../fonts/playfair-display-latin-400-normal.woff2", weight: "400" },
+    { path: "../fonts/playfair-display-latin-500-normal.woff2", weight: "500" },
+    { path: "../fonts/playfair-display-latin-600-normal.woff2", weight: "600" },
+    { path: "../fonts/playfair-display-latin-700-normal.woff2", weight: "700" },
+    { path: "../fonts/playfair-display-latin-800-normal.woff2", weight: "800" },
+  ],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
+const inter = localFont({
+  src: [
+    { path: "../fonts/inter-latin-300-normal.woff2", weight: "300" },
+    { path: "../fonts/inter-latin-400-normal.woff2", weight: "400" },
+    { path: "../fonts/inter-latin-500-normal.woff2", weight: "500" },
+    { path: "../fonts/inter-latin-600-normal.woff2", weight: "600" },
+    { path: "../fonts/inter-latin-700-normal.woff2", weight: "700" },
+  ],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const greatVibes = localFont({
+  src: "../fonts/great-vibes-latin-400-normal.woff2",
+  variable: "--font-great-vibes",
+  display: "swap",
+  weight: "400",
+});
 
 const GA_ID = "G-EK0DD0WE83";
 
