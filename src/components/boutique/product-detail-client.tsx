@@ -12,7 +12,7 @@ import { Header } from './header'
 import { Footer } from './footer'
 import { CartDrawer } from './cart-drawer'
 import { InfoModal } from './info-modal'
-import { EMPTY_FILTER, type FilterState } from '@/lib/boutique/catalog'
+import { EMPTY_FILTER, type FilterState, filterToParams } from '@/lib/boutique/catalog'
 
 import { ProductCard } from './product-card'
 import { ChevronDown, ZoomIn, ShoppingBag, X, ArrowLeft, MessageCircle } from 'lucide-react'
@@ -39,12 +39,9 @@ export function ProductDetailClient({ product, related }: ProductDetailClientPro
   const closeCart = useCart(s => s.close)
 
   const navigate = useCallback((nf: Partial<FilterState>) => {
-    const p = new URLSearchParams()
-    if (nf.categorias) p.set('categoria', nf.categorias.join(','))
-    if (nf.tipos) p.set('tipo', nf.tipos.join(','))
-    if (nf.marcas) p.set('marca', nf.marcas.join(','))
-    if (nf.search) p.set('q', nf.search)
-    router.push(`/?${p.toString()}`)
+    // El encabezado manda { sale: ['true'] } para SALE.
+    const p = filterToParams({ ...nf, sale: (nf as Record<string, unknown>).sale !== undefined })
+    router.push(p.toString() ? `/?${p}` : '/')
   }, [router])
 
   const handleSearch = useCallback((q: string) => {

@@ -8,6 +8,15 @@ import { BRAND } from '@/lib/boutique/brand'
 import { track } from '@/lib/boutique/analytics'
 import { useState, useEffect } from 'react'
 import { Picture } from '@/components/boutique/picture'
+import { DEPARTAMENTOS, MUNICIPIOS } from '@/data/guatemala'
+
+/** destino se guarda como "Municipio, Departamento" */
+function leerDestino(d: string): { depto: string; muni: string } {
+  const i = d.lastIndexOf(', ')
+  if (i < 0) return { depto: '', muni: '' }
+  const depto = d.slice(i + 2), muni = d.slice(0, i)
+  return MUNICIPIOS[depto]?.includes(muni) ? { depto, muni } : { depto: '', muni: '' }
+}
 
 interface CartDrawerProps { isOpen: boolean; onClose: () => void }
 
@@ -26,16 +35,23 @@ export function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
   const count = useCart(s => s.count())
 
   useEffect(() => { if (isOpen && step === 2) track('begin_checkout', { items: count }) }, [isOpen, step, count])
+  // Departamento elegido aunque todavía no haya municipio (por eso no vive solo en `destino`).
+  const guardado = leerDestino(destino)
+  // null = el cliente aún no tocó el select; se usa el departamento guardado (el carrito se recupera de localStorage).
+  const [deptoSel, setDepto] = useState<string | null>(null)
+  const depto = deptoSel ?? guardado.depto
+  const muni = guardado.depto === depto ? guardado.muni : ''
+  const destinoListo = entrega === 'retiro' || (entrega === 'envio' && !!depto && !!muni)
 
   const handleSendWhatsApp = () => {
-    if (items.length === 0) return
+    if (items.length === 0 || !destinoListo) return
     track('send_order_whatsapp', { items: count, subtotal })
     const lines = items.map((i, idx) => `${idx + 1}. ${i.nombre} · ${i.marca} · Talla ${i.talla || '—'} · Color ${i.color} · Cant. ${i.cantidad}`).join('\n')
     const cartParams = items.map(i => `${i.slug}|${i.talla || ''}|${i.color}|${i.cantidad}`).join(',')
     const cartUrl = `${typeof window !== 'undefined' ? window.location.origin : ''}/?carrito=${encodeURIComponent(cartParams)}`
     const entregaStr = entrega === 'envio' ? 'Envío' : entrega === 'retiro' ? 'Retiro en tienda' : '—'
-    const destinoStr = entrega === 'envio' ? (destino || '—') : 'Recoger en tienda'
-    const message = `Hola, La Torre. Quiero realizar el siguiente pedido:\n${lines}\n\nPedido completo: ${cartUrl}\nEntrega: ${entregaStr}\nDestino: ${destinoStr}`
+    const destinoStr = entrega === 'envio' ? `Departamento: ${depto}\nMunicipio: ${muni}` : 'Destino: Recoger en tienda'
+    const message = `Hola, La Torre. Quiero realizar el siguiente pedido:\n${lines}\n\nPedido completo: ${cartUrl}\nEntrega: ${entregaStr}\n${destinoStr}`
     window.open(waLink(message), '_blank')
   }
 
@@ -115,8 +131,23 @@ export function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
               </div>
               {entrega === 'envio' && (
                 <div className="mb-5">
-                  <label className="block text-xs uppercase tracking-wider text-muted-foreground mb-2">DESTINO (DEPARTAMENTO Y MUNICIPIO)</label>
-                  <input type="text" value={destino} onChange={e => setDestino(e.target.value)} placeholder="Ej. Quetzaltenango, Quetzaltenango" className="w-full px-3 py-2.5 text-sm border border-midnight/15 bg-white rounded focus:outline-none focus:border-gold" />
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">DESTINO</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <label className="block">
+                      <span className="sr-only">Departamento</span>
+                      <select value={depto} onChange={e => { setDepto(e.target.value); setDestino('') }} className="w-full px-3 py-2.5 text-sm border border-midnight/15 bg-white rounded focus:outline-none focus:border-gold text-midnight">
+                        <option value="">Departamento</option>
+                        {DEPARTAMENTOS.map(d => <option key={d} value={d}>{d}</option>)}
+                      </select>
+                    </label>
+                    <label className="block">
+                      <span className="sr-only">Municipio</span>
+                      <select value={muni} disabled={!depto} onChange={e => setDestino(e.target.value ? `${e.target.value}, ${depto}` : '')} className="w-full px-3 py-2.5 text-sm border border-midnight/15 bg-white rounded focus:outline-none focus:border-gold text-midnight disabled:bg-cream-deep disabled:text-muted-foreground disabled:cursor-not-allowed">
+                        <option value="">{depto ? 'Municipio' : 'Elige el departamento'}</option>
+                        {(MUNICIPIOS[depto] || []).map(m => <option key={m} value={m}>{m}</option>)}
+                      </select>
+                    </label>
+                  </div>
                   <p className="text-xs text-muted-foreground mt-2 italic">Enviamos con {BRAND.shippingCarriers} ({BRAND.shippingTime}). Gratis en compras +Q{BRAND.freeShippingThreshold}.</p>
                 </div>
               )}
@@ -136,7 +167,7 @@ export function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                 </div>
                 <p className="text-xs text-muted-foreground italic">No incluye envío</p>
               </div>
-              <button onClick={handleSendWhatsApp} disabled={!entrega} className={`w-full py-3.5 mb-2 text-sm uppercase tracking-wider font-medium rounded-full transition-colors flex items-center justify-center gap-2 ${entrega ? 'bg-whatsapp text-white hover:bg-whatsapp-dark' : 'bg-muted text-muted-foreground cursor-not-allowed'}`}>
+              <button onClick={handleSendWhatsApp} disabled={!destinoListo} className={`w-full py-3.5 mb-2 text-sm uppercase tracking-wider font-medium rounded-full transition-colors flex items-center justify-center gap-2 ${destinoListo ? 'bg-whatsapp text-white hover:bg-whatsapp-dark' : 'bg-muted text-muted-foreground cursor-not-allowed'}`}>
                 <MessageCircle className="w-4 h-4" />ENVIAR PEDIDO POR WHATSAPP
               </button>
               <button onClick={clear} className="w-full py-2 text-xs uppercase tracking-wider text-muted-foreground hover:text-destructive transition-colors">VACIAR CARRITO</button>

@@ -13,22 +13,15 @@ import { Footer } from './footer'
 import { ProductGrid } from './product-grid'
 import { CartDrawer } from './cart-drawer'
 import { InfoModal } from './info-modal'
-import { EMPTY_FILTER, type FilterState } from '@/lib/boutique/catalog'
+import { EMPTY_FILTER, filterToParams, paramsToFilter, type FilterState } from '@/lib/boutique/catalog'
 import { useCart } from '@/store/cart'
 
 type View = 'home' | 'listing'
 
 function parseUrlFilter(): { view: View; filter: FilterState } {
   if (typeof window === 'undefined') return { view: 'home', filter: EMPTY_FILTER }
-  const params = new URLSearchParams(window.location.search)
-  const newFilter: FilterState = { ...EMPTY_FILTER }
-  const c = params.get('categoria'); if (c) newFilter.categorias = c.split(',').filter(Boolean)
-  const t = params.get('tipo'); if (t) newFilter.tipos = t.split(',').filter(Boolean)
-  const m = params.get('marca'); if (m) newFilter.marcas = m.split(',').filter(Boolean)
-  const q = params.get('q'); if (q) newFilter.search = q
-  if (params.get('sale') === 'true') newFilter.sale = true
-  const hasFilter = c || t || m || q || params.get('sale') === 'true'
-  return { view: hasFilter ? 'listing' : 'home', filter: newFilter }
+  const f = paramsToFilter(new URLSearchParams(window.location.search))
+  return f ? { view: 'listing', filter: f } : { view: 'home', filter: EMPTY_FILTER }
 }
 
 export function BoutiqueClient() {
@@ -48,14 +41,7 @@ export function BoutiqueClient() {
   }, [])
 
   const pushUrl = useCallback((f: FilterState, v: View) => {
-    const p = new URLSearchParams()
-    if (v === 'listing') {
-      if (f.categorias.length) p.set('categoria', f.categorias.join(','))
-      if (f.tipos.length) p.set('tipo', f.tipos.join(','))
-      if (f.marcas.length) p.set('marca', f.marcas.join(','))
-      if (f.search) p.set('q', f.search)
-      if (f.sale) p.set('sale', 'true')
-    }
+    const p = v === 'listing' ? filterToParams(f) : new URLSearchParams()
     window.history.pushState({}, '', p.toString() ? `/?${p}` : '/')
   }, [])
 

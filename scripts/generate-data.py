@@ -26,6 +26,16 @@ OUT_DIR = ROOT / 'src' / 'data'
 REDIRECTS = ROOT / 'public' / '_redirects'
 PRODUCTS_MARK = 'export const products: Product[] = '
 
+
+# Valores retirados del catálogo (nov 2026). Si Notion todavía trae el valor viejo, se convierte aquí.
+SUBTIPO_MAP = {'Tela': 'Tela / Gabardina', 'De vestir': 'Tela / Gabardina'}
+ESTILO_MAP = {'814': 'Slim', '816': 'Skinny', '812': ''}
+
+
+def norm(mapping, value):
+    v = (value or '').strip()
+    return mapping.get(v, v)
+
 def emit(path, text):
     if not DRY:
         path.write_text(text, encoding='utf-8')
@@ -109,8 +119,8 @@ for row in rows:
         'id': int(digits) if digits else 0, 'slug': '', 'notionId': notion_id, 'nombre': nombre,
         'categoria': (row.get('Categoría') or '').strip(),
         'tipo': (row.get('Tipo de producto') or '').strip(),
-        'subtipo': (row.get('Subtipo') or '').strip(),
-        'estilo': (row.get('Estilo de Pantalon') or '').strip(),
+        'subtipo': norm(SUBTIPO_MAP, row.get('Subtipo')),
+        'estilo': norm(ESTILO_MAP, row.get('Estilo de Pantalon')),
         'marca': (row.get('Marca') or '').strip(),
         'color': color, 'colorHex': color_to_hex(color),
         'tallas': parse_tallas(row.get('Tallas')),

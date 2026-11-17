@@ -29,21 +29,19 @@ export const tiposByCategoria: Record<string, string[]> = {
   ]
 }
 export const subtiposByTipo: Record<string, string[]> = {
-  "Accesorios": [
-    "Billeteras",
-    "Cinturones",
-    "Gorras"
-  ],
   "Camisas": [
     "Manga corta",
     "Manga larga"
   ],
   "Pantalones": [
-    "Cargo",
-    "De vestir",
     "Jeans",
-    "Tela",
+    "Jogger",
     "Tela / Gabardina"
+  ],
+  "Accesorios": [
+    "Billeteras",
+    "Cinturones",
+    "Gorras"
   ],
   "Ropa Interior": [
     "Bóxer",
@@ -105,16 +103,6 @@ export const marcasByCategoria: Record<string, string[]> = {
 }
 export const coloresAll: string[] = ["Amarillo", "Azul / Celeste", "Beige / Khaki", "Blanco", "Café", "Morado", "Multicolor / Estampado", "Naranja", "Negro / Gris", "Rojo / Corinto", "Rosa", "Verde"]
 export const tallasByContext: Record<string, string[]> = {
-  "Hombre|Accesorios": [
-    "30",
-    "31",
-    "32",
-    "33",
-    "34",
-    "36",
-    "40",
-    "42"
-  ],
   "Hombre|Chumpas": [
     "L",
     "M",
@@ -159,6 +147,16 @@ export const tallasByContext: Record<string, string[]> = {
     "34",
     "36",
     "38"
+  ],
+  "Hombre|Accesorios": [
+    "30",
+    "31",
+    "32",
+    "33",
+    "34",
+    "36",
+    "40",
+    "42"
   ],
   "Hombre|Ropa Interior": [
     "L",

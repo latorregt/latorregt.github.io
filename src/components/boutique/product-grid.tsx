@@ -1,7 +1,7 @@
 'use client'
 import { useState, useMemo, useEffect, useRef } from 'react'
-import { applyFilter, type FilterState, type SortMode } from '@/lib/boutique/catalog'
-import { marcasByCategoria, coloresAll, allCategorias, tiposByCategoria } from '@/data/filters'
+import { applyFilter, opcionesTipo, type FilterState, type SortMode } from '@/lib/boutique/catalog'
+import { marcasByCategoria, coloresAll, allCategorias } from '@/data/filters'
 import { ProductCard } from './product-card'
 import { BRAND } from '@/lib/boutique/brand'
 import { track } from '@/lib/boutique/analytics'
@@ -28,7 +28,7 @@ export function ProductGrid({ filter, onOpenProduct, onNavigate }: ProductGridPr
   const filtered = useMemo(() => applyFilter(localFilter, sort), [localFilter, sort])
   const visible = filtered.slice(0, visibleCount)
   const availableCategorias = allCategorias
-  const availableTipos = localFilter.categorias.length ? Array.from(new Set(localFilter.categorias.flatMap(c => tiposByCategoria[c] || []))) : Array.from(new Set(Object.values(tiposByCategoria).flat()))
+  const tipoOpts = useMemo(() => opcionesTipo(localFilter.categorias), [localFilter.categorias])
   const availableMarcas = localFilter.categorias.length ? Array.from(new Set(localFilter.categorias.flatMap(c => marcasByCategoria[c] || []))) : Array.from(new Set(Object.values(marcasByCategoria).flat()))
   const chips: { label: string; type: keyof FilterState; value: string }[] = []
   localFilter.categorias.forEach(c => chips.push({ label: c, type: 'categorias', value: c }))
@@ -61,10 +61,12 @@ export function ProductGrid({ filter, onOpenProduct, onNavigate }: ProductGridPr
           <div className="flex items-center justify-between flex-wrap gap-2 mb-3">
             <div className="flex items-center gap-2 flex-wrap">
             {['Categoria', 'Tipo', 'Talla', 'Marca', 'Color'].map(label => {
-              const key = label === 'Categoria' ? 'categorias' : label === 'Tipo' ? 'tipos' : label === 'Talla' ? 'tallas' : label === 'Marca' ? 'marcas' : 'colores'
-              const options = label === 'Categoria' ? availableCategorias : label === 'Tipo' ? availableTipos : label === 'Talla' ? availableTallas : label === 'Marca' ? availableMarcas : coloresAll
+              const key = label === 'Categoria' ? 'categorias' : label === 'Talla' ? 'tallas' : label === 'Marca' ? 'marcas' : 'colores'
+              // Tipo: lista aplanada; cada opción sabe si filtra por tipo o por subtipo.
+              const options: { label: string; key: keyof FilterState; value: string }[] = label === 'Tipo' ? tipoOpts
+                : (label === 'Categoria' ? availableCategorias : label === 'Talla' ? availableTallas : label === 'Marca' ? availableMarcas : coloresAll).map(v => ({ label: v, key: key as keyof FilterState, value: v }))
               if (!options.length) return null
-              return (<div key={label} className="relative"><button onClick={() => setFilterOpen(filterOpen === label ? null : label)} className="px-4 py-2 text-sm border border-midnight/15 bg-white hover:border-midnight transition-colors flex items-center gap-2 whitespace-nowrap">{label}<ChevronDown className={`w-3 h-3 transition-transform ${filterOpen === label ? 'rotate-180' : ''}`} /></button>{filterOpen === label && (<div className="dropdown-animate absolute top-full left-0 mt-1 z-20 bg-white border border-midnight/15 shadow-lg rounded-md py-2 max-h-72 overflow-y-auto min-w-[180px] scrollbar-boutique">{options.map(opt => (<button key={opt} onClick={() => toggleFilter(key as keyof FilterState, opt)} className={`block w-full text-left px-3 py-1.5 text-sm hover:bg-cream-deep transition-colors whitespace-nowrap ${(localFilter[key as keyof FilterState] as string[]).includes(opt) ? 'text-gold font-medium' : 'text-midnight'}`}>{opt}</button>))}</div>)}</div>)
+              return (<div key={label} className="relative"><button onClick={() => setFilterOpen(filterOpen === label ? null : label)} className="px-4 py-2 text-sm border border-midnight/15 bg-white hover:border-midnight transition-colors flex items-center gap-2 whitespace-nowrap">{label}<ChevronDown className={`w-3 h-3 transition-transform ${filterOpen === label ? 'rotate-180' : ''}`} /></button>{filterOpen === label && (<div className="dropdown-animate absolute top-full left-0 mt-1 z-20 bg-white border border-midnight/15 shadow-lg rounded-md py-2 max-h-72 overflow-y-auto min-w-[180px] scrollbar-boutique">{options.map(opt => (<button key={`${opt.key}:${opt.value}`} onClick={() => toggleFilter(opt.key, opt.value)} className={`block w-full text-left px-3 py-1.5 text-sm hover:bg-cream-deep transition-colors whitespace-nowrap ${(localFilter[opt.key] as string[]).includes(opt.value) ? 'text-gold font-medium' : 'text-midnight'}`}>{opt.label}</button>))}</div>)}</div>)
             })}
             </div>
             <div className="flex items-center gap-2"><label className="text-xs uppercase tracking-wider text-muted-foreground">Ordenar:</label><select value={sort} onChange={e => setSort(e.target.value as SortMode)} className="px-3 py-1.5 text-sm border border-midnight/15 bg-white rounded focus:outline-none focus:border-gold">{Object.entries(SORT_LABELS).map(([k, v]) => (<option key={k} value={k}>{v}</option>))}</select></div>
