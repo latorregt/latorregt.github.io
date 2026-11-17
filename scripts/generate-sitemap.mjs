@@ -17,8 +17,11 @@ const products = [...data.matchAll(/"slug":\s*"([^"]+)"[\s\S]*?"fecha":\s*(null|
 if (!products.length) { console.error('No se encontraron productos en src/data/products.ts'); process.exit(1) }
 
 const today = new Date().toISOString().slice(0, 10)
+// Páginas del pie (/qa, /contacto, ...): se leen de src/lib/boutique/paginas.tsx
+const paginas = [...fs.readFileSync(path.join(ROOT, 'src', 'lib', 'boutique', 'paginas.tsx'), 'utf8').matchAll(/slug: '([a-z0-9-]+)'/g)].map(m => m[1])
 const urls = [
   { loc: `${SITE}/`, lastmod: today, priority: '1.0', changefreq: 'weekly' },
+  ...paginas.map(slug => ({ loc: `${SITE}/${slug}/`, lastmod: today, priority: '0.4', changefreq: 'yearly' })),
   ...products.map(p => ({ loc: `${SITE}/producto/${p.slug}/`, lastmod: p.fecha || today, priority: '0.8', changefreq: 'monthly' })),
 ]
 const xml = `<?xml version="1.0" encoding="UTF-8"?>

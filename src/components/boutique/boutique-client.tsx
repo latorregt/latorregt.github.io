@@ -12,7 +12,6 @@ import { TrustSection } from './trust-section'
 import { Footer } from './footer'
 import { ProductGrid } from './product-grid'
 import { CartDrawer } from './cart-drawer'
-import { InfoModal } from './info-modal'
 import { EMPTY_FILTER, filterToParams, paramsToFilter, type FilterState } from '@/lib/boutique/catalog'
 import { useCart } from '@/store/cart'
 
@@ -28,7 +27,6 @@ export function BoutiqueClient() {
   const router = useRouter()
   const [view, setView] = useState<View>('home')
   const [filter, setFilter] = useState<FilterState>(EMPTY_FILTER)
-  const [infoModalKey, setInfoModalKey] = useState<string | null>(null)
   const openCart = useCart(s => s.open)
   const isCartOpen = useCart(s => s.isOpen)
   const closeCart = useCart(s => s.close)
@@ -84,9 +82,8 @@ export function BoutiqueClient() {
           <ProductGrid filter={filter} onOpenProduct={openProduct} onNavigate={navigate} />
         )}
       </main>
-      <Footer onOpenInfoModal={setInfoModalKey} />
+      <Footer />
       <CartDrawer isOpen={isCartOpen} onClose={closeCart} />
-      <InfoModal openKey={infoModalKey} onClose={() => setInfoModalKey(null)} onOpenInfoModal={setInfoModalKey} />
     </div>
   )
 }

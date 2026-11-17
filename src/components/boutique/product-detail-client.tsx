@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import type { Product } from '@/data/products'
 import { formatGTQ, discountPct, sortTallas } from '@/lib/boutique/format'
 import { useCart } from '@/store/cart'
@@ -11,7 +12,6 @@ import { TopBar } from './top-bar'
 import { Header } from './header'
 import { Footer } from './footer'
 import { CartDrawer } from './cart-drawer'
-import { InfoModal } from './info-modal'
 import { EMPTY_FILTER, type FilterState, filterToParams } from '@/lib/boutique/catalog'
 
 import { ProductCard } from './product-card'
@@ -33,7 +33,6 @@ export function ProductDetailClient({ product, related }: ProductDetailClientPro
   const add = useCart(s => s.add)
   const openCart = useCart(s => s.open)
   const router = useRouter()
-  const [infoModalKey, setInfoModalKey] = useState<string | null>(null)
   const isCartOpen = useCart(s => s.isOpen)
   const closeCart = useCart(s => s.close)
 
@@ -196,9 +195,9 @@ export function ProductDetailClient({ product, related }: ProductDetailClientPro
             {/* Expandable blocks */}
             <div className="space-y-6 mb-6">
               {[
-                { key: 'envio', title: 'ENVÍO Y DEVOLUCIONES', content: 'Enviamos a todo el territorio de Guatemala con Forza o Guatex. El tiempo estimado de entrega es de 1 a 3 días hábiles a partir del despacho. El envío es gratis en compras mayores a Q1,250, y en Santa Cruz del Quiché es gratis hasta la puerta de tu casa. Los cambios se realizan únicamente en nuestra tienda física, dentro de 15 días y con la prenda en perfecto estado.' },
-                { key: 'lavado', title: 'LAVADO Y CUIDADOS', content: 'Sigue siempre las instrucciones de la etiqueta de cada prenda: es la guía definitiva según el material. Como recomendaciones generales, lava las prendas con otras de color similar, preferentemente con agua fría; no uses cloro ni blanqueador; plancha a la temperatura adecuada a la tela y sécalas a la sombra para conservar el color.' },
-                { key: 'precio', title: 'PRECIO Y TALLAJE', content: 'Precio. Los precios publicados ya incluyen el descuento por pago en efectivo o transferencia. En tienda física y en entrega local, el pago con tarjeta, Apple Pay, Google Pay o PayPal se rige por el precio de etiqueta.\n\nTallaje. Aunque las prendas manejan un tallaje estándar, cada marca maneja sus propias medidas, por lo que una misma talla puede variar de una prenda a otra. Si tienes dudas, escríbenos por WhatsApp.' },
+                { key: 'envio', title: 'ENVÍO Y DEVOLUCIONES', content: (<><p>Enviamos a todo el territorio de Guatemala con Forza o Guatex. El tiempo estimado de entrega es de 1 a 3 días hábiles a partir del despacho. El envío es gratis en compras mayores a Q1,250, y en Santa Cruz del Quiché es gratis hasta la puerta de tu casa.</p><p>Los cambios se realizan únicamente en nuestra tienda física, dentro de 15 días y con la prenda en perfecto estado. Consulta las políticas completas en <Link href="/devoluciones-y-cambios/" className="text-midnight underline underline-offset-4 decoration-gold/60 hover:text-gold">Devoluciones y cambios</Link>.</p></>) },
+                { key: 'lavado', title: 'LAVADO Y CUIDADOS', content: (<p>Sigue siempre las instrucciones de la etiqueta de cada prenda: es la guía definitiva según el material. Como recomendaciones generales, lava las prendas con otras de color similar, preferentemente con agua fría; no uses cloro ni blanqueador; plancha a la temperatura adecuada a la tela y sécalas a la sombra para conservar el color.</p>) },
+                { key: 'precio', title: 'PRECIO Y TALLAJE', content: (<><p><em>Precio.</em> Los precios publicados ya incluyen el descuento por pago en efectivo o transferencia. En tienda física y en entrega local, el pago con tarjeta, Apple Pay, Google Pay o PayPal se rige por el precio de etiqueta.</p><p><em>Tallaje.</em> Aunque las prendas manejan un tallaje estándar, cada marca maneja sus propias medidas, por lo que una misma talla puede variar de una prenda a otra. Si tienes dudas, escríbenos por <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="text-midnight underline underline-offset-4 decoration-gold/60 hover:text-gold">WhatsApp</a> y te enviaremos las medidas exactas de la prenda que te interesa. Si prefieres compararla con una prenda tuya, consulta aquí <Link href="/qa/#guia-de-tallas" className="text-midnight underline underline-offset-4 decoration-gold/60 hover:text-gold">cómo medir una prenda</Link>.</p></>) },
               ].map(block => (
                 <div key={block.key} className="border-b border-midnight/15">
                   <button
@@ -209,7 +208,7 @@ export function ProductDetailClient({ product, related }: ProductDetailClientPro
                     <ChevronDown className={`w-4 h-4 transition-transform ${expanded === block.key ? 'rotate-180' : ''}`} />
                   </button>
                   {expanded === block.key && (
-                    <div className="px-4 pb-4 text-sm text-foreground/80 leading-relaxed">{block.content}</div>
+                    <div className="px-4 pb-4 text-sm text-foreground/80 leading-relaxed space-y-3">{block.content}</div>
                   )}
                 </div>
               ))}
@@ -246,9 +245,8 @@ export function ProductDetailClient({ product, related }: ProductDetailClientPro
         )}
       </div>
       </main>
-      <Footer onOpenInfoModal={setInfoModalKey} />
+      <Footer />
       <CartDrawer isOpen={isCartOpen} onClose={closeCart} />
-      <InfoModal openKey={infoModalKey} onClose={() => setInfoModalKey(null)} onOpenInfoModal={setInfoModalKey} />
     </div>
   )
 }

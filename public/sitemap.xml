@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://latorre.boutiquegt.workers.dev/</loc><lastmod>2026-11-17</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://latorre.boutiquegt.workers.dev/qa/</loc><lastmod>2026-11-17</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://latorre.boutiquegt.workers.dev/contacto/</loc><lastmod>2026-11-17</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://latorre.boutiquegt.workers.dev/atencion-inmediata/</loc><lastmod>2026-11-17</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://latorre.boutiquegt.workers.dev/estado-del-pedido/</loc><lastmod>2026-11-17</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://latorre.boutiquegt.workers.dev/colaboraciones/</loc><lastmod>2026-11-17</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://latorre.boutiquegt.workers.dev/proceso-de-compra/</loc><lastmod>2026-11-17</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://latorre.boutiquegt.workers.dev/entrega-o-servicio/</loc><lastmod>2026-11-17</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://latorre.boutiquegt.workers.dev/retiro-en-tienda/</loc><lastmod>2026-11-17</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://latorre.boutiquegt.workers.dev/devoluciones-y-cambios/</loc><lastmod>2026-11-17</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://latorre.boutiquegt.workers.dev/terminos-y-privacidad/</loc><lastmod>2026-11-17</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
   <url><loc>https://latorre.boutiquegt.workers.dev/producto/chaqueta-fondo-entero-navy-kenneth-cole-lt-139/</loc><lastmod>2026-11-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://latorre.boutiquegt.workers.dev/producto/sueter-tejido-de-punto-lt-94/</loc><lastmod>2026-11-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://latorre.boutiquegt.workers.dev/producto/polo-fondo-entero-navy-kenneth-cole-lt-29/</loc><lastmod>2026-11-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
