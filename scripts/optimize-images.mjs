@@ -38,7 +38,7 @@ const EXTRA_WIDTHS = { marca: [1920] } // el hero ocupa toda la pantalla
 const WEBP = { quality: 78, effort: 5 }
 const AVIF = { quality: 52, effort: 3 }
 // Fotos de prenda: máxima calidad (decisión nov 2026). AVIF 90 pesa lo mismo que WebP 95 y se ve igual o mejor.
-const HQ = { productos: { webp: { quality: 95, effort: 4 }, avif: { quality: 90, effort: 3 } }, categorias: { webp: { quality: 95, effort: 4 }, avif: { quality: 90, effort: 3 } } }
+const HQ = { marca: { webp: { quality: 95, effort: 4 }, avif: { quality: 90, effort: 3 } }, productos: { webp: { quality: 95, effort: 4 }, avif: { quality: 90, effort: 3 } }, categorias: { webp: { quality: 95, effort: 4 }, avif: { quality: 90, effort: 3 } } }
 const ONLY = (process.argv.find(a => a.startsWith('--only=')) || '').slice(7)
 const OG_HOME = 'marca/Boutique_La_Torre_iluminada_de_noche.png'
 

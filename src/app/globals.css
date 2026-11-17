@@ -178,7 +178,6 @@
 @keyframes page-enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .page-enter { animation: none; } }
 
-/* Hero: la foto es horizontal. En pantallas verticales (celular) se corre a la izquierda
-   para que se lea "BOUTIQUE LA TORRE" en vez de solo "RRE". Al tener la foto vertical se reemplaza. */
+/* Hero: en pantallas verticales se usa la foto vertical; el texto va abajo para no tapar el letrero. */
 .hero-img { object-position: center 15%; }
-@media (max-aspect-ratio: 1/1) { .hero-img { object-position: 16% 15%; } }
+@media (max-aspect-ratio: 1/1) { .hero-img { object-position: 58% 0%; } }

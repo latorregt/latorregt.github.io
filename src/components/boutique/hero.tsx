@@ -1,7 +1,10 @@
 'use client'
 
 import { track } from '@/lib/boutique/analytics'
-import { Picture } from '@/components/boutique/picture'
+import { imageSrcSet, imageUrl } from '@/lib/boutique/images'
+
+const HERO_H = '/images/marca/Boutique_La_Torre_iluminada_de_noche.png'
+const HERO_V = '/images/marca/Boutique_La_Torre_vertical.png'
 
 interface HeroProps {
   onColecciones: () => void
@@ -10,21 +13,27 @@ interface HeroProps {
 
 export function Hero({ onColecciones, onComoLlegar }: HeroProps) {
   return (
-    <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden" aria-label="Sección de bienvenida">
+    <section className="relative min-h-[88vh] flex items-center [@media(max-aspect-ratio:1/1)]:items-end justify-center overflow-hidden" aria-label="Sección de bienvenida">
       <div className="absolute inset-0">
-        <Picture
-          src="/images/marca/Boutique_La_Torre_iluminada_de_noche.png"
-          alt="Boutique La Torre iluminada de noche en Santa Cruz del Quiché"
-          className="hero-img w-full h-full object-cover"
-          sizes="(max-aspect-ratio: 1/1) 200vh, 100vw"
-          widths={[600, 1200, 1920]}
-          priority
-        />
+        {/* Celular / pantallas verticales: foto vertical. Computadora: foto horizontal. Un solo <picture>: se descarga solo una. */}
+        <picture>
+          <source media="(max-aspect-ratio: 1/1)" type="image/avif" srcSet={imageSrcSet(HERO_V, 'avif', [600, 1200])} sizes="100vw" />
+          <source media="(max-aspect-ratio: 1/1)" type="image/webp" srcSet={imageSrcSet(HERO_V, 'webp', [600, 1200])} sizes="100vw" />
+          <source type="image/avif" srcSet={imageSrcSet(HERO_H, 'avif', [600, 1200, 1920])} sizes="100vw" />
+          <source type="image/webp" srcSet={imageSrcSet(HERO_H, 'webp', [600, 1200, 1920])} sizes="100vw" />
+          <img
+            src={imageUrl(HERO_H, 1200, 'webp')}
+            alt="Boutique La Torre iluminada de noche en Santa Cruz del Quiché"
+            className="hero-img w-full h-full object-cover"
+            fetchPriority="high"
+            decoding="async"
+          />
+        </picture>
         {/* Black opacity overlay (no color tint) - heavier at top and bottom for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/25 to-black/70" />
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-cream py-24">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-cream py-24 [@media(max-aspect-ratio:1/1)]:pb-10">
         <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] mb-4 drop-shadow-lg">
           DONDE EL BUEN VESTIR<br />ES TRADICIÓN
         </h1>
