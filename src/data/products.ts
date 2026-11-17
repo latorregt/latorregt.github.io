@@ -8,7 +8,7 @@ export interface Product {
 export const products: Product[] = [
   {
     "id": 185,
-    "slug": "cincho-dutton-185",
+    "slug": "cincho-dutton-536c",
     "nombre": "Cincho Dutton",
     "categoria": "Hombre",
     "tipo": "Accesorios",
@@ -36,7 +36,7 @@ export const products: Product[] = [
   },
   {
     "id": 1,
-    "slug": "chaqueta-fondo-entero-navy-1",
+    "slug": "chaqueta-fondo-entero-navy-kenneth-cole-3779",
     "nombre": "Chaqueta fondo entero Navy",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -65,7 +65,7 @@ export const products: Product[] = [
   },
   {
     "id": 26,
-    "slug": "sueter-tejido-de-punto-26",
+    "slug": "sueter-tejido-de-punto-4cdb",
     "nombre": "Suéter tejido de punto",
     "categoria": "Hombre",
     "tipo": "Suéteres",
@@ -92,7 +92,7 @@ export const products: Product[] = [
   },
   {
     "id": 31,
-    "slug": "polo-fondo-entero-navy-31",
+    "slug": "polo-fondo-entero-navy-kenneth-cole-6143",
     "nombre": "Polo fondo entero navy",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -121,7 +121,7 @@ export const products: Product[] = [
   },
   {
     "id": 73,
-    "slug": "camisa-casual-tipo-mezclilla-73",
+    "slug": "camisa-casual-tipo-mezclilla-van-heusen-c070",
     "nombre": "Camisa casual tipo mezclilla",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -149,7 +149,7 @@ export const products: Product[] = [
   },
   {
     "id": 113,
-    "slug": "playera-basica-algodon-organico-white-113",
+    "slug": "playera-basica-algodon-organico-white-original-penguin-5bf3",
     "nombre": "Playera Básica Algodón Orgánico white",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -176,7 +176,7 @@ export const products: Product[] = [
   },
   {
     "id": 138,
-    "slug": "jean-van-heusen-vaqueros-slim-fit-138",
+    "slug": "jean-van-heusen-vaqueros-slim-fit-7818",
     "nombre": "Jean Van Heusen Vaqueros Slim Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -205,7 +205,7 @@ export const products: Product[] = [
   },
   {
     "id": 186,
-    "slug": "billetera-de-cuero-cafe-claro-186",
+    "slug": "billetera-de-cuero-cafe-claro-manhattan-e3d6",
     "nombre": "Billetera de cuero Cafe Claro",
     "categoria": "Hombre",
     "tipo": "Accesorios",
@@ -229,7 +229,7 @@ export const products: Product[] = [
   },
   {
     "id": 197,
-    "slug": "boxer-de-microfibra-sin-costuras-197",
+    "slug": "boxer-de-microfibra-sin-costuras-lupo-52ff",
     "nombre": "bóxer de microfibra sin costuras",
     "categoria": "Hombre",
     "tipo": "Ropa Interior",
@@ -257,7 +257,7 @@ export const products: Product[] = [
   },
   {
     "id": 222,
-    "slug": "polo-entallada-con-cuello-bicolor-222",
+    "slug": "polo-entallada-con-cuello-bicolor-2a92",
     "nombre": "Polo Entallada con Cuello Bicolor",
     "categoria": "Mujer",
     "tipo": "Polos",
@@ -285,7 +285,7 @@ export const products: Product[] = [
   },
   {
     "id": 224,
-    "slug": "jean-481-wide-leg-fit-1-boton-224",
+    "slug": "jean-481-wide-leg-fit-1-boton-pierre-cardin-e6b2",
     "nombre": "Jean 481 wide leg Fit 1 botón",
     "categoria": "Mujer",
     "tipo": "Pantalones",
@@ -315,7 +315,7 @@ export const products: Product[] = [
   },
   {
     "id": 231,
-    "slug": "blusa-manga-larga-cuello-drapeado-231",
+    "slug": "blusa-manga-larga-cuello-drapeado-84c5",
     "nombre": "Blusa Manga Larga Cuello Drapeado",
     "categoria": "Mujer",
     "tipo": "Blusas",
@@ -341,7 +341,7 @@ export const products: Product[] = [
   },
   {
     "id": 234,
-    "slug": "sueter-tejido-de-trenzas-234",
+    "slug": "sueter-tejido-de-trenzas-94eb",
     "nombre": "Suéter Tejido de Trenzas",
     "categoria": "Mujer",
     "tipo": "Chumpas / Suéteres / Sudaderas",
@@ -366,7 +366,7 @@ export const products: Product[] = [
   },
   {
     "id": 240,
-    "slug": "jean-jordache-loose-fit-240",
+    "slug": "jean-jordache-loose-fit-d980",
     "nombre": "Jean Jordache Loose Fit",
     "categoria": "Juvenil",
     "tipo": "Pantalones",
@@ -397,7 +397,7 @@ export const products: Product[] = [
   },
   {
     "id": 256,
-    "slug": "camisa-lisa-256",
+    "slug": "camisa-lisa-redsand-2e6d",
     "nombre": "Camisa lisa",
     "categoria": "Juvenil",
     "tipo": "Polos / Camisas / Playeras",
@@ -425,7 +425,7 @@ export const products: Product[] = [
   },
   {
     "id": 277,
-    "slug": "chumpa-acolchada-277",
+    "slug": "chumpa-acolchada-hummer-jeans-c5f2",
     "nombre": "Chumpa acolchada",
     "categoria": "Juvenil",
     "tipo": "Chumpas / Suéteres / Sudaderas",
@@ -453,7 +453,7 @@ export const products: Product[] = [
   },
   {
     "id": 287,
-    "slug": "jean-pepe-vi228-skinny-fit-287",
+    "slug": "jean-pepe-vi228-skinny-fit-f3eb",
     "nombre": "Jean Pepe VI228 Skinny Fit",
     "categoria": "Infantil",
     "tipo": "Pantalones",
@@ -483,7 +483,7 @@ export const products: Product[] = [
   },
   {
     "id": 289,
-    "slug": "camisa-casual-a-cuadros-manga-corta-289",
+    "slug": "camisa-casual-a-cuadros-manga-corta-catano-kids-3cea",
     "nombre": "Camisa casual a cuadros manga corta",
     "categoria": "Infantil",
     "tipo": "Polos / Camisas / Playeras",
@@ -509,7 +509,7 @@ export const products: Product[] = [
   },
   {
     "id": 303,
-    "slug": "sudadera-estilo-universitario-303",
+    "slug": "sudadera-estilo-universitario-ff58",
     "nombre": "Sudadera estilo universitario",
     "categoria": "Infantil",
     "tipo": "Chumpas / Suéteres / Sudaderas",
@@ -536,7 +536,7 @@ export const products: Product[] = [
   },
   {
     "id": 2,
-    "slug": "chaqueta-bomber-casual-minimalista-2",
+    "slug": "chaqueta-bomber-casual-minimalista-oscar-de-la-renta-2632",
     "nombre": "Chaqueta bomber casual minimalista",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -563,7 +563,7 @@ export const products: Product[] = [
   },
   {
     "id": 114,
-    "slug": "playera-con-tipografia-en-relieve-frontal-114",
+    "slug": "playera-con-tipografia-en-relieve-frontal-kenneth-cole-b374",
     "nombre": "Playera con tipografía en relieve frontal",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -592,7 +592,7 @@ export const products: Product[] = [
   },
   {
     "id": 187,
-    "slug": "cincho-de-vestir-reversible-187",
+    "slug": "cincho-de-vestir-reversible-manhattan-265c",
     "nombre": "Cincho de vestir reversible",
     "categoria": "Hombre",
     "tipo": "Accesorios",
@@ -622,7 +622,7 @@ export const products: Product[] = [
   },
   {
     "id": 198,
-    "slug": "3pack-de-calcetas-altas-198",
+    "slug": "3pack-de-calcetas-altas-pepe-5a2d",
     "nombre": "3Pack de Calcetas altas",
     "categoria": "Hombre",
     "tipo": "Ropa Interior",
@@ -648,7 +648,7 @@ export const products: Product[] = [
   },
   {
     "id": 223,
-    "slug": "polo-entallada-con-cuello-bicolor-223",
+    "slug": "polo-entallada-con-cuello-bicolor-08bf",
     "nombre": "Polo Entallada con Cuello Bicolor",
     "categoria": "Mujer",
     "tipo": "Polos",
@@ -676,7 +676,7 @@ export const products: Product[] = [
   },
   {
     "id": 235,
-    "slug": "sudadera-estilo-deportiva-entallada-235",
+    "slug": "sudadera-estilo-deportiva-entallada-dc50",
     "nombre": "Sudadera estilo Deportiva Entallada",
     "categoria": "Mujer",
     "tipo": "Chumpas / Suéteres / Sudaderas",
@@ -703,7 +703,7 @@ export const products: Product[] = [
   },
   {
     "id": 304,
-    "slug": "sudadera-abierta-con-estampado-de-dinosaurios-304",
+    "slug": "sudadera-abierta-con-estampado-de-dinosaurios-4493",
     "nombre": "Sudadera abierta con estampado de dinosaurios",
     "categoria": "Infantil",
     "tipo": "Chumpas / Suéteres / Sudaderas",
@@ -728,7 +728,7 @@ export const products: Product[] = [
   },
   {
     "id": 27,
-    "slug": "sueter-quarter-zip-27",
+    "slug": "sueter-quarter-zip-original-penguin-7d0c",
     "nombre": "Suéter Quarter Zip",
     "categoria": "Hombre",
     "tipo": "Suéteres",
@@ -757,7 +757,7 @@ export const products: Product[] = [
   },
   {
     "id": 32,
-    "slug": "polo-pique-a-borde-de-rayas-32",
+    "slug": "polo-pique-a-borde-de-rayas-u-s-polo-assn-ae8a",
     "nombre": "Polo piqué a borde de rayas",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -785,7 +785,7 @@ export const products: Product[] = [
   },
   {
     "id": 33,
-    "slug": "polo-de-algodon-organico-earl-mesh-beige-33",
+    "slug": "polo-de-algodon-organico-earl-mesh-beige-original-penguin-085e",
     "nombre": "Polo de Algodón Orgánico Earl Mesh beige",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -814,7 +814,7 @@ export const products: Product[] = [
   },
   {
     "id": 74,
-    "slug": "camisa-de-vestir-a-cuadros-finos-74",
+    "slug": "camisa-de-vestir-a-cuadros-finos-kenneth-cole-04b0",
     "nombre": "Camisa de vestir a cuadros finos",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -841,7 +841,7 @@ export const products: Product[] = [
   },
   {
     "id": 139,
-    "slug": "jean-levi-s-511-slim-fit-139",
+    "slug": "jean-levi-s-511-slim-fit-aaa5",
     "nombre": "Jean Levi’s 511™ Slim Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -873,7 +873,7 @@ export const products: Product[] = [
   },
   {
     "id": 225,
-    "slug": "jean-bootcut-fit-cargo-de-dos-bolsas-225",
+    "slug": "jean-bootcut-fit-cargo-de-dos-bolsas-fa88",
     "nombre": "Jean Bootcut Fit cargo de dos bolsas",
     "categoria": "Mujer",
     "tipo": "Pantalones",
@@ -899,7 +899,7 @@ export const products: Product[] = [
   },
   {
     "id": 232,
-    "slug": "blusa-acanalada-cuello-oja-232",
+    "slug": "blusa-acanalada-cuello-oja-ed13",
     "nombre": "Blusa Acanalada Cuello Oja",
     "categoria": "Mujer",
     "tipo": "Blusas",
@@ -926,7 +926,7 @@ export const products: Product[] = [
   },
   {
     "id": 241,
-    "slug": "jean-jordache-loose-fit-241",
+    "slug": "jean-jordache-loose-fit-721a",
     "nombre": "Jean Jordache Loose Fit",
     "categoria": "Juvenil",
     "tipo": "Pantalones",
@@ -957,7 +957,7 @@ export const products: Product[] = [
   },
   {
     "id": 257,
-    "slug": "camisa-casual-a-cuadros-257",
+    "slug": "camisa-casual-a-cuadros-hummer-jeans-721d",
     "nombre": "Camisa casual a cuadros",
     "categoria": "Juvenil",
     "tipo": "Polos / Camisas / Playeras",
@@ -984,7 +984,7 @@ export const products: Product[] = [
   },
   {
     "id": 278,
-    "slug": "sudadera-estilo-universitario-bicolor-278",
+    "slug": "sudadera-estilo-universitario-bicolor-ff03",
     "nombre": "Sudadera estilo universitario bicolor",
     "categoria": "Juvenil",
     "tipo": "Chumpas / Suéteres / Sudaderas",
@@ -1012,7 +1012,7 @@ export const products: Product[] = [
   },
   {
     "id": 290,
-    "slug": "polo-pique-con-franja-290",
+    "slug": "polo-pique-con-franja-u-s-polo-assn-0d41",
     "nombre": "Polo piqué con franja",
     "categoria": "Infantil",
     "tipo": "Polos / Camisas / Playeras",
@@ -1039,7 +1039,7 @@ export const products: Product[] = [
   },
   {
     "id": 3,
-    "slug": "chaqueta-utilitaria-con-cierre-metalico-3",
+    "slug": "chaqueta-utilitaria-con-cierre-metalico-carven-371a",
     "nombre": "Chaqueta utilitaria con cierre metálico",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -1064,7 +1064,7 @@ export const products: Product[] = [
   },
   {
     "id": 188,
-    "slug": "cincho-casual-negro-hebilla-gris-188",
+    "slug": "cincho-casual-negro-hebilla-gris-pierre-cardin-eb46",
     "nombre": "Cincho casual negro hebilla gris",
     "categoria": "Hombre",
     "tipo": "Accesorios",
@@ -1094,7 +1094,7 @@ export const products: Product[] = [
   },
   {
     "id": 199,
-    "slug": "3pack-de-calcetines-cortos-199",
+    "slug": "3pack-de-calcetines-cortos-pepe-38d6",
     "nombre": "3Pack de calcetines cortos",
     "categoria": "Hombre",
     "tipo": "Ropa Interior",
@@ -1118,7 +1118,7 @@ export const products: Product[] = [
   },
   {
     "id": 28,
-    "slug": "sueter-tejido-texturizado-con-cierre-metalico-28",
+    "slug": "sueter-tejido-texturizado-con-cierre-metalico-01d4",
     "nombre": "Suéter tejido texturizado con cierre metálico",
     "categoria": "Hombre",
     "tipo": "Suéteres",
@@ -1145,7 +1145,7 @@ export const products: Product[] = [
   },
   {
     "id": 34,
-    "slug": "polo-nylon-fondo-entero-34",
+    "slug": "polo-nylon-fondo-entero-kenneth-cole-7c99",
     "nombre": "Polo Nylon Fondo Entero",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -1176,7 +1176,7 @@ export const products: Product[] = [
   },
   {
     "id": 115,
-    "slug": "playera-graphic-set-in-neck-115",
+    "slug": "playera-graphic-set-in-neck-levi-s-47fc",
     "nombre": "Playera Graphic Set In Neck",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -1205,7 +1205,7 @@ export const products: Product[] = [
   },
   {
     "id": 236,
-    "slug": "sueter-cuello-alto-con-botones-236",
+    "slug": "sueter-cuello-alto-con-botones-ddd6",
     "nombre": "Suéter Cuello Alto con Botones",
     "categoria": "Mujer",
     "tipo": "Chumpas / Suéteres / Sudaderas",
@@ -1231,7 +1231,7 @@ export const products: Product[] = [
   },
   {
     "id": 305,
-    "slug": "chaleco-acolchonado-305",
+    "slug": "chaleco-acolchonado-hummer-jeans-7052",
     "nombre": "Chaleco acolchonado",
     "categoria": "Infantil",
     "tipo": "Chumpas / Suéteres / Sudaderas",
@@ -1256,7 +1256,7 @@ export const products: Product[] = [
   },
   {
     "id": 4,
-    "slug": "chumpa-acolchada-pedro-azul-4",
+    "slug": "chumpa-acolchada-pedro-azul-totto-d043",
     "nombre": "Chumpa Acolchada Pedro Azul",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -1286,7 +1286,7 @@ export const products: Product[] = [
   },
   {
     "id": 75,
-    "slug": "camisa-casual-lisa-75",
+    "slug": "camisa-casual-lisa-hummer-jeans-0f8f",
     "nombre": "Camisa casual lisa",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -1313,7 +1313,7 @@ export const products: Product[] = [
   },
   {
     "id": 140,
-    "slug": "jean-levi-s-505-regular-fit-140",
+    "slug": "jean-levi-s-505-regular-fit-7548",
     "nombre": "Jean Levi’s 505™ Regular Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -1345,7 +1345,7 @@ export const products: Product[] = [
   },
   {
     "id": 189,
-    "slug": "gorra-ajustable-perry-ellis-189",
+    "slug": "gorra-ajustable-perry-ellis-perrry-ellis-ec92",
     "nombre": "Gorra ajustable Perry Ellis",
     "categoria": "Hombre",
     "tipo": "Accesorios",
@@ -1368,7 +1368,7 @@ export const products: Product[] = [
   },
   {
     "id": 226,
-    "slug": "pantalon-de-tela-relaxed-fit-226",
+    "slug": "pantalon-de-tela-relaxed-fit-8f1c",
     "nombre": "Pantalon de tela relaxed Fit",
     "categoria": "Mujer",
     "tipo": "Pantalones",
@@ -1396,7 +1396,7 @@ export const products: Product[] = [
   },
   {
     "id": 233,
-    "slug": "crop-top-cuello-cuadrado-233",
+    "slug": "crop-top-cuello-cuadrado-0fff",
     "nombre": "Crop Top Cuello Cuadrado",
     "categoria": "Mujer",
     "tipo": "Blusas",
@@ -1423,7 +1423,7 @@ export const products: Product[] = [
   },
   {
     "id": 242,
-    "slug": "jean-jordache-slim-fit-115-242",
+    "slug": "jean-jordache-slim-fit-115-c2c7",
     "nombre": "Jean Jordache Slim Fit 115",
     "categoria": "Juvenil",
     "tipo": "Pantalones",
@@ -1454,7 +1454,7 @@ export const products: Product[] = [
   },
   {
     "id": 258,
-    "slug": "polo-con-borde-a-rayas-258",
+    "slug": "polo-con-borde-a-rayas-u-s-polo-assn-a7a4",
     "nombre": "Polo con borde a rayas",
     "categoria": "Juvenil",
     "tipo": "Polos / Camisas / Playeras",
@@ -1481,7 +1481,7 @@ export const products: Product[] = [
   },
   {
     "id": 279,
-    "slug": "sudadera-estilo-universitario-279",
+    "slug": "sudadera-estilo-universitario-30a0",
     "nombre": "Sudadera estilo universitario",
     "categoria": "Juvenil",
     "tipo": "Chumpas / Suéteres / Sudaderas",
@@ -1506,7 +1506,7 @@ export const products: Product[] = [
   },
   {
     "id": 288,
-    "slug": "jogger-cargo-straight-fit-288",
+    "slug": "jogger-cargo-straight-fit-jordache-5a33",
     "nombre": "jogger cargo straight fit",
     "categoria": "Infantil",
     "tipo": "Pantalones",
@@ -1536,7 +1536,7 @@ export const products: Product[] = [
   },
   {
     "id": 291,
-    "slug": "playera-basica-con-rectangulo-291",
+    "slug": "playera-basica-con-rectangulo-jordache-ed2f",
     "nombre": "Playera básica con rectángulo",
     "categoria": "Infantil",
     "tipo": "Polos / Camisas / Playeras",
@@ -1562,7 +1562,7 @@ export const products: Product[] = [
   },
   {
     "id": 35,
-    "slug": "polo-de-algodon-organico-interlock-daddy-corinta-35",
+    "slug": "polo-de-algodon-organico-interlock-daddy-corinta-original-penguin-e4dd",
     "nombre": "Polo de algodón orgánico interlock Daddy corinta",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -1592,7 +1592,7 @@ export const products: Product[] = [
   },
   {
     "id": 116,
-    "slug": "playera-con-bloque-de-color-y-escudo-116",
+    "slug": "playera-con-bloque-de-color-y-escudo-u-s-polo-assn-bee3",
     "nombre": "Playera con bloque de color y escudo",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -1619,7 +1619,7 @@ export const products: Product[] = [
   },
   {
     "id": 200,
-    "slug": "3pack-de-calcetines-cortos-200",
+    "slug": "3pack-de-calcetines-cortos-pepe-80df",
     "nombre": "3Pack de calcetines cortos",
     "categoria": "Hombre",
     "tipo": "Ropa Interior",
@@ -1642,7 +1642,7 @@ export const products: Product[] = [
   },
   {
     "id": 29,
-    "slug": "sueter-tejido-estilo-cardigan-29",
+    "slug": "sueter-tejido-estilo-cardigan-6e28",
     "nombre": "Suéter tejido estilo cárdigan",
     "categoria": "Hombre",
     "tipo": "Suéteres",
@@ -1668,7 +1668,7 @@ export const products: Product[] = [
   },
   {
     "id": 237,
-    "slug": "sudadera-cropped-con-capucha-237",
+    "slug": "sudadera-cropped-con-capucha-d2c6",
     "nombre": "Sudadera Cropped con Capucha",
     "categoria": "Mujer",
     "tipo": "Chumpas / Suéteres / Sudaderas",
@@ -1694,7 +1694,7 @@ export const products: Product[] = [
   },
   {
     "id": 5,
-    "slug": "chumpa-acolchada-cuello-alto-jetty-beige-5",
+    "slug": "chumpa-acolchada-cuello-alto-jetty-beige-totto-7664",
     "nombre": "Chumpa Acolchada cuello alto jetty beige",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -1720,7 +1720,7 @@ export const products: Product[] = [
   },
   {
     "id": 76,
-    "slug": "camisa-casual-de-cuadros-vichy-76",
+    "slug": "camisa-casual-de-cuadros-vichy-ted-lapidus-c6f7",
     "nombre": "Camisa casual de cuadros vichy",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -1748,7 +1748,7 @@ export const products: Product[] = [
   },
   {
     "id": 117,
-    "slug": "playera-jaspeada-con-estampado-tipografico-117",
+    "slug": "playera-jaspeada-con-estampado-tipografico-u-s-polo-assn-1262",
     "nombre": "Playera jaspeada con estampado tipográfico",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -1775,7 +1775,7 @@ export const products: Product[] = [
   },
   {
     "id": 141,
-    "slug": "pantalon-de-pana-levi-s-505-regular-fit-141",
+    "slug": "pantalon-de-pana-levi-s-505-regular-fit-79b5",
     "nombre": "Pantalon de Pana Levi’s 505™ Regular Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -1807,7 +1807,7 @@ export const products: Product[] = [
   },
   {
     "id": 190,
-    "slug": "cincho-casual-negro-hebilla-gris-oscura-190",
+    "slug": "cincho-casual-negro-hebilla-gris-oscura-pierre-cardin-37b5",
     "nombre": "Cincho casual negro hebilla gris oscura",
     "categoria": "Hombre",
     "tipo": "Accesorios",
@@ -1835,7 +1835,7 @@ export const products: Product[] = [
   },
   {
     "id": 201,
-    "slug": "boxer-de-microfibra-sin-costuras-201",
+    "slug": "boxer-de-microfibra-sin-costuras-lupo-b4af",
     "nombre": "bóxer de microfibra sin costuras",
     "categoria": "Hombre",
     "tipo": "Ropa Interior",
@@ -1863,7 +1863,7 @@ export const products: Product[] = [
   },
   {
     "id": 227,
-    "slug": "jean-bootcut-fit-colombiano-tiro-alto-227",
+    "slug": "jean-bootcut-fit-colombiano-tiro-alto-6205",
     "nombre": "Jean Bootcut Fit Colombiano Tiro Alto",
     "categoria": "Mujer",
     "tipo": "Pantalones",
@@ -1889,7 +1889,7 @@ export const products: Product[] = [
   },
   {
     "id": 243,
-    "slug": "jean-jordache-loose-fit-243",
+    "slug": "jean-jordache-loose-fit-e466",
     "nombre": "Jean Jordache Loose Fit",
     "categoria": "Juvenil",
     "tipo": "Pantalones",
@@ -1921,7 +1921,7 @@ export const products: Product[] = [
   },
   {
     "id": 259,
-    "slug": "playera-manga-larga-259",
+    "slug": "playera-manga-larga-u-s-polo-assn-65db",
     "nombre": "Playera manga larga",
     "categoria": "Juvenil",
     "tipo": "Polos / Camisas / Playeras",
@@ -1948,7 +1948,7 @@ export const products: Product[] = [
   },
   {
     "id": 280,
-    "slug": "chumpa-acolchada-280",
+    "slug": "chumpa-acolchada-27b9",
     "nombre": "Chumpa acolchada",
     "categoria": "Juvenil",
     "tipo": "Chumpas / Suéteres / Sudaderas",
@@ -1975,7 +1975,7 @@ export const products: Product[] = [
   },
   {
     "id": 292,
-    "slug": "camisa-lisa-con-cuello-bordado-292",
+    "slug": "camisa-lisa-con-cuello-bordado-catano-kids-3f5d",
     "nombre": "Camisa lisa con cuello bordado",
     "categoria": "Infantil",
     "tipo": "Polos / Camisas / Playeras",
@@ -2003,7 +2003,7 @@ export const products: Product[] = [
   },
   {
     "id": 36,
-    "slug": "polo-johnny-honeycomb-36",
+    "slug": "polo-johnny-honeycomb-original-penguin-5986",
     "nombre": "Polo Johnny Honeycomb",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -2032,7 +2032,7 @@ export const products: Product[] = [
   },
   {
     "id": 238,
-    "slug": "sueter-tejido-de-trenzas-238",
+    "slug": "sueter-tejido-de-trenzas-9c23",
     "nombre": "Suéter Tejido de Trenzas",
     "categoria": "Mujer",
     "tipo": "Chumpas / Suéteres / Sudaderas",
@@ -2058,7 +2058,7 @@ export const products: Product[] = [
   },
   {
     "id": 30,
-    "slug": "sueter-tejido-acanalado-30",
+    "slug": "sueter-tejido-acanalado-e612",
     "nombre": "Suéter tejido acanalado",
     "categoria": "Hombre",
     "tipo": "Suéteres",
@@ -2083,7 +2083,7 @@ export const products: Product[] = [
   },
   {
     "id": 77,
-    "slug": "camisa-casual-de-cuadros-manga-corta-77",
+    "slug": "camisa-casual-de-cuadros-manga-corta-levi-s-18d3",
     "nombre": "Camisa casual de cuadros manga corta",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -2110,7 +2110,7 @@ export const products: Product[] = [
   },
   {
     "id": 191,
-    "slug": "billetera-de-cuero-cafe-191",
+    "slug": "billetera-de-cuero-cafe-manhattan-d964",
     "nombre": "Billetera de cuero café",
     "categoria": "Hombre",
     "tipo": "Accesorios",
@@ -2134,7 +2134,7 @@ export const products: Product[] = [
   },
   {
     "id": 202,
-    "slug": "3pack-boxers-con-pretina-satinada-202",
+    "slug": "3pack-boxers-con-pretina-satinada-oscar-de-la-renta-7ecb",
     "nombre": "3Pack bóxers con pretina satinada",
     "categoria": "Hombre",
     "tipo": "Ropa Interior",
@@ -2165,7 +2165,7 @@ export const products: Product[] = [
   },
   {
     "id": 6,
-    "slug": "chaqueta-bomber-6",
+    "slug": "chaqueta-bomber-kenneth-cole-326e",
     "nombre": "Chaqueta Bomber",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -2196,7 +2196,7 @@ export const products: Product[] = [
   },
   {
     "id": 118,
-    "slug": "playera-con-estampado-tipografico-repetido-118",
+    "slug": "playera-con-estampado-tipografico-repetido-kenneth-cole-9de4",
     "nombre": "Playera con estampado tipográfico repetido",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -2224,7 +2224,7 @@ export const products: Product[] = [
   },
   {
     "id": 260,
-    "slug": "playera-con-estampado-de-franjas-260",
+    "slug": "playera-con-estampado-de-franjas-u-s-polo-assn-ab96",
     "nombre": "Playera con estampado de franjas",
     "categoria": "Juvenil",
     "tipo": "Polos / Camisas / Playeras",
@@ -2251,7 +2251,7 @@ export const products: Product[] = [
   },
   {
     "id": 281,
-    "slug": "chumpa-acolchada-281",
+    "slug": "chumpa-acolchada-hummer-jeans-74dd",
     "nombre": "Chumpa acolchada",
     "categoria": "Juvenil",
     "tipo": "Chumpas / Suéteres / Sudaderas",
@@ -2279,7 +2279,7 @@ export const products: Product[] = [
   },
   {
     "id": 293,
-    "slug": "polo-en-bloques-diagonales-293",
+    "slug": "polo-en-bloques-diagonales-u-s-polo-assn-c677",
     "nombre": "polo en bloques diagonales",
     "categoria": "Infantil",
     "tipo": "Polos / Camisas / Playeras",
@@ -2306,7 +2306,7 @@ export const products: Product[] = [
   },
   {
     "id": 37,
-    "slug": "polo-pique-casual-de-diseno-dinamico-37",
+    "slug": "polo-pique-casual-de-diseno-dinamico-u-s-polo-assn-b3f6",
     "nombre": "Polo piqué casual de diseño dinamico",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -2333,7 +2333,7 @@ export const products: Product[] = [
   },
   {
     "id": 78,
-    "slug": "camisa-casual-de-rayas-finas-horizontales-78",
+    "slug": "camisa-casual-de-rayas-finas-horizontales-polo-club-long-beach-6b14",
     "nombre": "Camisa casual de rayas finas horizontales",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -2360,7 +2360,7 @@ export const products: Product[] = [
   },
   {
     "id": 142,
-    "slug": "jean-levi-s-514-straight-fit-142",
+    "slug": "jean-levi-s-514-straight-fit-73f6",
     "nombre": "Jean Levi's 514 Straight Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -2388,7 +2388,7 @@ export const products: Product[] = [
   },
   {
     "id": 192,
-    "slug": "cincho-de-vestir-reversible-192",
+    "slug": "cincho-de-vestir-reversible-manhattan-e15a",
     "nombre": "Cincho de vestir reversible",
     "categoria": "Hombre",
     "tipo": "Accesorios",
@@ -2419,7 +2419,7 @@ export const products: Product[] = [
   },
   {
     "id": 203,
-    "slug": "3pack-de-calcetines-cortos-203",
+    "slug": "3pack-de-calcetines-cortos-pepe-928f",
     "nombre": "3Pack de calcetines cortos",
     "categoria": "Hombre",
     "tipo": "Ropa Interior",
@@ -2442,7 +2442,7 @@ export const products: Product[] = [
   },
   {
     "id": 239,
-    "slug": "sudadera-clasica-con-cierre-completo-239",
+    "slug": "sudadera-clasica-con-cierre-completo-totto-9871",
     "nombre": "Sudadera Clásica con Cierre Completo",
     "categoria": "Mujer",
     "tipo": "Chumpas / Suéteres / Sudaderas",
@@ -2467,7 +2467,7 @@ export const products: Product[] = [
   },
   {
     "id": 244,
-    "slug": "jean-jordache-slim-fit-115-244",
+    "slug": "jean-jordache-slim-fit-115-9ba0",
     "nombre": "Jean Jordache Slim Fit 115",
     "categoria": "Juvenil",
     "tipo": "Pantalones",
@@ -2498,7 +2498,7 @@ export const products: Product[] = [
   },
   {
     "id": 38,
-    "slug": "polo-fondo-entero-bone-38",
+    "slug": "polo-fondo-entero-bone-kenneth-cole-0f26",
     "nombre": "Polo fondo entero bone",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -2525,7 +2525,7 @@ export const products: Product[] = [
   },
   {
     "id": 193,
-    "slug": "cincho-de-vestir-reversible-193",
+    "slug": "cincho-de-vestir-reversible-manhattan-9215",
     "nombre": "Cincho de vestir reversible",
     "categoria": "Hombre",
     "tipo": "Accesorios",
@@ -2555,7 +2555,7 @@ export const products: Product[] = [
   },
   {
     "id": 228,
-    "slug": "pantalon-cargo-con-dos-bolsas-228",
+    "slug": "pantalon-cargo-con-dos-bolsas-1d7d",
     "nombre": "Pantalon Cargo con dos bolsas",
     "categoria": "Mujer",
     "tipo": "Pantalones",
@@ -2585,7 +2585,7 @@ export const products: Product[] = [
   },
   {
     "id": 39,
-    "slug": "polo-minimalista-con-cuello-y-punos-a-rayas-39",
+    "slug": "polo-minimalista-con-cuello-y-punos-a-rayas-perrry-ellis-92c3",
     "nombre": "polo minimalista con cuello y puños a rayas",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -2612,7 +2612,7 @@ export const products: Product[] = [
   },
   {
     "id": 119,
-    "slug": "playera-two-horse-119",
+    "slug": "playera-two-horse-levi-s-889c",
     "nombre": "Playera Two Horse",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -2640,7 +2640,7 @@ export const products: Product[] = [
   },
   {
     "id": 194,
-    "slug": "billetera-de-cuero-negra-194",
+    "slug": "billetera-de-cuero-negra-manhattan-0140",
     "nombre": "Billetera de cuero negra",
     "categoria": "Hombre",
     "tipo": "Accesorios",
@@ -2664,7 +2664,7 @@ export const products: Product[] = [
   },
   {
     "id": 261,
-    "slug": "polo-estilo-deportiva-universitario-261",
+    "slug": "polo-estilo-deportiva-universitario-u-s-polo-assn-1e23",
     "nombre": "Polo estilo deportiva universitario",
     "categoria": "Juvenil",
     "tipo": "Polos / Camisas / Playeras",
@@ -2691,7 +2691,7 @@ export const products: Product[] = [
   },
   {
     "id": 7,
-    "slug": "chumpa-acolchada-termolight-2-0-azul-7",
+    "slug": "chumpa-acolchada-termolight-2-0-azul-totto-522f",
     "nombre": "Chumpa Acolchada Termolight 2.0 Azul",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -2723,7 +2723,7 @@ export const products: Product[] = [
   },
   {
     "id": 79,
-    "slug": "camisa-cuadros-cerulean-manga-larga-79",
+    "slug": "camisa-cuadros-cerulean-manga-larga-oscar-de-la-renta-1a15",
     "nombre": "Camisa Cuadros Cerulean Manga Larga",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -2751,7 +2751,7 @@ export const products: Product[] = [
   },
   {
     "id": 80,
-    "slug": "camisa-de-textura-jaspeada-con-trazos-horizontales-80",
+    "slug": "camisa-de-textura-jaspeada-con-trazos-horizontales-polo-club-long-beach-c6d8",
     "nombre": "Camisa de textura jaspeada con trazos horizontales",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -2780,7 +2780,7 @@ export const products: Product[] = [
   },
   {
     "id": 143,
-    "slug": "jean-511-slim-fit-performance-cool-men-s-143",
+    "slug": "jean-511-slim-fit-performance-cool-men-s-levi-s-f074",
     "nombre": "Jean 511™ Slim Fit Performance Cool Men's",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -2812,7 +2812,7 @@ export const products: Product[] = [
   },
   {
     "id": 204,
-    "slug": "3pack-de-calcetas-altas-204",
+    "slug": "3pack-de-calcetas-altas-pepe-4e38",
     "nombre": "3Pack de Calcetas Altas",
     "categoria": "Hombre",
     "tipo": "Ropa Interior",
@@ -2835,7 +2835,7 @@ export const products: Product[] = [
   },
   {
     "id": 245,
-    "slug": "jean-pepe-vi228-skinny-fit-245",
+    "slug": "jean-pepe-vi228-skinny-fit-a217",
     "nombre": "Jean Pepe VI228 Skinny Fit",
     "categoria": "Juvenil",
     "tipo": "Pantalones",
@@ -2866,7 +2866,7 @@ export const products: Product[] = [
   },
   {
     "id": 282,
-    "slug": "chaleco-acolchado-282",
+    "slug": "chaleco-acolchado-hummer-jeans-8653",
     "nombre": "Chaleco acolchado",
     "categoria": "Juvenil",
     "tipo": "Chumpas / Suéteres / Sudaderas",
@@ -2893,7 +2893,7 @@ export const products: Product[] = [
   },
   {
     "id": 294,
-    "slug": "polo-pique-con-bloque-bicolor-294",
+    "slug": "polo-pique-con-bloque-bicolor-u-s-polo-assn-416b",
     "nombre": "Polo piqué con bloque bicolor",
     "categoria": "Infantil",
     "tipo": "Polos / Camisas / Playeras",
@@ -2920,7 +2920,7 @@ export const products: Product[] = [
   },
   {
     "id": 229,
-    "slug": "jean-481-wide-leg-fit-1-boton-229",
+    "slug": "jean-481-wide-leg-fit-1-boton-pierre-cardin-9b04",
     "nombre": "Jean 481 wide leg Fit 1 botón",
     "categoria": "Mujer",
     "tipo": "Pantalones",
@@ -2949,7 +2949,7 @@ export const products: Product[] = [
   },
   {
     "id": 40,
-    "slug": "polo-fondo-entero-ash-40",
+    "slug": "polo-fondo-entero-ash-kenneth-cole-ca7c",
     "nombre": "Polo fondo entero ash",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -2977,7 +2977,7 @@ export const products: Product[] = [
   },
   {
     "id": 81,
-    "slug": "camisa-casual-regular-fit-multicolor-manga-larga-81",
+    "slug": "camisa-casual-regular-fit-multicolor-manga-larga-oscar-de-la-renta-8017",
     "nombre": "Camisa casual regular fit multicolor Manga Larga",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -3006,7 +3006,7 @@ export const products: Product[] = [
   },
   {
     "id": 120,
-    "slug": "playera-con-grafico-geometrico-lineal-frontal-120",
+    "slug": "playera-con-grafico-geometrico-lineal-frontal-kenneth-cole-a0c4",
     "nombre": "Playera con gráfico geométrico lineal frontal",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -3035,7 +3035,7 @@ export const products: Product[] = [
   },
   {
     "id": 195,
-    "slug": "gorra-ajustable-totto-195",
+    "slug": "gorra-ajustable-totto-83c2",
     "nombre": "Gorra Ajustable Totto",
     "categoria": "Hombre",
     "tipo": "Accesorios",
@@ -3058,7 +3058,7 @@ export const products: Product[] = [
   },
   {
     "id": 205,
-    "slug": "boxer-de-microfibra-pro-elegance-sin-costuras-205",
+    "slug": "boxer-de-microfibra-pro-elegance-sin-costuras-lupo-e481",
     "nombre": "Boxer de Microfibra PRO Elegance sin Costuras",
     "categoria": "Hombre",
     "tipo": "Ropa Interior",
@@ -3086,7 +3086,7 @@ export const products: Product[] = [
   },
   {
     "id": 246,
-    "slug": "jean-jordache-loose-fit-246",
+    "slug": "jean-jordache-loose-fit-83c0",
     "nombre": "Jean Jordache Loose Fit",
     "categoria": "Juvenil",
     "tipo": "Pantalones",
@@ -3117,7 +3117,7 @@ export const products: Product[] = [
   },
   {
     "id": 262,
-    "slug": "camisa-a-cuadros-diagonales-262",
+    "slug": "camisa-a-cuadros-diagonales-catano-kids-1ef3",
     "nombre": "Camisa a cuadros diagonales",
     "categoria": "Juvenil",
     "tipo": "Polos / Camisas / Playeras",
@@ -3145,7 +3145,7 @@ export const products: Product[] = [
   },
   {
     "id": 8,
-    "slug": "chaqueta-liviana-barbadelo-8",
+    "slug": "chaqueta-liviana-barbadelo-dougger-32f4",
     "nombre": "Chaqueta Liviana BARBADELO",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -3172,7 +3172,7 @@ export const products: Product[] = [
   },
   {
     "id": 41,
-    "slug": "polo-interlock-tipo-sweater-celeste-41",
+    "slug": "polo-interlock-tipo-sweater-celeste-original-penguin-335f",
     "nombre": "Polo interlock tipo sweater celeste",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -3200,7 +3200,7 @@ export const products: Product[] = [
   },
   {
     "id": 144,
-    "slug": "jean-levi-s-502-tapered-fit-144",
+    "slug": "jean-levi-s-502-tapered-fit-75aa",
     "nombre": "Jean Levi's 502 Tapered Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -3229,7 +3229,7 @@ export const products: Product[] = [
   },
   {
     "id": 283,
-    "slug": "chumpa-cortaviento-283",
+    "slug": "chumpa-cortaviento-bc7b",
     "nombre": "Chumpa cortaviento",
     "categoria": "Juvenil",
     "tipo": "Chumpas / Suéteres / Sudaderas",
@@ -3255,7 +3255,7 @@ export const products: Product[] = [
   },
   {
     "id": 295,
-    "slug": "camisa-casual-de-cuadros-manga-larga-295",
+    "slug": "camisa-casual-de-cuadros-manga-larga-catano-kids-4b94",
     "nombre": "Camisa casual de cuadros manga larga",
     "categoria": "Infantil",
     "tipo": "Polos / Camisas / Playeras",
@@ -3281,7 +3281,7 @@ export const products: Product[] = [
   },
   {
     "id": 121,
-    "slug": "playera-basica-algodon-organico-black-121",
+    "slug": "playera-basica-algodon-organico-black-original-penguin-5d63",
     "nombre": "Playera Básica Algodón Orgánico black",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -3310,7 +3310,7 @@ export const products: Product[] = [
   },
   {
     "id": 230,
-    "slug": "jean-bootcut-fit-colombiano-tiro-alto-230",
+    "slug": "jean-bootcut-fit-colombiano-tiro-alto-55dc",
     "nombre": "Jean Bootcut Fit Colombiano Tiro Alto",
     "categoria": "Mujer",
     "tipo": "Pantalones",
@@ -3335,7 +3335,7 @@ export const products: Product[] = [
   },
   {
     "id": 247,
-    "slug": "jean-jordache-slim-fit-247",
+    "slug": "jean-jordache-slim-fit-eadc",
     "nombre": "Jean Jordache Slim Fit",
     "categoria": "Juvenil",
     "tipo": "Pantalones",
@@ -3366,7 +3366,7 @@ export const products: Product[] = [
   },
   {
     "id": 263,
-    "slug": "camisa-casual-a-cuadros-263",
+    "slug": "camisa-casual-a-cuadros-hummer-jeans-9073",
     "nombre": "Camisa casual a cuadros",
     "categoria": "Juvenil",
     "tipo": "Polos / Camisas / Playeras",
@@ -3395,7 +3395,7 @@ export const products: Product[] = [
   },
   {
     "id": 42,
-    "slug": "polo-de-algodon-organico-earl-mesh-beige-azul-marino-42",
+    "slug": "polo-de-algodon-organico-earl-mesh-beige-azul-marino-original-penguin-236a",
     "nombre": "Polo de Algodón Orgánico Earl Mesh beige azul marino",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -3426,7 +3426,7 @@ export const products: Product[] = [
   },
   {
     "id": 82,
-    "slug": "camisa-formal-con-microestampado-pata-de-gallo-82",
+    "slug": "camisa-formal-con-microestampado-pata-de-gallo-kenneth-cole-b315",
     "nombre": "Camisa formal con microestampado pata de gallo",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -3454,7 +3454,7 @@ export const products: Product[] = [
   },
   {
     "id": 206,
-    "slug": "3pack-de-calcetas-altas-206",
+    "slug": "3pack-de-calcetas-altas-pepe-b252",
     "nombre": "3Pack de Calcetas altas",
     "categoria": "Hombre",
     "tipo": "Ropa Interior",
@@ -3477,7 +3477,7 @@ export const products: Product[] = [
   },
   {
     "id": 296,
-    "slug": "playera-con-recuadro-geometrico-296",
+    "slug": "playera-con-recuadro-geometrico-jordache-9992",
     "nombre": "Playera con recuadro geométrico",
     "categoria": "Infantil",
     "tipo": "Polos / Camisas / Playeras",
@@ -3503,7 +3503,7 @@ export const products: Product[] = [
   },
   {
     "id": 9,
-    "slug": "chumpa-acolchada-9",
+    "slug": "chumpa-acolchada-hummer-jeans-44df",
     "nombre": "Chumpa Acolchada",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -3532,7 +3532,7 @@ export const products: Product[] = [
   },
   {
     "id": 10,
-    "slug": "chumpa-acolchada-con-capucha-desmontable-10",
+    "slug": "chumpa-acolchada-con-capucha-desmontable-kenneth-cole-872f",
     "nombre": "Chumpa acolchada con capucha desmontable",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -3558,7 +3558,7 @@ export const products: Product[] = [
   },
   {
     "id": 122,
-    "slug": "playera-fondo-entero-kc-clasica-122",
+    "slug": "playera-fondo-entero-kc-clasica-kenneth-cole-4a6a",
     "nombre": "Playera fondo entero KC Clásica",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -3588,7 +3588,7 @@ export const products: Product[] = [
   },
   {
     "id": 145,
-    "slug": "jean-levi-s-512-slim-taper-fit-145",
+    "slug": "jean-levi-s-512-slim-taper-fit-2892",
     "nombre": "Jean Levi's 512 Slim Taper Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -3622,7 +3622,7 @@ export const products: Product[] = [
   },
   {
     "id": 83,
-    "slug": "camisa-jaspeado-83",
+    "slug": "camisa-jaspeado-kenneth-cole-4202",
     "nombre": "CAMISA JASPEADO",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -3650,7 +3650,7 @@ export const products: Product[] = [
   },
   {
     "id": 123,
-    "slug": "playera-con-bloque-central-123",
+    "slug": "playera-con-bloque-central-kenneth-cole-3354",
     "nombre": "Playera con bloque central",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -3680,7 +3680,7 @@ export const products: Product[] = [
   },
   {
     "id": 248,
-    "slug": "jean-jordache-straight-fit-comfort-248",
+    "slug": "jean-jordache-straight-fit-comfort-e2ab",
     "nombre": "Jean Jordache Straight Fit Comfort",
     "categoria": "Juvenil",
     "tipo": "Pantalones",
@@ -3712,7 +3712,7 @@ export const products: Product[] = [
   },
   {
     "id": 264,
-    "slug": "camisa-casual-a-cuadros-264",
+    "slug": "camisa-casual-a-cuadros-hummer-jeans-d9ed",
     "nombre": "Camisa casual a cuadros",
     "categoria": "Juvenil",
     "tipo": "Polos / Camisas / Playeras",
@@ -3741,7 +3741,7 @@ export const products: Product[] = [
   },
   {
     "id": 284,
-    "slug": "sudadera-284",
+    "slug": "sudadera-levi-s-d7cb",
     "nombre": "Sudadera",
     "categoria": "Juvenil",
     "tipo": "Chumpas / Suéteres / Sudaderas",
@@ -3767,7 +3767,7 @@ export const products: Product[] = [
   },
   {
     "id": 196,
-    "slug": "cincho-casual-hebilla-negra-196",
+    "slug": "cincho-casual-hebilla-negra-pierre-cardin-b44a",
     "nombre": "Cincho casual hebilla negra",
     "categoria": "Hombre",
     "tipo": "Accesorios",
@@ -3795,7 +3795,7 @@ export const products: Product[] = [
   },
   {
     "id": 207,
-    "slug": "boxer-por-unidad-en-tres-colores-207",
+    "slug": "boxer-por-unidad-en-tres-colores-u-s-polo-assn-b93f",
     "nombre": "Boxer por Unidad en tres colores",
     "categoria": "Hombre",
     "tipo": "Ropa Interior",
@@ -3825,7 +3825,7 @@ export const products: Product[] = [
   },
   {
     "id": 297,
-    "slug": "camisa-a-cuadros-diagonales-manga-larga-297",
+    "slug": "camisa-a-cuadros-diagonales-manga-larga-catano-kids-c036",
     "nombre": "Camisa a cuadros diagonales manga larga",
     "categoria": "Infantil",
     "tipo": "Polos / Camisas / Playeras",
@@ -3853,7 +3853,7 @@ export const products: Product[] = [
   },
   {
     "id": 11,
-    "slug": "chumpa-reversible-acolchada-11",
+    "slug": "chumpa-reversible-acolchada-dougger-7a2f",
     "nombre": "Chumpa reversible acolchada",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -3881,7 +3881,7 @@ export const products: Product[] = [
   },
   {
     "id": 84,
-    "slug": "camisa-de-rayas-combinadas-estilo-patchwork-84",
+    "slug": "camisa-de-rayas-combinadas-estilo-patchwork-hummer-jeans-1554",
     "nombre": "Camisa de rayas combinadas estilo patchwork",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -3908,7 +3908,7 @@ export const products: Product[] = [
   },
   {
     "id": 124,
-    "slug": "playera-casual-con-franja-horizontal-124",
+    "slug": "playera-casual-con-franja-horizontal-u-s-polo-assn-ec11",
     "nombre": "Playera casual con franja horizontal",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -3934,7 +3934,7 @@ export const products: Product[] = [
   },
   {
     "id": 146,
-    "slug": "jean-pepe-816-skinny-fit-146",
+    "slug": "jean-pepe-816-skinny-fit-9314",
     "nombre": "Jean Pepe 816 Skinny Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -3966,7 +3966,7 @@ export const products: Product[] = [
   },
   {
     "id": 265,
-    "slug": "polo-a-rayas-horizontales-265",
+    "slug": "polo-a-rayas-horizontales-fdf5",
     "nombre": "polo a rayas horizontales",
     "categoria": "Juvenil",
     "tipo": "Polos / Camisas / Playeras",
@@ -3993,7 +3993,7 @@ export const products: Product[] = [
   },
   {
     "id": 43,
-    "slug": "polo-fondo-entero-negra-43",
+    "slug": "polo-fondo-entero-negra-kenneth-cole-c9b0",
     "nombre": "Polo fondo entero negra",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -4023,7 +4023,7 @@ export const products: Product[] = [
   },
   {
     "id": 249,
-    "slug": "jean-pepe-vi228-skinny-fit-249",
+    "slug": "jean-pepe-vi228-skinny-fit-5ac8",
     "nombre": "Jean Pepe VI228 Skinny Fit",
     "categoria": "Juvenil",
     "tipo": "Pantalones",
@@ -4053,7 +4053,7 @@ export const products: Product[] = [
   },
   {
     "id": 85,
-    "slug": "camisa-principe-de-gales-manga-corta-85",
+    "slug": "camisa-principe-de-gales-manga-corta-van-heusen-8961",
     "nombre": "Camisa príncipe de Gales manga corta",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -4083,7 +4083,7 @@ export const products: Product[] = [
   },
   {
     "id": 208,
-    "slug": "boxer-estampados-por-unidad-208",
+    "slug": "boxer-estampados-por-unidad-u-s-polo-assn-fc4e",
     "nombre": "Boxer estampados por Unidad",
     "categoria": "Hombre",
     "tipo": "Ropa Interior",
@@ -4110,7 +4110,7 @@ export const products: Product[] = [
   },
   {
     "id": 12,
-    "slug": "chumpa-de-abrigo-con-doble-cuello-12",
+    "slug": "chumpa-de-abrigo-con-doble-cuello-oscar-de-la-renta-e233",
     "nombre": "Chumpa de abrigo con doble cuello",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -4138,7 +4138,7 @@ export const products: Product[] = [
   },
   {
     "id": 44,
-    "slug": "polo-lisa-minimalista-44",
+    "slug": "polo-lisa-minimalista-carven-b715",
     "nombre": "polo lisa minimalista",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -4166,7 +4166,7 @@ export const products: Product[] = [
   },
   {
     "id": 125,
-    "slug": "playera-fondo-entero-125",
+    "slug": "playera-fondo-entero-kenneth-cole-a299",
     "nombre": "Playera Fondo Entero",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -4195,7 +4195,7 @@ export const products: Product[] = [
   },
   {
     "id": 147,
-    "slug": "hummer-celeste-palido-147",
+    "slug": "hummer-celeste-palido-hummer-jeans-9456",
     "nombre": "Hummer Celeste Palido",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -4226,7 +4226,7 @@ export const products: Product[] = [
   },
   {
     "id": 266,
-    "slug": "polo-de-bloques-en-contraste-266",
+    "slug": "polo-de-bloques-en-contraste-u-s-polo-assn-01d2",
     "nombre": "Polo de bloques en contraste",
     "categoria": "Juvenil",
     "tipo": "Polos / Camisas / Playeras",
@@ -4253,7 +4253,7 @@ export const products: Product[] = [
   },
   {
     "id": 298,
-    "slug": "playera-cuello-redondo-con-tipografia-298",
+    "slug": "playera-cuello-redondo-con-tipografia-jordache-e7ba",
     "nombre": "Playera cuello redondo con tipografía",
     "categoria": "Infantil",
     "tipo": "Polos / Camisas / Playeras",
@@ -4278,7 +4278,7 @@ export const products: Product[] = [
   },
   {
     "id": 250,
-    "slug": "jean-jordache-slim-fit-115-250",
+    "slug": "jean-jordache-slim-fit-115-19be",
     "nombre": "Jean Jordache Slim Fit 115",
     "categoria": "Juvenil",
     "tipo": "Pantalones",
@@ -4311,7 +4311,7 @@ export const products: Product[] = [
   },
   {
     "id": 285,
-    "slug": "sudadera-cerrada-285",
+    "slug": "sudadera-cerrada-levi-s-a2a8",
     "nombre": "Sudadera cerrada",
     "categoria": "Juvenil",
     "tipo": "Chumpas / Suéteres / Sudaderas",
@@ -4337,7 +4337,7 @@ export const products: Product[] = [
   },
   {
     "id": 86,
-    "slug": "camisa-casual-tipo-mezclilla-manga-corta-86",
+    "slug": "camisa-casual-tipo-mezclilla-manga-corta-van-heusen-ffd0",
     "nombre": "Camisa casual tipo mezclilla manga corta",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -4365,7 +4365,7 @@ export const products: Product[] = [
   },
   {
     "id": 209,
-    "slug": "3pack-de-calcetines-cortos-209",
+    "slug": "3pack-de-calcetines-cortos-pepe-432a",
     "nombre": "3Pack de calcetines cortos",
     "categoria": "Hombre",
     "tipo": "Ropa Interior",
@@ -4388,7 +4388,7 @@ export const products: Product[] = [
   },
   {
     "id": 299,
-    "slug": "polo-con-microfiguras-299",
+    "slug": "polo-con-microfiguras-c102",
     "nombre": "Polo con microfiguras",
     "categoria": "Infantil",
     "tipo": "Polos / Camisas / Playeras",
@@ -4415,7 +4415,7 @@ export const products: Product[] = [
   },
   {
     "id": 13,
-    "slug": "chaqueta-utilitaria-con-cuello-camisero-13",
+    "slug": "chaqueta-utilitaria-con-cuello-camisero-carven-6f8f",
     "nombre": "Chaqueta utilitaria con cuello camisero",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -4442,7 +4442,7 @@ export const products: Product[] = [
   },
   {
     "id": 45,
-    "slug": "polo-texturizada-clasica-45",
+    "slug": "polo-texturizada-clasica-oscar-de-la-renta-2ac6",
     "nombre": "polo texturizada clásica",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -4469,7 +4469,7 @@ export const products: Product[] = [
   },
   {
     "id": 126,
-    "slug": "playera-casual-con-doble-franja-126",
+    "slug": "playera-casual-con-doble-franja-u-s-polo-assn-6938",
     "nombre": "Playera casual con doble franja",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -4496,7 +4496,7 @@ export const products: Product[] = [
   },
   {
     "id": 148,
-    "slug": "pantalon-manhattan-de-vestir-cooling-comfort-148",
+    "slug": "pantalon-manhattan-de-vestir-cooling-comfort-5841",
     "nombre": "Pantalon Manhattan de vestir Cooling Comfort",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -4526,7 +4526,7 @@ export const products: Product[] = [
   },
   {
     "id": 267,
-    "slug": "polo-estilo-deportiva-267",
+    "slug": "polo-estilo-deportiva-u-s-polo-assn-9332",
     "nombre": "Polo estilo deportiva",
     "categoria": "Juvenil",
     "tipo": "Polos / Camisas / Playeras",
@@ -4553,7 +4553,7 @@ export const products: Product[] = [
   },
   {
     "id": 251,
-    "slug": "jean-pepe-vi228-skinny-fit-251",
+    "slug": "jean-pepe-vi228-skinny-fit-14ad",
     "nombre": "Jean Pepe VI228 Skinny Fit",
     "categoria": "Juvenil",
     "tipo": "Pantalones",
@@ -4584,7 +4584,7 @@ export const products: Product[] = [
   },
   {
     "id": 87,
-    "slug": "camisa-casual-de-microcuadros-87",
+    "slug": "camisa-casual-de-microcuadros-van-heusen-755f",
     "nombre": "Camisa casual de microcuadros",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -4613,7 +4613,7 @@ export const products: Product[] = [
   },
   {
     "id": 127,
-    "slug": "playera-basica-lisa-de-tejido-jaspeado-127",
+    "slug": "playera-basica-lisa-de-tejido-jaspeado-pierre-cardin-b91a",
     "nombre": "Playera básica lisa de tejido jaspeado",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -4640,7 +4640,7 @@ export const products: Product[] = [
   },
   {
     "id": 210,
-    "slug": "boxer-estampados-por-unidad-210",
+    "slug": "boxer-estampados-por-unidad-u-s-polo-assn-61e0",
     "nombre": "Boxer estampados por Unidad",
     "categoria": "Hombre",
     "tipo": "Ropa Interior",
@@ -4667,7 +4667,7 @@ export const products: Product[] = [
   },
   {
     "id": 268,
-    "slug": "playera-con-estampado-tipografico-268",
+    "slug": "playera-con-estampado-tipografico-u-s-polo-assn-469f",
     "nombre": "Playera con estampado tipográfico",
     "categoria": "Juvenil",
     "tipo": "Polos / Camisas / Playeras",
@@ -4694,7 +4694,7 @@ export const products: Product[] = [
   },
   {
     "id": 300,
-    "slug": "polo-texturizada-en-relieve-300",
+    "slug": "polo-texturizada-en-relieve-jordache-44c1",
     "nombre": "Polo texturizada en relieve",
     "categoria": "Infantil",
     "tipo": "Polos / Camisas / Playeras",
@@ -4720,7 +4720,7 @@ export const products: Product[] = [
   },
   {
     "id": 14,
-    "slug": "chumpa-acolchada-termolight-2-0-negra-14",
+    "slug": "chumpa-acolchada-termolight-2-0-negra-totto-94ba",
     "nombre": "Chumpa Acolchada Termolight 2.0 Negra",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -4751,7 +4751,7 @@ export const products: Product[] = [
   },
   {
     "id": 149,
-    "slug": "jean-levi-s-511-slim-fit-algodon-149",
+    "slug": "jean-levi-s-511-slim-fit-algodon-b7cd",
     "nombre": "Jean Levi’s 511 Slim Fit Algodón",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -4783,7 +4783,7 @@ export const products: Product[] = [
   },
   {
     "id": 252,
-    "slug": "jean-pepe-vi227-slim-fit-252",
+    "slug": "jean-pepe-vi227-slim-fit-4947",
     "nombre": "Jean Pepe VI227 Slim Fit",
     "categoria": "Juvenil",
     "tipo": "Pantalones",
@@ -4812,7 +4812,7 @@ export const products: Product[] = [
   },
   {
     "id": 88,
-    "slug": "camisa-regular-manga-larga-88",
+    "slug": "camisa-regular-manga-larga-oscar-de-la-renta-70d1",
     "nombre": "Camisa Regular Manga Larga",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -4840,7 +4840,7 @@ export const products: Product[] = [
   },
   {
     "id": 301,
-    "slug": "playera-cuello-redondo-con-emblema-301",
+    "slug": "playera-cuello-redondo-con-emblema-beverly-hills-polo-club-b1ef",
     "nombre": "Playera cuello redondo con emblema",
     "categoria": "Infantil",
     "tipo": "Polos / Camisas / Playeras",
@@ -4866,7 +4866,7 @@ export const products: Product[] = [
   },
   {
     "id": 128,
-    "slug": "playera-basica-con-logo-resaltado-128",
+    "slug": "playera-basica-con-logo-resaltado-original-penguin-98eb",
     "nombre": "Playera básica con Logo Resaltado",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -4894,7 +4894,7 @@ export const products: Product[] = [
   },
   {
     "id": 211,
-    "slug": "boxer-con-rayas-en-la-cintura-211",
+    "slug": "boxer-con-rayas-en-la-cintura-lupo-37d8",
     "nombre": "boxer con rayas en la cintura",
     "categoria": "Hombre",
     "tipo": "Ropa Interior",
@@ -4920,7 +4920,7 @@ export const products: Product[] = [
   },
   {
     "id": 269,
-    "slug": "playera-jaspeada-con-franja-269",
+    "slug": "playera-jaspeada-con-franja-u-s-polo-assn-2d23",
     "nombre": "playera jaspeada con franja",
     "categoria": "Juvenil",
     "tipo": "Polos / Camisas / Playeras",
@@ -4947,7 +4947,7 @@ export const products: Product[] = [
   },
   {
     "id": 15,
-    "slug": "chaqueta-fondo-entero-army-15",
+    "slug": "chaqueta-fondo-entero-army-kenneth-cole-08df",
     "nombre": "Chaqueta fondo entero Army",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -4976,7 +4976,7 @@ export const products: Product[] = [
   },
   {
     "id": 46,
-    "slug": "polo-de-pique-de-manga-larga-46",
+    "slug": "polo-de-pique-de-manga-larga-original-penguin-afdf",
     "nombre": "Polo de piqué de manga larga",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -5004,7 +5004,7 @@ export const products: Product[] = [
   },
   {
     "id": 150,
-    "slug": "jean-van-heusen-vaqueros-slim-fit-150",
+    "slug": "jean-van-heusen-vaqueros-slim-fit-12ce",
     "nombre": "Jean Van Heusen Vaqueros Slim Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -5034,7 +5034,7 @@ export const products: Product[] = [
   },
   {
     "id": 253,
-    "slug": "jean-pepe-vi228-skinny-fit-253",
+    "slug": "jean-pepe-vi228-skinny-fit-a598",
     "nombre": "Jean Pepe VI228 Skinny Fit",
     "categoria": "Juvenil",
     "tipo": "Pantalones",
@@ -5063,7 +5063,7 @@ export const products: Product[] = [
   },
   {
     "id": 89,
-    "slug": "camisa-casual-de-cuadros-vichy-89",
+    "slug": "camisa-casual-de-cuadros-vichy-ted-lapidus-11d6",
     "nombre": "Camisa casual de cuadros vichy",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -5090,7 +5090,7 @@ export const products: Product[] = [
   },
   {
     "id": 129,
-    "slug": "playera-con-tipografia-bicolor-entrelazada-frontal-129",
+    "slug": "playera-con-tipografia-bicolor-entrelazada-frontal-kenneth-cole-34c0",
     "nombre": "Playera con tipografía bicolor entrelazada frontal",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -5118,7 +5118,7 @@ export const products: Product[] = [
   },
   {
     "id": 212,
-    "slug": "boxer-sin-costuras-con-pretina-geometrica-212",
+    "slug": "boxer-sin-costuras-con-pretina-geometrica-lupo-3dfb",
     "nombre": "Bóxer sin costuras con pretina geométrica",
     "categoria": "Hombre",
     "tipo": "Ropa Interior",
@@ -5144,7 +5144,7 @@ export const products: Product[] = [
   },
   {
     "id": 302,
-    "slug": "playera-estilo-sport-en-contraste-302",
+    "slug": "playera-estilo-sport-en-contraste-u-s-polo-assn-0be2",
     "nombre": "Playera estilo sport en contraste",
     "categoria": "Infantil",
     "tipo": "Polos / Camisas / Playeras",
@@ -5169,7 +5169,7 @@ export const products: Product[] = [
   },
   {
     "id": 90,
-    "slug": "camisa-casual-de-cuadros-90",
+    "slug": "camisa-casual-de-cuadros-polo-club-long-beach-b985",
     "nombre": "Camisa casual de cuadros",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -5196,7 +5196,7 @@ export const products: Product[] = [
   },
   {
     "id": 130,
-    "slug": "playera-con-franja-130",
+    "slug": "playera-con-franja-kenneth-cole-47bf",
     "nombre": "Playera con franja",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -5224,7 +5224,7 @@ export const products: Product[] = [
   },
   {
     "id": 270,
-    "slug": "playera-con-grafico-tipografico-de-efecto-desgastado-270",
+    "slug": "playera-con-grafico-tipografico-de-efecto-desgastado-u-s-polo-assn-2401",
     "nombre": "Playera con gráfico tipográfico de efecto desgastado",
     "categoria": "Juvenil",
     "tipo": "Polos / Camisas / Playeras",
@@ -5251,7 +5251,7 @@ export const products: Product[] = [
   },
   {
     "id": 16,
-    "slug": "chaqueta-bomber-verde-salvia-16",
+    "slug": "chaqueta-bomber-verde-salvia-hummer-jeans-9f1d",
     "nombre": "Chaqueta bomber verde salvia",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -5278,7 +5278,7 @@ export const products: Product[] = [
   },
   {
     "id": 151,
-    "slug": "jean-levi-s-511-slim-fit-151",
+    "slug": "jean-levi-s-511-slim-fit-ab6c",
     "nombre": "Jean Levi’s 511™ Slim Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -5313,7 +5313,7 @@ export const products: Product[] = [
   },
   {
     "id": 254,
-    "slug": "jean-pepe-vi267-straight-fit-denim-254",
+    "slug": "jean-pepe-vi267-straight-fit-denim-e5fa",
     "nombre": "Jean Pepe VI267 Straight Fit Denim",
     "categoria": "Juvenil",
     "tipo": "Pantalones",
@@ -5342,7 +5342,7 @@ export const products: Product[] = [
   },
   {
     "id": 47,
-    "slug": "polo-pique-con-franja-tricolor-frontal-47",
+    "slug": "polo-pique-con-franja-tricolor-frontal-u-s-polo-assn-00f4",
     "nombre": "polo piqué con franja tricolor frontal",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -5370,7 +5370,7 @@ export const products: Product[] = [
   },
   {
     "id": 91,
-    "slug": "camisa-casual-lisa-91",
+    "slug": "camisa-casual-lisa-hummer-jeans-9692",
     "nombre": "Camisa casual lisa",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -5397,7 +5397,7 @@ export const products: Product[] = [
   },
   {
     "id": 213,
-    "slug": "boxer-lupo-de-microfibra-con-cinturilla-angular-213",
+    "slug": "boxer-lupo-de-microfibra-con-cinturilla-angular-65a3",
     "nombre": "bóxer lupo de microfibra con cinturilla angular",
     "categoria": "Hombre",
     "tipo": "Ropa Interior",
@@ -5424,7 +5424,7 @@ export const products: Product[] = [
   },
   {
     "id": 17,
-    "slug": "chaqueta-bomber-casual-17",
+    "slug": "chaqueta-bomber-casual-estivaneli-bde4",
     "nombre": "Chaqueta Bomber casual",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -5450,7 +5450,7 @@ export const products: Product[] = [
   },
   {
     "id": 92,
-    "slug": "camisa-de-rayas-verticales-manga-corta-92",
+    "slug": "camisa-de-rayas-verticales-manga-corta-beverly-hills-polo-club-e229",
     "nombre": "Camisa de rayas verticales manga corta",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -5477,7 +5477,7 @@ export const products: Product[] = [
   },
   {
     "id": 131,
-    "slug": "playera-casual-jaspeada-131",
+    "slug": "playera-casual-jaspeada-levi-s-5a19",
     "nombre": "Playera casual jaspeada",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -5503,7 +5503,7 @@ export const products: Product[] = [
   },
   {
     "id": 18,
-    "slug": "chaqueta-bomber-casual-18",
+    "slug": "chaqueta-bomber-casual-estivaneli-28cc",
     "nombre": "Chaqueta Bomber casual",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -5528,7 +5528,7 @@ export const products: Product[] = [
   },
   {
     "id": 93,
-    "slug": "camisa-casual-de-cuadros-manga-corta-93",
+    "slug": "camisa-casual-de-cuadros-manga-corta-van-heusen-2c76",
     "nombre": "Camisa casual de cuadros manga corta",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -5556,7 +5556,7 @@ export const products: Product[] = [
   },
   {
     "id": 152,
-    "slug": "pantalon-casual-manhattan-five-pocket-printed-152",
+    "slug": "pantalon-casual-manhattan-five-pocket-printed-c1d3",
     "nombre": "Pantalón Casual Manhattan Five Pocket Printed",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -5590,7 +5590,7 @@ export const products: Product[] = [
   },
   {
     "id": 214,
-    "slug": "calcetas-cortas-de-algodon-por-unidad-214",
+    "slug": "calcetas-cortas-de-algodon-por-unidad-u-s-polo-assn-caf7",
     "nombre": "Calcetas cortas de algodón por unidad",
     "categoria": "Hombre",
     "tipo": "Ropa Interior",
@@ -5613,7 +5613,7 @@ export const products: Product[] = [
   },
   {
     "id": 255,
-    "slug": "jean-pepe-vi227-slim-fit-255",
+    "slug": "jean-pepe-vi227-slim-fit-a9ad",
     "nombre": "Jean Pepe VI227 Slim Fit",
     "categoria": "Juvenil",
     "tipo": "Pantalones",
@@ -5642,7 +5642,7 @@ export const products: Product[] = [
   },
   {
     "id": 271,
-    "slug": "camisa-lisa-271",
+    "slug": "camisa-lisa-catano-kids-9128",
     "nombre": "Camisa lisa",
     "categoria": "Juvenil",
     "tipo": "Polos / Camisas / Playeras",
@@ -5669,7 +5669,7 @@ export const products: Product[] = [
   },
   {
     "id": 132,
-    "slug": "playera-con-tipografia-en-relieve-frontal-132",
+    "slug": "playera-con-tipografia-en-relieve-frontal-kenneth-cole-f5d7",
     "nombre": "Playera con tipografía en relieve frontal",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -5698,7 +5698,7 @@ export const products: Product[] = [
   },
   {
     "id": 48,
-    "slug": "polo-army-fondo-entero-48",
+    "slug": "polo-army-fondo-entero-kenneth-cole-090a",
     "nombre": "Polo Army fondo entero",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -5726,7 +5726,7 @@ export const products: Product[] = [
   },
   {
     "id": 19,
-    "slug": "chumpa-reversible-acolchada-19",
+    "slug": "chumpa-reversible-acolchada-dougger-6e9b",
     "nombre": "Chumpa reversible acolchada",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -5753,7 +5753,7 @@ export const products: Product[] = [
   },
   {
     "id": 133,
-    "slug": "playera-texturizada-de-canale-vertical-133",
+    "slug": "playera-texturizada-de-canale-vertical-perrry-ellis-2d83",
     "nombre": "Playera texturizada de canalé vertical",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -5780,7 +5780,7 @@ export const products: Product[] = [
   },
   {
     "id": 153,
-    "slug": "jean-levi-s-505-regular-fit-153",
+    "slug": "jean-levi-s-505-regular-fit-6a07",
     "nombre": "Jean Levi’s 505™ Regular Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -5812,7 +5812,7 @@ export const products: Product[] = [
   },
   {
     "id": 272,
-    "slug": "polo-con-franja-horizontal-bicolor-272",
+    "slug": "polo-con-franja-horizontal-bicolor-u-s-polo-assn-c04b",
     "nombre": "polo con franja horizontal bicolor",
     "categoria": "Juvenil",
     "tipo": "Polos / Camisas / Playeras",
@@ -5839,7 +5839,7 @@ export const products: Product[] = [
   },
   {
     "id": 94,
-    "slug": "camisa-casual-de-cuadros-grandes-94",
+    "slug": "camisa-casual-de-cuadros-grandes-polo-club-long-beach-1c44",
     "nombre": "Camisa casual de cuadros grandes",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -5865,7 +5865,7 @@ export const products: Product[] = [
   },
   {
     "id": 134,
-    "slug": "playera-basica-lisa-134",
+    "slug": "playera-basica-lisa-totto-0a40",
     "nombre": "Playera básica lisa",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -5891,7 +5891,7 @@ export const products: Product[] = [
   },
   {
     "id": 273,
-    "slug": "playera-estilo-sport-en-contraste-273",
+    "slug": "playera-estilo-sport-en-contraste-u-s-polo-assn-1225",
     "nombre": "Playera estilo sport en contraste",
     "categoria": "Juvenil",
     "tipo": "Polos / Camisas / Playeras",
@@ -5918,7 +5918,7 @@ export const products: Product[] = [
   },
   {
     "id": 20,
-    "slug": "chumpa-acolchada-de-rombos-20",
+    "slug": "chumpa-acolchada-de-rombos-johnny-cotton-c3d6",
     "nombre": "Chumpa acolchada de rombos",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -5946,7 +5946,7 @@ export const products: Product[] = [
   },
   {
     "id": 154,
-    "slug": "pantalon-manhattan-anywhere-stretch-azul-154",
+    "slug": "pantalon-manhattan-anywhere-stretch-azul-d618",
     "nombre": "Pantalón Manhattan Anywhere Stretch Azul",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -5978,7 +5978,7 @@ export const products: Product[] = [
   },
   {
     "id": 95,
-    "slug": "camisa-clasica-de-algodon-y-lino-de-corte-estandar-con-un-bolsillo-95",
+    "slug": "camisa-clasica-de-algodon-y-lino-de-corte-estandar-con-un-bolsillo-levi-s-f9dc",
     "nombre": "Camisa clásica de algodón y lino de corte estándar con un bolsillo",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -6007,7 +6007,7 @@ export const products: Product[] = [
   },
   {
     "id": 135,
-    "slug": "playera-con-textura-jacquard-135",
+    "slug": "playera-con-textura-jacquard-carven-a937",
     "nombre": "Playera con textura jacquard",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -6034,7 +6034,7 @@ export const products: Product[] = [
   },
   {
     "id": 274,
-    "slug": "polo-con-borde-a-rayas-274",
+    "slug": "polo-con-borde-a-rayas-u-s-polo-assn-945e",
     "nombre": "Polo con borde a rayas",
     "categoria": "Juvenil",
     "tipo": "Polos / Camisas / Playeras",
@@ -6061,7 +6061,7 @@ export const products: Product[] = [
   },
   {
     "id": 155,
-    "slug": "pantalon-casual-manhattan-lux-touch-155",
+    "slug": "pantalon-casual-manhattan-lux-touch-bed6",
     "nombre": "Pantalón Casual Manhattan Lux Touch",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -6092,7 +6092,7 @@ export const products: Product[] = [
   },
   {
     "id": 49,
-    "slug": "polo-fondo-entero-ash-49",
+    "slug": "polo-fondo-entero-ash-kenneth-cole-4514",
     "nombre": "Polo fondo entero ash",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -6120,7 +6120,7 @@ export const products: Product[] = [
   },
   {
     "id": 96,
-    "slug": "camisa-casual-de-cuadros-texturizados-96",
+    "slug": "camisa-casual-de-cuadros-texturizados-ted-lapidus-f0cf",
     "nombre": "Camisa casual de cuadros texturizados",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -6148,7 +6148,7 @@ export const products: Product[] = [
   },
   {
     "id": 275,
-    "slug": "playera-con-estampado-circular-clasico-frontal-275",
+    "slug": "playera-con-estampado-circular-clasico-frontal-u-s-polo-assn-dfc2",
     "nombre": "Playera con estampado circular clásico frontal",
     "categoria": "Juvenil",
     "tipo": "Polos / Camisas / Playeras",
@@ -6175,7 +6175,7 @@ export const products: Product[] = [
   },
   {
     "id": 21,
-    "slug": "chumpa-acolchada-con-cierre-frontal-21",
+    "slug": "chumpa-acolchada-con-cierre-frontal-totto-6a4b",
     "nombre": "Chumpa acolchada con cierre frontal",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -6201,7 +6201,7 @@ export const products: Product[] = [
   },
   {
     "id": 156,
-    "slug": "jean-levi-s-511-slim-fit-156",
+    "slug": "jean-levi-s-511-slim-fit-1436",
     "nombre": "Jean Levi’s 511™ Slim Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -6234,7 +6234,7 @@ export const products: Product[] = [
   },
   {
     "id": 50,
-    "slug": "polo-con-tapeta-en-contraste-50",
+    "slug": "polo-con-tapeta-en-contraste-carven-0aa3",
     "nombre": "polo con tapeta en contraste",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -6262,7 +6262,7 @@ export const products: Product[] = [
   },
   {
     "id": 97,
-    "slug": "camisa-de-cuadros-con-detalles-en-contraste-97",
+    "slug": "camisa-de-cuadros-con-detalles-en-contraste-van-heusen-5853",
     "nombre": "Camisa de cuadros con detalles en contraste",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -6290,7 +6290,7 @@ export const products: Product[] = [
   },
   {
     "id": 276,
-    "slug": "playera-con-franja-tricolor-degradada-276",
+    "slug": "playera-con-franja-tricolor-degradada-u-s-polo-assn-0586",
     "nombre": "Playera con franja tricolor degradada",
     "categoria": "Juvenil",
     "tipo": "Polos / Camisas / Playeras",
@@ -6317,7 +6317,7 @@ export const products: Product[] = [
   },
   {
     "id": 22,
-    "slug": "chaqueta-bomber-con-cuello-alto-22",
+    "slug": "chaqueta-bomber-con-cuello-alto-carven-3bdc",
     "nombre": "Chaqueta bomber con cuello alto",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -6344,7 +6344,7 @@ export const products: Product[] = [
   },
   {
     "id": 51,
-    "slug": "polo-pique-con-franja-en-hombros-51",
+    "slug": "polo-pique-con-franja-en-hombros-oscar-de-la-renta-dbe4",
     "nombre": "polo piqué con franja en hombros",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -6374,7 +6374,7 @@ export const products: Product[] = [
   },
   {
     "id": 98,
-    "slug": "camisa-casual-tipo-chambray-98",
+    "slug": "camisa-casual-tipo-chambray-ccc0",
     "nombre": "Camisa casual tipo chambray",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -6401,7 +6401,7 @@ export const products: Product[] = [
   },
   {
     "id": 99,
-    "slug": "camisa-casual-a-cuadros-ventana-99",
+    "slug": "camisa-casual-a-cuadros-ventana-ted-lapidus-b648",
     "nombre": "Camisa casual a cuadros ventana",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -6427,7 +6427,7 @@ export const products: Product[] = [
   },
   {
     "id": 157,
-    "slug": "jean-levi-s-511-slim-fit-flex-157",
+    "slug": "jean-levi-s-511-slim-fit-flex-909f",
     "nombre": "Jean Levi’s 511™ Slim Fit Flex",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -6459,7 +6459,7 @@ export const products: Product[] = [
   },
   {
     "id": 100,
-    "slug": "camisa-casual-lisa-100",
+    "slug": "camisa-casual-lisa-hummer-jeans-65d2",
     "nombre": "Camisa casual lisa",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -6488,7 +6488,7 @@ export const products: Product[] = [
   },
   {
     "id": 23,
-    "slug": "chumpa-acolchada-con-cierre-frontal-23",
+    "slug": "chumpa-acolchada-con-cierre-frontal-totto-7d0f",
     "nombre": "Chumpa acolchada con cierre frontal",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -6514,7 +6514,7 @@ export const products: Product[] = [
   },
   {
     "id": 158,
-    "slug": "jean-levi-s-505-regular-fit-158",
+    "slug": "jean-levi-s-505-regular-fit-70ff",
     "nombre": "Jean Levi’s 505™ Regular Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -6545,7 +6545,7 @@ export const products: Product[] = [
   },
   {
     "id": 101,
-    "slug": "camisa-cuadros-nightshade-manga-larga-101",
+    "slug": "camisa-cuadros-nightshade-manga-larga-oscar-de-la-renta-b816",
     "nombre": "Camisa Cuadros Nightshade Manga Larga",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -6573,7 +6573,7 @@ export const products: Product[] = [
   },
   {
     "id": 24,
-    "slug": "chumpa-casual-harrington-style-24",
+    "slug": "chumpa-casual-harrington-style-jordache-0e5d",
     "nombre": "Chumpa casual Harrington Style",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -6598,7 +6598,7 @@ export const products: Product[] = [
   },
   {
     "id": 159,
-    "slug": "jean-levi-s-511-slim-fit-159",
+    "slug": "jean-levi-s-511-slim-fit-b062",
     "nombre": "Jean Levi's® 511™ Slim Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -6629,7 +6629,7 @@ export const products: Product[] = [
   },
   {
     "id": 52,
-    "slug": "polo-pique-tencel-celeste-52",
+    "slug": "polo-pique-tencel-celeste-original-penguin-675e",
     "nombre": "Polo piqué tencel celeste",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -6658,7 +6658,7 @@ export const products: Product[] = [
   },
   {
     "id": 53,
-    "slug": "polo-de-algodon-organico-interlock-daddy-azul-marino-53",
+    "slug": "polo-de-algodon-organico-interlock-daddy-azul-marino-original-penguin-4fcb",
     "nombre": "Polo de algodón orgánico interlock Daddy azul marino",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -6686,7 +6686,7 @@ export const products: Product[] = [
   },
   {
     "id": 102,
-    "slug": "camisa-casual-lisa-minimalista-de-manga-corta-102",
+    "slug": "camisa-casual-lisa-minimalista-de-manga-corta-hummer-jeans-1d4b",
     "nombre": "Camisa casual lisa minimalista de manga corta",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -6714,7 +6714,7 @@ export const products: Product[] = [
   },
   {
     "id": 25,
-    "slug": "chumpa-acolchada-de-rombos-25",
+    "slug": "chumpa-acolchada-de-rombos-johnny-cotton-08dd",
     "nombre": "Chumpa acolchada de rombos",
     "categoria": "Hombre",
     "tipo": "Chumpas",
@@ -6741,7 +6741,7 @@ export const products: Product[] = [
   },
   {
     "id": 160,
-    "slug": "jean-levi-s-512-slim-taper-fit-flex-160",
+    "slug": "jean-levi-s-512-slim-taper-fit-flex-13d6",
     "nombre": "Jean Levi’s 512™ Slim Taper® Fit Flex",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -6772,7 +6772,7 @@ export const products: Product[] = [
   },
   {
     "id": 54,
-    "slug": "polo-pique-con-tapeta-en-contraste-54",
+    "slug": "polo-pique-con-tapeta-en-contraste-u-s-polo-assn-a65a",
     "nombre": "polo piqué con tapeta en contraste",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -6800,7 +6800,7 @@ export const products: Product[] = [
   },
   {
     "id": 103,
-    "slug": "camisa-casual-texturizada-con-bolsillo-de-solapa-103",
+    "slug": "camisa-casual-texturizada-con-bolsillo-de-solapa-hummer-jeans-5e7e",
     "nombre": "Camisa casual texturizada con bolsillo de solapa",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -6829,7 +6829,7 @@ export const products: Product[] = [
   },
   {
     "id": 161,
-    "slug": "jean-levi-s-512-slim-taper-fit-161",
+    "slug": "jean-levi-s-512-slim-taper-fit-712b",
     "nombre": "Jean Levi's 512 Slim Taper Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -6860,7 +6860,7 @@ export const products: Product[] = [
   },
   {
     "id": 55,
-    "slug": "polo-fondo-entero-55",
+    "slug": "polo-fondo-entero-kenneth-cole-beb3",
     "nombre": "Polo fondo entero",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -6888,7 +6888,7 @@ export const products: Product[] = [
   },
   {
     "id": 104,
-    "slug": "camisa-casual-lisa-manga-corta-104",
+    "slug": "camisa-casual-lisa-manga-corta-polo-club-long-beach-dda6",
     "nombre": "Camisa casual lisa manga corta",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -6916,7 +6916,7 @@ export const products: Product[] = [
   },
   {
     "id": 162,
-    "slug": "pantalon-manhattan-anywhere-stretch-negro-162",
+    "slug": "pantalon-manhattan-anywhere-stretch-negro-f288",
     "nombre": "Pantalón Manhattan Anywhere Stretch Negro",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -6948,7 +6948,7 @@ export const products: Product[] = [
   },
   {
     "id": 56,
-    "slug": "polo-lisa-con-cuello-en-bloques-de-color-56",
+    "slug": "polo-lisa-con-cuello-en-bloques-de-color-perrry-ellis-3a33",
     "nombre": "polo lisa con cuello en bloques de color",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -6975,7 +6975,7 @@ export const products: Product[] = [
   },
   {
     "id": 105,
-    "slug": "camisa-casual-de-rayas-verticales-105",
+    "slug": "camisa-casual-de-rayas-verticales-hummer-jeans-e13e",
     "nombre": "Camisa casual de rayas verticales",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -7001,7 +7001,7 @@ export const products: Product[] = [
   },
   {
     "id": 163,
-    "slug": "jean-pepe-816-skinny-fit-163",
+    "slug": "jean-pepe-816-skinny-fit-7773",
     "nombre": "Jean Pepe 816 Skinny Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -7034,7 +7034,7 @@ export const products: Product[] = [
   },
   {
     "id": 57,
-    "slug": "polo-de-algodon-organico-interlock-daddy-negra-57",
+    "slug": "polo-de-algodon-organico-interlock-daddy-negra-original-penguin-1f80",
     "nombre": "Polo de algodón orgánico interlock Daddy negra",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -7062,7 +7062,7 @@ export const products: Product[] = [
   },
   {
     "id": 106,
-    "slug": "camisa-casual-de-cuadros-finos-106",
+    "slug": "camisa-casual-de-cuadros-finos-van-heusen-1323",
     "nombre": "Camisa casual de cuadros finos",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -7091,7 +7091,7 @@ export const products: Product[] = [
   },
   {
     "id": 107,
-    "slug": "camisa-cuadros-azul-rey-manga-larga-107",
+    "slug": "camisa-cuadros-azul-rey-manga-larga-oscar-de-la-renta-367f",
     "nombre": "Camisa Cuadros Azul Rey Manga Larga",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -7121,7 +7121,7 @@ export const products: Product[] = [
   },
   {
     "id": 164,
-    "slug": "pantalon-levi-s-502-taper-fit-de-gabardina-164",
+    "slug": "pantalon-levi-s-502-taper-fit-de-gabardina-35e7",
     "nombre": "Pantalon Levi's 502™ Taper Fit de Gabardina",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -7151,7 +7151,7 @@ export const products: Product[] = [
   },
   {
     "id": 58,
-    "slug": "polo-lisa-con-cuello-a-rayas-58",
+    "slug": "polo-lisa-con-cuello-a-rayas-carven-cf5d",
     "nombre": "polo lisa con cuello a rayas",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -7177,7 +7177,7 @@ export const products: Product[] = [
   },
   {
     "id": 108,
-    "slug": "camisa-a-cuadros-manga-larga-108",
+    "slug": "camisa-a-cuadros-manga-larga-levi-s-a216",
     "nombre": "Camisa a Cuadros Manga Larga",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -7205,7 +7205,7 @@ export const products: Product[] = [
   },
   {
     "id": 165,
-    "slug": "hummer-azul-indigo-oscuro-165",
+    "slug": "hummer-azul-indigo-oscuro-hummer-jeans-9107",
     "nombre": "Hummer Azul Indigo Oscuro",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -7235,7 +7235,7 @@ export const products: Product[] = [
   },
   {
     "id": 59,
-    "slug": "polo-pique-con-bordado-numerico-59",
+    "slug": "polo-pique-con-bordado-numerico-u-s-polo-assn-ca21",
     "nombre": "polo piqué con bordado numérico",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -7261,7 +7261,7 @@ export const products: Product[] = [
   },
   {
     "id": 166,
-    "slug": "jean-van-heusen-vaqueros-slim-fit-166",
+    "slug": "jean-van-heusen-vaqueros-slim-fit-a3ec",
     "nombre": "Jean Van Heusen Vaqueros Slim Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -7289,7 +7289,7 @@ export const products: Product[] = [
   },
   {
     "id": 60,
-    "slug": "polo-pique-con-cuello-texturizado-a-rayas-60",
+    "slug": "polo-pique-con-cuello-texturizado-a-rayas-oscar-de-la-renta-2011",
     "nombre": "polo piqué con cuello texturizado a rayas",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -7316,7 +7316,7 @@ export const products: Product[] = [
   },
   {
     "id": 167,
-    "slug": "pantalon-casual-manhattan-slim-fit-five-pocket-tencel-167",
+    "slug": "pantalon-casual-manhattan-slim-fit-five-pocket-tencel-eb20",
     "nombre": "Pantalón Casual Manhattan Slim FIT Five Pocket Tencel",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -7348,7 +7348,7 @@ export const products: Product[] = [
   },
   {
     "id": 61,
-    "slug": "polo-pique-casual-61",
+    "slug": "polo-pique-casual-oscar-de-la-renta-8ad5",
     "nombre": "polo piqué casual",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -7375,7 +7375,7 @@ export const products: Product[] = [
   },
   {
     "id": 168,
-    "slug": "jean-denizen-from-levi-s-216-slim-fit-168",
+    "slug": "jean-denizen-from-levi-s-216-slim-fit-0aff",
     "nombre": "Jean Denizen from Levi´s 216 Slim Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -7404,7 +7404,7 @@ export const products: Product[] = [
   },
   {
     "id": 62,
-    "slug": "playera-tipo-polo-clasica-con-punos-tricolor-62",
+    "slug": "playera-tipo-polo-clasica-con-punos-tricolor-hummer-jeans-db5a",
     "nombre": "Playera Tipo Polo Clásica con Puños Tricolor",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -7431,7 +7431,7 @@ export const products: Product[] = [
   },
   {
     "id": 109,
-    "slug": "camisa-casual-de-cuadros-vichy-manga-corta-109",
+    "slug": "camisa-casual-de-cuadros-vichy-manga-corta-van-heusen-65ca",
     "nombre": "Camisa casual de cuadros vichy manga corta",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -7459,7 +7459,7 @@ export const products: Product[] = [
   },
   {
     "id": 169,
-    "slug": "pantalon-van-heusen-chino-fit-stretch-169",
+    "slug": "pantalon-van-heusen-chino-fit-stretch-1961",
     "nombre": "PANTALON van heusen CHINO FIT STRETCH",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -7488,7 +7488,7 @@ export const products: Product[] = [
   },
   {
     "id": 63,
-    "slug": "polo-casual-clasica-con-firma-bordada-63",
+    "slug": "polo-casual-clasica-con-firma-bordada-perrry-ellis-b64a",
     "nombre": "Polo casual clásica con firma bordada",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -7513,7 +7513,7 @@ export const products: Product[] = [
   },
   {
     "id": 110,
-    "slug": "camisa-casual-lisa-110",
+    "slug": "camisa-casual-lisa-beverly-hills-polo-club-9345",
     "nombre": "Camisa casual lisa",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -7540,7 +7540,7 @@ export const products: Product[] = [
   },
   {
     "id": 170,
-    "slug": "jean-levi-s-511-slim-fit-170",
+    "slug": "jean-levi-s-511-slim-fit-a0b3",
     "nombre": "Jean Levi's® 511™ Slim Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -7570,7 +7570,7 @@ export const products: Product[] = [
   },
   {
     "id": 111,
-    "slug": "camisa-casual-de-cuadros-vichy-manga-corta-111",
+    "slug": "camisa-casual-de-cuadros-vichy-manga-corta-van-heusen-18b0",
     "nombre": "Camisa casual de cuadros vichy manga corta",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -7599,7 +7599,7 @@ export const products: Product[] = [
   },
   {
     "id": 64,
-    "slug": "polo-pique-con-cuello-texturizado-a-rayas-64",
+    "slug": "polo-pique-con-cuello-texturizado-a-rayas-oscar-de-la-renta-733f",
     "nombre": "polo piqué con cuello texturizado a rayas",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -7625,7 +7625,7 @@ export const products: Product[] = [
   },
   {
     "id": 171,
-    "slug": "jean-levi-s-511-slim-fit-171",
+    "slug": "jean-levi-s-511-slim-fit-bb93",
     "nombre": "Jean Levi's® 511™ Slim Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -7655,7 +7655,7 @@ export const products: Product[] = [
   },
   {
     "id": 112,
-    "slug": "camisa-casual-de-cuadros-manga-corta-112",
+    "slug": "camisa-casual-de-cuadros-manga-corta-beverly-hills-polo-club-fafd",
     "nombre": "Camisa casual de cuadros manga corta",
     "categoria": "Hombre",
     "tipo": "Camisas",
@@ -7683,7 +7683,7 @@ export const products: Product[] = [
   },
   {
     "id": 65,
-    "slug": "polo-lisa-minimalista-65",
+    "slug": "polo-lisa-minimalista-carven-32cb",
     "nombre": "polo lisa minimalista",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -7709,7 +7709,7 @@ export const products: Product[] = [
   },
   {
     "id": 66,
-    "slug": "polo-casual-lisa-66",
+    "slug": "polo-casual-lisa-kenneth-cole-3a4e",
     "nombre": "Polo casual lisa",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -7736,7 +7736,7 @@ export const products: Product[] = [
   },
   {
     "id": 172,
-    "slug": "jean-levi-s-512-ajustados-de-corte-conico-172",
+    "slug": "jean-levi-s-512-ajustados-de-corte-conico-bc69",
     "nombre": "Jean Levi’s 512™ ajustados de corte cónico",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -7765,7 +7765,7 @@ export const products: Product[] = [
   },
   {
     "id": 173,
-    "slug": "jean-pepe-814-semi-ajustado-173",
+    "slug": "jean-pepe-814-semi-ajustado-dd31",
     "nombre": "Jean Pepe 814 SEMI AJUSTADO",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -7800,7 +7800,7 @@ export const products: Product[] = [
   },
   {
     "id": 67,
-    "slug": "polo-tradicional-jersey-67",
+    "slug": "polo-tradicional-jersey-original-penguin-8f85",
     "nombre": "Polo tradicional jersey",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -7828,7 +7828,7 @@ export const products: Product[] = [
   },
   {
     "id": 174,
-    "slug": "jean-levi-s-505-regular-fit-174",
+    "slug": "jean-levi-s-505-regular-fit-b4ca",
     "nombre": "Jean Levi’s 505™ Regular Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -7859,7 +7859,7 @@ export const products: Product[] = [
   },
   {
     "id": 68,
-    "slug": "polo-lisa-con-cuello-ribeteado-en-contraste-68",
+    "slug": "polo-lisa-con-cuello-ribeteado-en-contraste-carven-70a5",
     "nombre": "polo lisa con cuello ribeteado en contraste",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -7885,7 +7885,7 @@ export const products: Product[] = [
   },
   {
     "id": 175,
-    "slug": "jean-levi-s-511-slim-fit-175",
+    "slug": "jean-levi-s-511-slim-fit-68b6",
     "nombre": "Jean Levi's® 511™ Slim Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -7916,7 +7916,7 @@ export const products: Product[] = [
   },
   {
     "id": 176,
-    "slug": "jean-pierre-cardin-310-slim-fit-176",
+    "slug": "jean-pierre-cardin-310-slim-fit-1296",
     "nombre": "Jean Pierre Cardin 310 Slim Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -7948,7 +7948,7 @@ export const products: Product[] = [
   },
   {
     "id": 177,
-    "slug": "pantalones-levi-s-511-slim-fit-de-gabardina-177",
+    "slug": "pantalones-levi-s-511-slim-fit-de-gabardina-da32",
     "nombre": "Pantalones Levi's® 511 Slim Fit de Gabardina",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -7980,7 +7980,7 @@ export const products: Product[] = [
   },
   {
     "id": 69,
-    "slug": "polo-casual-deportiva-69",
+    "slug": "polo-casual-deportiva-nautica-jeans-0a51",
     "nombre": "Polo casual deportiva",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -8008,7 +8008,7 @@ export const products: Product[] = [
   },
   {
     "id": 178,
-    "slug": "pantalon-manhattan-anywhere-stretch-gris-178",
+    "slug": "pantalon-manhattan-anywhere-stretch-gris-34e6",
     "nombre": "Pantalón Manhattan Anywhere Stretch Gris",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -8040,7 +8040,7 @@ export const products: Product[] = [
   },
   {
     "id": 70,
-    "slug": "polo-jaspeada-casual-70",
+    "slug": "polo-jaspeada-casual-beverly-hills-polo-club-2ffc",
     "nombre": "polo jaspeada casual",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -8066,7 +8066,7 @@ export const products: Product[] = [
   },
   {
     "id": 179,
-    "slug": "jean-levi-s-502-tapered-fit-179",
+    "slug": "jean-levi-s-502-tapered-fit-5f71",
     "nombre": "Jean Levi's 502 Tapered Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -8096,7 +8096,7 @@ export const products: Product[] = [
   },
   {
     "id": 71,
-    "slug": "polo-casual-deportiva-71",
+    "slug": "polo-casual-deportiva-nautica-jeans-847f",
     "nombre": "Polo casual deportiva",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -8123,7 +8123,7 @@ export const products: Product[] = [
   },
   {
     "id": 180,
-    "slug": "jean-pepe-816-skinny-fit-180",
+    "slug": "jean-pepe-816-skinny-fit-767a",
     "nombre": "Jean Pepe 816 Skinny Fit",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -8154,7 +8154,7 @@ export const products: Product[] = [
   },
   {
     "id": 72,
-    "slug": "polo-casual-clasica-72",
+    "slug": "polo-casual-clasica-beverly-hills-polo-club-93f6",
     "nombre": "Polo casual clásica",
     "categoria": "Hombre",
     "tipo": "Polos",
@@ -8181,7 +8181,7 @@ export const products: Product[] = [
   },
   {
     "id": 181,
-    "slug": "hummer-azul-181",
+    "slug": "hummer-azul-hummer-jeans-c186",
     "nombre": "Hummer Azul",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -8211,7 +8211,7 @@ export const products: Product[] = [
   },
   {
     "id": 182,
-    "slug": "hummer-negro-182",
+    "slug": "hummer-negro-hummer-jeans-b8c4",
     "nombre": "Hummer Negro",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -8243,7 +8243,7 @@ export const products: Product[] = [
   },
   {
     "id": 184,
-    "slug": "jean-pepe-baggy-fit-829-184",
+    "slug": "jean-pepe-baggy-fit-829-b122",
     "nombre": "Jean Pepe Baggy Fit 829",
     "categoria": "Hombre",
     "tipo": "Pantalones",
@@ -8274,7 +8274,7 @@ export const products: Product[] = [
   },
   {
     "id": 215,
-    "slug": "tenis-streeless-sneaker-olive-215",
+    "slug": "tenis-streeless-sneaker-olive-kenneth-cole-8b14",
     "nombre": "tenis streeless sneaker olive",
     "categoria": "Hombre",
     "tipo": "Calzado",
@@ -8306,7 +8306,7 @@ export const products: Product[] = [
   },
   {
     "id": 216,
-    "slug": "tenis-streeless-sneaker-white-216",
+    "slug": "tenis-streeless-sneaker-white-kenneth-cole-fb38",
     "nombre": "Tenis streeless sneaker white",
     "categoria": "Hombre",
     "tipo": "Calzado",
@@ -8336,7 +8336,7 @@ export const products: Product[] = [
   },
   {
     "id": 217,
-    "slug": "tenis-de-cuero-reyes-217",
+    "slug": "tenis-de-cuero-reyes-0cb3",
     "nombre": "TENIS de cuero Reyes",
     "categoria": "Hombre",
     "tipo": "Calzado",
@@ -8365,7 +8365,7 @@ export const products: Product[] = [
   },
   {
     "id": 218,
-    "slug": "tenis-casuales-deportivos-218",
+    "slug": "tenis-casuales-deportivos-u-s-polo-assn-00c9",
     "nombre": "Tenis casuales deportivos",
     "categoria": "Hombre",
     "tipo": "Calzado",
@@ -8394,7 +8394,7 @@ export const products: Product[] = [
   },
   {
     "id": 219,
-    "slug": "tenis-casuales-deportivos-219",
+    "slug": "tenis-casuales-deportivos-u-s-polo-assn-8ef5",
     "nombre": "Tenis casuales deportivos",
     "categoria": "Hombre",
     "tipo": "Calzado",
@@ -8423,7 +8423,7 @@ export const products: Product[] = [
   },
   {
     "id": 220,
-    "slug": "tenis-casuales-con-siglas-laterales-estampadas-220",
+    "slug": "tenis-casuales-con-siglas-laterales-estampadas-u-s-polo-assn-33ab",
     "nombre": "Tenis casuales con siglas laterales estampadas",
     "categoria": "Hombre",
     "tipo": "Calzado",
@@ -8454,7 +8454,7 @@ export const products: Product[] = [
   },
   {
     "id": 221,
-    "slug": "tenis-casuales-deportivos-221",
+    "slug": "tenis-casuales-deportivos-u-s-polo-assn-5a74",
     "nombre": "Tenis casuales deportivos",
     "categoria": "Hombre",
     "tipo": "Calzado",
@@ -8481,7 +8481,7 @@ export const products: Product[] = [
   },
   {
     "id": 136,
-    "slug": "playera-casual-jaspeada-136",
+    "slug": "playera-casual-jaspeada-levi-s-05b6",
     "nombre": "Playera casual jaspeada",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -8499,17 +8499,17 @@ export const products: Product[] = [
     "imagenes": [
       "/images/productos/images 1.jpg"
     ],
-    "precio": 300.0,
+    "precio": 150.0,
     "tarjeta": 323.0,
     "descripcion": "Playera Levi's de corte clásico y manga corta, en tejido ligero jaspeado vino tinto. Cuello redondo acanalado y costuras reforzadas en hombros y ruedo. Logotipo icónico estampado en el centro del pecho y la clásica etiqueta roja en el borde lateral izquierdo. Composición: 60% algodón, 40% poliéster.",
     "fecha": "2026-09-20",
     "sale": true,
     "prontoVolvera": false,
-    "descuento": 7
+    "descuento": 54
   },
   {
     "id": 137,
-    "slug": "playera-clasica-estampada-137",
+    "slug": "playera-clasica-estampada-levi-s-3e83",
     "nombre": "Playera clásica estampada",
     "categoria": "Hombre",
     "tipo": "Playeras",
@@ -8527,17 +8527,17 @@ export const products: Product[] = [
     "imagenes": [
       "/images/productos/ofertaLevis.webp"
     ],
-    "precio": 300.0,
+    "precio": 150.0,
     "tarjeta": 323.0,
     "descripcion": "La base perfecta para cualquier conjunto. La camiseta Classic Graphic lo tiene todo: un perfil atemporal y uno de los logotipos más emblemáticos que existen.\n• Un clásico por excelencia que puedes combinar con todo\n• Con un gráfico atrevido",
     "fecha": "2026-09-17",
     "sale": true,
     "prontoVolvera": false,
-    "descuento": 7
+    "descuento": 54
   },
   {
     "id": 183,
-    "slug": "hummer-celeste-lavado-183",
+    "slug": "hummer-celeste-lavado-hummer-jeans-6d66",
     "nombre": "Hummer Celeste Lavado",
     "categoria": "Hombre",
     "tipo": "Pantalones",

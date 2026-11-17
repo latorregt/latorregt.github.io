@@ -6,7 +6,7 @@ import { Picture } from '@/components/boutique/picture'
 export function TrustSection() {
   const [reviewIdx, setReviewIdx] = useState(0)
   const [photoIdx, setPhotoIdx] = useState(0)
-  const customerPhotos = ['/images/marca/WhatsApp_Image_2026-11-14_at_20.36.48_(1).jpeg', '/images/marca/WhatsApp_Image_2026-09-09_at_9.07.23_PM_(1).jpeg', '/images/marca/cliente_foto_3.jpg', '/images/marca/cliente_foto_4.jpg'].filter(Boolean)
+  const customerPhotos = ['/images/marca/WhatsApp_Image_2026-11-14_at_20.36.48_(1).jpeg', '/images/marca/WhatsApp_Image_2026-09-09_at_9.07.23_PM_(1).jpeg', '/images/marca/cliente_foto_3.jpg'].filter(Boolean)
   const maxReviews = Math.max(reviews.length - 2, 1)
   const maxPhotos = Math.max(customerPhotos.length - 2, 1)
   let visibleReviews = reviews.slice(reviewIdx, reviewIdx + 3)

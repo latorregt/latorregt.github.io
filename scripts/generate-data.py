@@ -12,13 +12,8 @@ CATALOG = sys.argv[1]
 REVIEWS = sys.argv[2]
 OUT_DIR = ROOT / 'src' / 'data'
 
-def slugify(s):
-    if not s: return ''
-    s = str(s).lower()
-    for old, new in [('àáâãäå','a'),('èéêë','e'),('ìíîï','i'),('òóôõö','o'),('ùúûü','u'),('ñ','n')]:
-        for c in old: s = s.replace(c, new)
-    s = re.sub(r'[^a-z0-9]+', '-', s).strip('-')
-    return s[:80]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from slugs import assign_slugs
 
 def parse_tallas(s):
     if not s: return []
@@ -69,7 +64,7 @@ for idx, row in enumerate(rows):
         skipped += 1
         continue
     pid = idx + 1
-    slug = slugify(nombre) + '-' + str(pid)
+    notion_id = (row.get('ID') or '').strip()
     tarjeta = (row.get('Tarjeta GTQ') or '').strip()
     try: precio_num = float(precio)
     except ValueError: precio_num = 0.0
@@ -79,7 +74,7 @@ for idx, row in enumerate(rows):
     is_pronto = (row.get('Pronto volverá') or '').strip().lower() == 'yes'
     discount = round((1 - precio_num / tarjeta_num) * 100) if (is_sale and tarjeta_num > precio_num) else 0
     products.append({
-        'id': pid, 'slug': slug, 'nombre': nombre,
+        'id': pid, 'slug': '', 'notionId': notion_id, 'nombre': nombre,
         'categoria': (row.get('Categoría') or '').strip(),
         'tipo': (row.get('Tipo de producto') or '').strip(),
         'subtipo': (row.get('Subtipo') or '').strip(),
@@ -95,6 +90,9 @@ for idx, row in enumerate(rows):
         'sale': is_sale, 'prontoVolvera': is_pronto,
         'descuento': discount if discount > 0 else None
     })
+
+assign_slugs(products)
+for p in products: p.pop('notionId', None)
 
 products.sort(key=lambda p: (
     1 if p['prontoVolvera'] else 0,
