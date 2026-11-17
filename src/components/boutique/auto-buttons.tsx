@@ -18,9 +18,8 @@ const BUTTONS: Record<AutoButtonsProps['type'], { label: string; estilo: string 
     { label: 'Straight', estilo: 'Straight' }, { label: 'Baggy / Loose', estilo: 'Baggy / Loose' },
     { label: '505', estilo: '505' }, { label: '511', estilo: '511' },
     { label: '512', estilo: '512' }, { label: '502', estilo: '502' },
-    { label: '514', estilo: '514' }, { label: '501', estilo: '501' },
-    { label: '510', estilo: '510' },
-  ],
+    { label: '514', estilo: '514' },
+      ],
   pantalones_mujer: [
     { label: 'Skinny', estilo: 'Skinny' }, { label: 'Colombiano', estilo: 'Colombiano' },
     { label: 'Bootcut', estilo: 'Bootcut' }, { label: 'Wide Leg', estilo: 'Wide Leg' },
