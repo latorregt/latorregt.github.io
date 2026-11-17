@@ -15,8 +15,7 @@ export function Hero({ onColecciones, onComoLlegar }: HeroProps) {
         <Picture
           src="/images/marca/Boutique_La_Torre_iluminada_de_noche.png"
           alt="Boutique La Torre iluminada de noche en Santa Cruz del Quiché"
-          className="w-full h-full object-cover"
-          style={{ objectPosition: 'center 15%' }}
+          className="hero-img w-full h-full object-cover"
           sizes="(max-aspect-ratio: 1/1) 200vh, 100vw"
           widths={[600, 1200, 1920]}
           priority
