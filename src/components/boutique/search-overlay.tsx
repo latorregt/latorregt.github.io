@@ -76,14 +76,14 @@ export function SearchOverlay({ open, onClose, onSearch, onNavigate }: SearchOve
       <div className="search-panel relative bg-cream border-b border-gold/30 shadow-2xl max-h-[92vh] overflow-y-auto scrollbar-boutique">
         <div className="max-w-[1200px] mx-auto px-4 md:px-8 pt-5 md:pt-6 pb-6 md:pb-8">
           <form onSubmit={submit} className="flex items-center gap-3 md:gap-4 border-b-2 border-midnight pb-3">
-            <Search className="w-5 h-5 md:w-6 md:h-6 text-gold flex-shrink-0" aria-hidden />
+            <Search className="w-5 h-5 md:w-6 md:h-6 text-midnight flex-shrink-0" aria-hidden />
             <input
               ref={inputRef}
               type="search"
               value={q}
               onChange={e => { setQ(e.target.value); setActive(-1) }}
               onKeyDown={onKeyDown}
-              placeholder="¿Qué estás buscando?"
+              placeholder="Buscar"
               aria-label="Buscar por marca, prenda o color"
               autoComplete="off"
               enterKeyHint="search"

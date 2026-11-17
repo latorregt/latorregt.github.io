@@ -52,6 +52,13 @@ export function ProductGrid({ filter, onOpenProduct, onNavigate }: ProductGridPr
   }
   const autoButtons = showAutoButtons(localFilter)
 
+
+const FILTER_DISPLAY_NAMES: Record<string, string> = {
+  'Manga larga': 'Camisa manga larga',
+  'Manga corta': 'Camisas manga corta',
+}
+const getDisplayName = (opt: string) => FILTER_DISPLAY_NAMES[opt] || opt
+
   return (
     <section className="py-10 md:py-14 bg-cream min-h-screen">
       <div className="max-w-[1600px] mx-auto px-4 md:px-6">
@@ -66,7 +73,14 @@ export function ProductGrid({ filter, onOpenProduct, onNavigate }: ProductGridPr
               const options: { label: string; key: keyof FilterState; value: string }[] = label === 'Tipo' ? tipoOpts
                 : (label === 'Categoria' ? availableCategorias : label === 'Talla' ? availableTallas : label === 'Marca' ? availableMarcas : coloresAll).map(v => ({ label: v, key: key as keyof FilterState, value: v }))
               if (!options.length) return null
-              return (<div key={label} className="relative"><button onClick={() => setFilterOpen(filterOpen === label ? null : label)} className="px-4 py-2 text-sm border border-midnight/15 bg-white hover:border-midnight transition-colors flex items-center gap-2 whitespace-nowrap">{label}<ChevronDown className={`w-3 h-3 transition-transform ${filterOpen === label ? 'rotate-180' : ''}`} /></button>{filterOpen === label && (<div className="dropdown-animate absolute top-full left-0 mt-1 z-20 bg-white border border-midnight/15 shadow-lg rounded-md py-2 max-h-72 overflow-y-auto min-w-[180px] scrollbar-boutique">{options.map(opt => (<button key={`${opt.key}:${opt.value}`} onClick={() => toggleFilter(opt.key, opt.value)} className={`block w-full text-left px-3 py-1.5 text-sm hover:bg-cream-deep transition-colors whitespace-nowrap ${(localFilter[opt.key] as string[]).includes(opt.value) ? 'text-gold font-medium' : 'text-midnight'}`}>{opt.label}</button>))}</div>)}</div>)
+            
+const FILTER_DISPLAY_NAMES: Record<string, string> = {
+  'Manga larga': 'Camisa manga larga',
+  'Manga corta': 'Camisas manga corta',
+}
+const getDisplayName = (opt: string) => FILTER_DISPLAY_NAMES[opt] || opt
+
+  return (<div key={label} className="relative"><button onClick={() => setFilterOpen(filterOpen === label ? null : label)} className="px-4 py-2 text-sm border border-midnight/15 bg-white hover:border-midnight transition-colors flex items-center gap-2 whitespace-nowrap">{label}<ChevronDown className={`w-3 h-3 transition-transform ${filterOpen === label ? 'rotate-180' : ''}`} /></button>{filterOpen === label && (<div className="dropdown-animate absolute top-full left-0 mt-1 z-20 bg-white border border-midnight/15 shadow-lg rounded-md py-2 max-h-72 overflow-y-auto min-w-[180px] scrollbar-boutique">{options.map(opt => (<button key={`${opt.key}:${opt.value}`} onClick={() => toggleFilter(opt.key, opt.value)} className={`block w-full text-left px-3 py-1.5 text-sm hover:bg-cream-deep transition-colors whitespace-nowrap ${(localFilter[opt.key] as string[]).includes(opt.value) ? 'text-gold font-medium' : 'text-midnight'}`}>{opt.label}</button>))}</div>)}</div>)
             })}
             </div>
             <div className="flex items-center gap-2"><label className="text-xs uppercase tracking-wider text-muted-foreground">Ordenar:</label><select value={sort} onChange={e => setSort(e.target.value as SortMode)} className="px-3 py-1.5 text-sm border border-midnight/15 bg-white rounded focus:outline-none focus:border-gold">{Object.entries(SORT_LABELS).map(([k, v]) => (<option key={k} value={k}>{v}</option>))}</select></div>
