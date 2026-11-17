@@ -20,7 +20,10 @@ def product_slug(nombre, marca, imagen1, notion_id=None):
     if m and m != 'otras' and m not in base:
         base = f'{base}-{m}'
     if notion_id:
-        return f'{base}-{slugify(notion_id)}'
+        sid = slugify(notion_id)
+        if sid.isdigit():   # ID sin prefijo en Notion (7, 281...): se antepone 'lt-' para no chocar con slugs viejos de fila
+            sid = 'lt-' + sid
+        return f'{base}-{sid}'
     archivo = imagen1.rsplit('/', 1)[-1]
     return f'{base}-{hashlib.sha1(archivo.encode("utf-8")).hexdigest()[:4]}'
 
