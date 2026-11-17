@@ -223,7 +223,7 @@ export function ProductDetailClient({ product, related }: ProductDetailClientPro
             <h2 className="font-serif text-xl md:text-2xl font-semibold text-midnight mb-6 text-center">También te podría interesar</h2>
             <div className="relative">
               <div className="overflow-hidden">
-                <div className="flex gap-4 md:gap-6 transition-transform duration-300" style={{ transform: `translateX(-${relatedIdx * 25}%)` }}>
+                <div className="flex gap-4 md:gap-6 transition-transform duration-300" style={{ transform: `translateX(calc(-${relatedIdx} * (48% + 1rem)))` }}>
                   {related.map(p => (
                     <div key={p.id} className="flex-shrink-0 w-[48%] md:w-[23%]">
                       <ProductCard product={p} onOpen={(slug) => router.push(`/producto/${slug}`)} />

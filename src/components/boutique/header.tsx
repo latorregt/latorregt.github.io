@@ -100,8 +100,8 @@ export function Header({ onNavigate, onSearch, onOpenCart, onHome }: HeaderProps
         </div>
       </div>
       {mobileOpen && (
-        <div className="md:hidden border-t border-midnight/10 bg-cream max-h-[70vh] overflow-y-auto">
-          <nav className="px-4 py-4 space-y-3">
+        <div className="md:hidden fixed inset-0 z-[55] bg-cream overflow-y-auto">
+          <div className="flex justify-end p-4"><button onClick={() => setMobileOpen(false)} className="text-midnight p-2"><X className="w-6 h-6" /></button></div><nav className="px-4 pb-8 space-y-3">
             {navItems.map(item => {
               const cats = item.children ? item.children : item.cat && item.cat !== '__SALE__' ? [{ label: '', cat: item.cat }] : []
               return (

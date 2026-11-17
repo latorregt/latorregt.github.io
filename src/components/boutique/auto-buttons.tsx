@@ -1,5 +1,4 @@
 'use client'
-
 import { useState } from 'react'
 import { track } from '@/lib/boutique/analytics'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
@@ -44,11 +43,8 @@ const CATEGORY_MAP: Record<AutoButtonsProps['type'], string> = {
 export function AutoButtons({ type, onNavigate }: AutoButtonsProps) {
   const buttons = BUTTONS[type]
   const [scrollIdx, setScrollIdx] = useState(0)
-  const maxVisible = 9
+  const maxVisible = type === 'pantalones_hombre' ? 9 : buttons.length
   const needsScroll = buttons.length > maxVisible
-  const buttonWidth = 112 // w-28 = 112px + gap
-  const gap = 16 // md:gap-4
-  const stepWidth = buttonWidth + gap
 
   const handleClick = (btn: { label: string; estilo: string }) => {
     track('auto_button_click', { type, label: btn.label })
@@ -61,23 +57,47 @@ export function AutoButtons({ type, onNavigate }: AutoButtonsProps) {
     }
   }
 
-  return (
-    <div className="bg-cream-deep rounded-xl p-4 md:p-6">
-      <div className="flex items-center justify-between gap-4">
-        {needsScroll && scrollIdx > 0 && (
-          <button onClick={() => setScrollIdx(i => Math.max(0, i - 1))} className="flex-shrink-0 w-8 h-8 rounded-full bg-white border border-midnight/15 flex items-center justify-center text-midnight hover:bg-midnight hover:text-cream transition-colors" aria-label="Anterior">
-            <ChevronLeft className="w-4 h-4" />
-          </button>
-        )}
-        <div className="overflow-hidden flex-1"><div className="flex items-center gap-3 md:gap-4 transition-transform duration-500 ease-out" style={{ transform: `translateX(-${scrollIdx * stepWidth}px)` }}>
+  if (!needsScroll) {
+    return (
+      <div className="bg-cream-deep rounded-xl p-4 md:p-6">
+        <div className="flex items-center justify-center gap-3 md:gap-4 flex-wrap">
           {buttons.map((btn) => (
-            <button key={btn.label} onClick={() => handleClick(btn)} className="flex-shrink-0 w-24 h-24 md:w-28 md:h-28 rounded-full bg-white border-2 border-midnight/15 hover:border-gold hover:bg-gold/5 transition-colors flex items-center justify-center text-center">
+            <button key={btn.label} onClick={() => handleClick(btn)}
+              className="flex-shrink-0 w-24 h-24 md:w-28 md:h-28 rounded-full bg-white border-2 border-midnight/15 hover:border-gold hover:bg-gold/5 transition-colors flex items-center justify-center text-center">
               <span className="text-[10px] md:text-xs uppercase tracking-wider font-medium text-midnight px-2 leading-tight">{btn.label}</span>
             </button>
           ))}
-        </div></div>
-        {needsScroll && scrollIdx < buttons.length - maxVisible && (
-          <button onClick={() => setScrollIdx(i => Math.min(buttons.length - maxVisible, i + 1))} className="flex-shrink-0 w-8 h-8 rounded-full bg-white border border-midnight/15 flex items-center justify-center text-midnight hover:bg-midnight hover:text-cream transition-colors" aria-label="Siguiente">
+        </div>
+      </div>
+    )
+  }
+
+  const buttonW = 112
+  const gapW = 16
+  const step = buttonW + gapW
+
+  return (
+    <div className="bg-cream-deep rounded-xl p-4 md:p-6">
+      <div className="flex items-center gap-2">
+        {scrollIdx > 0 && (
+          <button onClick={() => setScrollIdx(i => Math.max(0, i - 1))}
+            className="flex-shrink-0 w-8 h-8 rounded-full bg-white border border-midnight/15 flex items-center justify-center text-midnight hover:bg-midnight hover:text-cream transition-colors" aria-label="Anterior">
+            <ChevronLeft className="w-4 h-4" />
+          </button>
+        )}
+        <div className="overflow-hidden flex-1">
+          <div className="flex items-center gap-3 md:gap-4 transition-transform duration-500 ease-out" style={{ transform: `translateX(-${scrollIdx * step}px)` }}>
+            {buttons.map((btn) => (
+              <button key={btn.label} onClick={() => handleClick(btn)}
+                className="flex-shrink-0 w-24 h-24 md:w-28 md:h-28 rounded-full bg-white border-2 border-midnight/15 hover:border-gold hover:bg-gold/5 transition-colors flex items-center justify-center text-center">
+                <span className="text-[10px] md:text-xs uppercase tracking-wider font-medium text-midnight px-2 leading-tight">{btn.label}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+        {scrollIdx < buttons.length - maxVisible && (
+          <button onClick={() => setScrollIdx(i => Math.min(buttons.length - maxVisible, i + 1))}
+            className="flex-shrink-0 w-8 h-8 rounded-full bg-white border border-midnight/15 flex items-center justify-center text-midnight hover:bg-midnight hover:text-cream transition-colors" aria-label="Siguiente">
             <ChevronRight className="w-4 h-4" />
           </button>
         )}

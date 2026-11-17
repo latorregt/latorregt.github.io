@@ -69,7 +69,7 @@
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
-.animate-marquee { animation: marquee-scroll 25s linear infinite; }
+.animate-marquee { animation: marquee-scroll 18s linear infinite; }
 
 /* Nav underline hover effect */
 .nav-link {

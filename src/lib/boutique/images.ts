@@ -6,7 +6,7 @@
  * las variantes `Camisa__1__png-{200,600,1200}.{webp,avif}` y aquí se calcula la
  * misma ruta. Si cambias la regla, cámbiala en los dos archivos.
  */
-export const IMAGE_WIDTHS = [200, 600, 1200] as const
+export const IMAGE_WIDTHS = [200, 600, 1200, 1920] as const
 export type ImageFormat = 'webp' | 'avif'
 
 function variantStem(src: string): string {

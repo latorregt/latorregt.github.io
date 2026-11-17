@@ -83,7 +83,7 @@ export function ProductCard({ product, onOpen }: ProductCardProps) {
         )}
 
         {/* Hover overlay: tallas + add to cart (NO blue filter on image) */}
-        {!product.prontoVolvera && hovered && (
+        {!product.prontoVolvera && hovered && typeof window !== 'undefined' && window.matchMedia('(hover: hover)').matches && (
           <div className="absolute bottom-0 left-0 right-0 z-10">
             {/* White strip with tallas */}
             {needsTalla && (
