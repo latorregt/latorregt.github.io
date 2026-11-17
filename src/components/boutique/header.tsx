@@ -4,9 +4,10 @@ import { tiposByCategoria } from '@/data/filters'
 import { submenu, type FilterState } from '@/lib/boutique/catalog'
 import { Logo } from './logo'
 import { SearchOverlay } from './search-overlay'
+import { MobileMenu } from './mobile-menu'
 import { useCart } from '@/store/cart'
 import { track } from '@/lib/boutique/analytics'
-import { Search, ShoppingBag, User, Menu, X, ChevronDown, ChevronRight } from 'lucide-react'
+import { Search, ShoppingBag, User, Menu, ChevronDown, ChevronRight } from 'lucide-react'
 
 interface HeaderProps { onNavigate: (filter: Record<string, string[]>) => void; onSearch: (q: string) => void; onOpenCart: () => void; onHome: () => void }
 
@@ -17,6 +18,7 @@ export function Header({ onNavigate, onSearch, onOpenCart, onHome }: HeaderProps
   const [mobileOpen, setMobileOpen] = useState(false)
   const cartCount = useCart(s => s.count())
   const closeSearch = useCallback(() => setSearchOpen(false), [])
+  const closeMobile = useCallback(() => setMobileOpen(false), [])
 
   const navItems = [
     { label: 'HOMBRE', cat: 'Hombre', nav: false },
@@ -95,44 +97,11 @@ export function Header({ onNavigate, onSearch, onOpenCart, onHome }: HeaderProps
             <button onClick={() => { track('cart_open'); onOpenCart() }} className="text-midnight p-2 hover:text-gold transition-colors relative" aria-label={`Carrito (${cartCount} productos)`}>
               <ShoppingBag className="w-5 h-5" />{cartCount > 0 && <span className="absolute -top-0.5 -right-0.5 bg-gold text-midnight text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">{cartCount}</span>}
             </button>
-            <button onClick={() => setMobileOpen(s => !s)} className="md:hidden text-midnight p-2" aria-label="Menu">{mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}</button>
+            <button onClick={() => setMobileOpen(true)} className="md:hidden text-midnight p-2" aria-label="Menu" aria-expanded={mobileOpen}><Menu className="w-5 h-5" /></button>
           </div>
         </div>
       </div>
-      {mobileOpen && (
-        <div className="md:hidden fixed inset-0 z-[55] bg-cream overflow-y-auto">
-          <div className="flex justify-end p-4"><button onClick={() => setMobileOpen(false)} className="text-midnight p-2"><X className="w-6 h-6" /></button></div><nav className="px-4 pb-8 space-y-3">
-            {navItems.map(item => {
-              const cats = item.children ? item.children : item.cat && item.cat !== '__SALE__' ? [{ label: '', cat: item.cat }] : []
-              return (
-                <div key={item.label} className="border-b border-midnight/5 pb-3 last:border-0">
-                  <p className="text-xs tracking-[0.18em] uppercase font-medium text-gold mb-2">{item.label}</p>
-                  {item.cat === '__SALE__' ? (<button onClick={() => handleNavClick('__SALE__')} className="block text-sm text-midnight hover:text-gold">SALE</button>) : (
-                    <div className="pl-3 space-y-2">
-                      {cats.map(c => (
-                        <div key={c.cat}>
-                          {c.label && <p className="text-xs font-medium text-midnight mb-1">{c.label}</p>}
-                          <div className={c.label ? 'pl-3 space-y-1' : 'space-y-1'}>
-                            {(tiposByCategoria[c.cat] || []).map(tipo => {
-                              const subs = submenu(c.cat, tipo)
-                              return (
-                                <div key={tipo}>
-                                  <button onClick={() => handleNavClick(c.cat, tipo)} className="text-xs text-midnight hover:text-gold">{tipo}</button>
-                                  {subs.length > 0 && (<div className="pl-3 flex flex-wrap gap-x-3 gap-y-1 mt-0.5">{subs.map(sub => (<button key={sub.label} onClick={() => handleNavClick(c.cat, tipo, sub.subtipos)} className="text-[11px] text-midnight/60 hover:text-gold">{sub.label}</button>))}</div>)}
-                                </div>
-                              )
-                            })}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              )
-            })}
-          </nav>
-        </div>
-      )}
+      <MobileMenu open={mobileOpen} onClose={closeMobile} onPick={(cat, tipo, subtipos) => handleNavClick(cat, tipo, subtipos)} onSale={() => handleNavClick('__SALE__')} onSearch={openSearch} onHome={onHome} />
       <SearchOverlay open={searchOpen} onClose={closeSearch} onSearch={onSearch} onNavigate={(f: Partial<FilterState>) => onNavigate(f as Record<string, string[]>)} />
     </header>
   )

@@ -20,6 +20,7 @@
  *
  * Uso:  node scripts/optimize-images.mjs            (solo procesa lo que falta)
  *       node scripts/optimize-images.mjs --force    (regenera todo)
+ *       node scripts/optimize-images.mjs --force --only=productos   (solo una carpeta)
  */
 import fs from 'node:fs'
 import path from 'node:path'
@@ -36,6 +37,9 @@ export const WIDTHS = [200, 600, 1200]
 const EXTRA_WIDTHS = { marca: [1920] } // el hero ocupa toda la pantalla
 const WEBP = { quality: 78, effort: 5 }
 const AVIF = { quality: 52, effort: 3 }
+// Fotos de prenda: máxima calidad (decisión nov 2026). AVIF 90 pesa lo mismo que WebP 95 y se ve igual o mejor.
+const HQ = { productos: { webp: { quality: 95, effort: 4 }, avif: { quality: 90, effort: 3 } }, categorias: { webp: { quality: 95, effort: 4 }, avif: { quality: 90, effort: 3 } } }
+const ONLY = (process.argv.find(a => a.startsWith('--only=')) || '').slice(7)
 const OG_HOME = 'marca/Boutique_La_Torre_iluminada_de_noche.png'
 
 /** Misma regla que src/lib/boutique/images.ts */
@@ -76,7 +80,7 @@ if (!fs.existsSync(SRC)) {
   process.exit(1)
 }
 
-const files = walk(SRC)
+const files = walk(SRC).filter(f => !ONLY || f.split('/')[0] === ONLY)
 const seen = new Map()
 for (const f of files) {
   const key = path.posix.join(path.posix.dirname(f), variantBase(path.posix.basename(f)))
@@ -93,7 +97,10 @@ await pool(files, Math.max(2, os.cpus().length), async (rel) => {
   const dir = path.posix.dirname(rel)
   const outDir = path.join(OUT, dir)
   const base = variantBase(path.posix.basename(rel))
-  const widths = [...WIDTHS, ...(EXTRA_WIDTHS[dir.split('/')[0]] || [])]
+  const top = dir.split('/')[0]
+  const widths = [...WIDTHS, ...(EXTRA_WIDTHS[top] || [])]
+  const webpOpts = HQ[top]?.webp || WEBP
+  const avifOpts = HQ[top]?.avif || AVIF
   fs.mkdirSync(outDir, { recursive: true })
   const srcTime = fs.statSync(src).mtimeMs
   const need = (p) => FORCE || !fs.existsSync(p) || fs.statSync(p).mtimeMs < srcTime
@@ -103,8 +110,8 @@ await pool(files, Math.max(2, os.cpus().length), async (rel) => {
       const avif = path.join(outDir, `${base}-${w}.avif`)
       if (!need(webp) && !need(avif)) { skipped++; continue }
       const pipe = sharp(src, { failOn: 'none' }).rotate().resize({ width: w, withoutEnlargement: true })
-      if (need(webp)) await pipe.clone().webp(WEBP).toFile(webp)
-      if (need(avif)) await pipe.clone().avif(AVIF).toFile(avif)
+      if (need(webp)) await pipe.clone().webp(webpOpts).toFile(webp)
+      if (need(avif)) await pipe.clone().avif(avifOpts).toFile(avif)
       made++
     }
     if (ogSet.has(rel)) {
