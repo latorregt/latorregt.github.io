@@ -1,9 +1,9 @@
-"""Regla única de URLs de producto (la usan generate-data.py y la migración).
+"""Regla única de URLs de producto (la usa generate-data.py).
 
-URL = nombre [+ marca si el nombre no la menciona] + sufijo.
-El sufijo NO depende del orden de filas del CSV:
-  - si el CSV trae una columna "ID" (propiedad "ID" de Notion), se usa ese número;
-  - si no, 4 caracteres derivados del nombre de archivo de la Imagen 1.
+URL = nombre [+ marca si el nombre no la menciona] + ID único de Notion (p. ej. cincho-dutton-lt-185).
+El ID es permanente: no cambia al reordenar, editar ni mover filas, así que la URL solo cambia si se
+edita el nombre o la marca (en ese caso scripts/redirects.py deja la redirección 301 automáticamente).
+Sin ID (solo para pruebas) se usa un hash del nombre del archivo de la Imagen 1.
 """
 import hashlib, re
 

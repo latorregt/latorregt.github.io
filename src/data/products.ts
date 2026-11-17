@@ -1,6 +1,6 @@
 /* AUTO-GENERATED */
 export interface Product {
-  id: number; slug: string; nombre: string; categoria: string; tipo: string; subtipo: string; estilo: string
+  id: number; slug: string; notionId?: string; nombre: string; categoria: string; tipo: string; subtipo: string; estilo: string
   marca: string; color: string; colorHex: string; tallas: string[]; imagenes: string[]
   precio: number; tarjeta: number | null; descripcion: string; fecha: string | null
   sale: boolean; prontoVolvera: boolean; descuento: number | null
