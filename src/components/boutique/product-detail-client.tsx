@@ -29,8 +29,7 @@ export function ProductDetailClient({ product, related }: ProductDetailClientPro
   const [zoomed, setZoomed] = useState(false)
   const [expanded, setExpanded] = useState<string | null>(null)
   const [relatedIdx, setRelatedIdx] = useState(0)
-  const [dragStart, setDragStart] = useState<{x: number, y: number} | null>(null)
-  const [dragOffset, setDragOffset] = useState<{x: number, y: number}>({x: 0, y: 0})
+  const [mousePos, setMousePos] = useState({ x: 50, y: 50 })
   const add = useCart(s => s.add)
   const openCart = useCart(s => s.open)
   const router = useRouter()
@@ -52,12 +51,8 @@ export function ProductDetailClient({ product, related }: ProductDetailClientPro
     router.push('/')
   }, [router])
 
-  const handleMouseDown = (e: React.MouseEvent) => { if (zoomed) { setDragStart({x: e.clientX - dragOffset.x, y: e.clientY - dragOffset.y}) } }
-  const handleMouseMove = (e: React.MouseEvent) => { if (zoomed && dragStart) { setDragOffset({x: e.clientX - dragStart.x, y: e.clientY - dragStart.y}) } }
-  const handleMouseUp = () => { setDragStart(null) }
-
   useEffect(() => {
-    setActiveIdx(0); setTallaSel(''); setZoomed(false); setExpanded(null)
+    setActiveIdx(0); setTallaSel(''); setZoomed(false); setMousePos({x: 50, y: 50}); setExpanded(null)
     track('view_item', { product_id: product.id, product_name: product.nombre })
     window.scrollTo(0, 0)
   }, [product.slug])
@@ -101,11 +96,9 @@ export function ProductDetailClient({ product, related }: ProductDetailClientPro
               <div
                 className="bg-white rounded-lg overflow-hidden relative cursor-zoom-in flex items-center justify-center"
                 style={{ minHeight: '500px' }}
-                onClick={() => { if (!zoomed) setZoomed(true); else if (!dragStart) setZoomed(false) }}
-                onMouseDown={handleMouseDown}
-                onMouseMove={handleMouseMove}
-                onMouseUp={handleMouseUp}
-                onMouseLeave={handleMouseUp}
+                onClick={() => setZoomed(z => !z)}
+                onMouseMove={(e) => { if (zoomed) { const r = e.currentTarget.getBoundingClientRect(); setMousePos({ x: ((e.clientX - r.left) / r.width) * 100, y: ((e.clientY - r.top) / r.height) * 100 }) } }}
+                
               >
                 <Picture
                   key={activeIdx}
@@ -114,8 +107,8 @@ export function ProductDetailClient({ product, related }: ProductDetailClientPro
                   sizes="(min-width: 768px) 55vw, 92vw"
                   priority
                   draggable={false}
-                  style={zoomed ? { transform: `scale(1.5) translate(${dragOffset.x/3}px, ${dragOffset.y/3}px)` } : {}}
-                  className={`max-w-full max-h-[800px] object-contain transition-transform duration-300 ${zoomed ? 'cursor-grab active:cursor-grabbing' : 'cursor-zoom-in'}`}
+                  style={zoomed ? { transform: 'scale(2)', transformOrigin: `${mousePos.x}% ${mousePos.y}%` } : {}}
+                  className={`max-w-full max-h-[800px] object-contain transition-transform duration-200 ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
                 />
                 <div className="absolute bottom-2 right-2 bg-midnight/70 text-cream p-1.5 rounded">
                   <ZoomIn className="w-4 h-4" />
