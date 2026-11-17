@@ -14,7 +14,7 @@ export function Header({ onNavigate, onSearch, onOpenCart, onHome }: HeaderProps
   const [hovered, setHovered] = useState<string | null>(null)
   const [hoveredTipo, setHoveredTipo] = useState<string | null>(null)
   const [searchOpen, setSearchOpen] = useState(false)
-  const [m[[[mobileOpen setMobileOpen] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
   const cartCount = useCart(s => s.count())
   const closeSearch = useCallback(() => setSearchOpen(false), [])
 
