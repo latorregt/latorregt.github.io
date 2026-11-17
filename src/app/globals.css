@@ -157,3 +157,13 @@
 @keyframes search-down { from { transform: translateY(-100%); } to { transform: translateY(0); } }
 @keyframes search-fade { from { opacity: 0; } to { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .search-panel, .search-backdrop { animation: none; } }
+
+/* Slide animation for carousels */
+@keyframes slide-in-right {
+  0% { opacity: 0; transform: translateX(30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes slide-in-left {
+  0% { opacity: 0; transform: translateX(-30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}

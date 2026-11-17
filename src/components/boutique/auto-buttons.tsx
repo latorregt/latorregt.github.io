@@ -67,7 +67,7 @@ export function AutoButtons({ type, onNavigate }: AutoButtonsProps) {
             <ChevronLeft className="w-4 h-4" />
           </button>
         )}
-        <div className="flex items-center gap-3 md:gap-4 overflow-hidden justify-center flex-1">
+        <div key={scrollIdx} className="flex items-center gap-3 md:gap-4 overflow-hidden justify-center flex-1" style={{ animation: "slide-in-right 300ms ease-out" }}>
           {visibleButtons.map((btn) => (
             <button key={btn.label} onClick={() => handleClick(btn)} className="flex-shrink-0 w-24 h-24 md:w-28 md:h-28 rounded-full bg-white border-2 border-midnight/15 hover:border-gold hover:bg-gold/5 transition-colors flex items-center justify-center text-center">
               <span className="text-[10px] md:text-xs uppercase tracking-wider font-medium text-midnight px-2 leading-tight">{btn.label}</span>
