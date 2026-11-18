@@ -178,6 +178,6 @@
 @keyframes page-enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .page-enter { animation: none; } }
 
-/* Hero: en pantallas verticales se usa la foto vertical; el texto va abajo para no tapar el letrero. */
+/* Hero: en pantallas verticales se usa la foto vertical, con el título y los botones centrados. */
 .hero-img { object-position: center 15%; }
 @media (max-aspect-ratio: 1/1) { .hero-img { object-position: 58% 0%; } }

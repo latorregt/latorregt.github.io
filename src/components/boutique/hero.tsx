@@ -13,7 +13,7 @@ interface HeroProps {
 
 export function Hero({ onColecciones, onComoLlegar }: HeroProps) {
   return (
-    <section className="relative min-h-[88vh] flex items-center [@media(max-aspect-ratio:1/1)]:items-end justify-center overflow-hidden" aria-label="Sección de bienvenida">
+    <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden" aria-label="Sección de bienvenida">
       <div className="absolute inset-0">
         {/* Celular / pantallas verticales: foto vertical. Computadora: foto horizontal. Un solo <picture>: se descarga solo una. */}
         <picture>
@@ -33,7 +33,7 @@ export function Hero({ onColecciones, onComoLlegar }: HeroProps) {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/25 to-black/70" />
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-cream py-24 [@media(max-aspect-ratio:1/1)]:pb-10">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-cream py-24">
         <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] mb-4 drop-shadow-lg">
           DONDE EL BUEN VESTIR<br />ES TRADICIÓN
         </h1>
