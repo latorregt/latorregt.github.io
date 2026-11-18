@@ -100,13 +100,28 @@ def build_redirects(prev, new, existing):
     return final, {'cambiados': len(cambios), 'sin_pareja': sin_pareja, 'choques': choques}
 
 
+# Enlaces cortos para las biografías de redes: latorregt.com/ig -> portada con UTM (para medir en GA4 de dónde llega cada visita).
+# 302 (temporal) para poder cambiar el destino sin que los navegadores lo recuerden.
+ENLACES_CORTOS = {
+    'ig': 'utm_source=instagram&utm_medium=social&utm_campaign=bio',
+    'tt': 'utm_source=tiktok&utm_medium=social&utm_campaign=bio',
+    'fb': 'utm_source=facebook&utm_medium=social&utm_campaign=bio',
+    'wa': 'utm_source=whatsapp&utm_medium=social&utm_campaign=perfil',
+    'maps': 'utm_source=google&utm_medium=organic&utm_campaign=maps',
+}
+
+
 def write_redirects(path, mapping):
     # Se escribe la variante con barra final y la sin ella: en Cloudflare cuentan como reglas distintas.
-    lines = ['# Generado por scripts/generate-data.py. No editar a mano.',
-             '# URLs anteriores de productos -> URL actual (301).']
+    lines = ['# Generado por scripts/generate-data.py. No editar a mano (los enlaces cortos están en scripts/redirects.py).',
+             '# Enlaces cortos de redes -> portada con UTM (302).']
+    for corto, utm in ENLACES_CORTOS.items():
+        lines.append(f'/{corto} /?{utm} 302')
+        lines.append(f'/{corto}/ /?{utm} 302')
+    lines.append('# URLs anteriores de productos -> URL actual (301).')
     for src in sorted(mapping):
         lines.append(f'/producto/{src}/ /producto/{mapping[src]}/ 301')
         lines.append(f'/producto/{src} /producto/{mapping[src]}/ 301')
     Path(path).write_text('\n'.join(lines) + '\n', encoding='utf-8')
-    rules = (len(lines) - 2)
+    rules = sum(1 for l in lines if not l.startswith('#'))
     return rules
